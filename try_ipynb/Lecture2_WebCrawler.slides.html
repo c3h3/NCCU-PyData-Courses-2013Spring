@@ -1759,18 +1759,12 @@ div.output_prompt {
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="outline">Outline</h1>
 <ul>
-<li><h2>spideR 寫作的預備知識</h2></li>
-<li><h2>spideR 的一些小範例</h2></li>
-<li><h2>spideR 的架構</h2></li>
-<li><h2>spideR 的寫作流程</h2></li>
-<li><h2>spideR 的一些小技巧</h2></li>
+<li><h2>Crawler 寫作的預備知識</h2></li>
+<li><h2>Crawler 的一些小範例</h2></li>
+<li><h2>Crawler 的架構</h2></li>
+<li><h2>Crawler 的寫作流程</h2></li>
+<li><h2>Crawler 的一些小技巧</h2></li>
 </ul>
-</div></section>
-    </section><section>
-    <section>
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="本次演講適合初學者">本次演講適合初學者</h1>
-<h1 id="請各位高手們忍耐一下囉">請各位高手們忍耐一下囉！</h1>
 </div></section>
     </section><section>
     <section>
@@ -1778,7 +1772,7 @@ div.output_prompt {
 <h1 id="預備知識">預備知識</h1>
 </div></section><section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="spider-寫作的預備知識">spideR 寫作的預備知識</h1>
+<h1 id="crawler-寫作的預備知識">Crawler 寫作的預備知識</h1>
 <ul>
 <li><h2>什麼是網站？</h2></li>
 <li><h2>網站的結構？</h2></li>
@@ -1786,10 +1780,14 @@ div.output_prompt {
 <li><h2>網站資料的種類？</h2></li>
 <li><h2>分析的工具</h2></li>
 </ul>
-</div></section><section>
+</div></section>
+    </section><section>
+    <section>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="什麼是網站">什麼是網站?</h1>
-</div></section><section>
+</div></section>
+    </section><section>
+    <section>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="一般人眼中的網站-...">一般人眼中的網站 ...</h1>
 </div></section><section>
@@ -1812,7 +1810,9 @@ div.output_prompt {
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="一般人眼中的網站">一般人眼中的網站</h1>
 <p><a href="http://www.ptt.cc/bbs/R_Language/index.html"><img src="Lec2_slide_imgs/Web_ppt.png" alt="Web_ppt" /></a></p>
-</div></section><section>
+</div></section>
+    </section><section>
+    <section>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="工程師眼中的網站-...">工程師眼中的網站 ...</h1>
 </div></section><section>
@@ -1845,15 +1845,365 @@ div.output_prompt {
 <div class="figure">
 <img src="Lec2_slide_imgs/Web_backend5.png" />
 </div>
-</div></section><section>
+</div></section>
+    </section><section>
+    <section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="spider-眼中的網站-...">spideR 眼中的網站 ... ?</h1>
+<h1 id="crawler-眼中的網站-...">Crawler 眼中的網站 ... ?</h1>
 <div class="figure">
 <img src="Lec2_slide_imgs/spiderman.jpg" alt="spideR" /><p class="caption">spideR</p>
 </div>
+</div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="網站的結構">網站的結構?</h1>
 </div></section><section>
 <div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="網站結構的分類">網站結構的分類</h1>
+<ul>
+<li><h2>前端 V.S. 後端</h2></li>
+<li><h2>Model + View + Controler (MVC)</h2></li>
+<li><h2>Static (Page Render) V.S. Dynamic (Ajax)</h2></li>
+</ul>
+</div></section><section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="網站結構-ajax-v.s.-page-render">[網站結構] Ajax V.S. Page Render</h1>
+<div class="figure">
+<img src="Lec2_slide_imgs/ajax-fig1_small.png" />
+</div>
+</div></section><section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="網站結構-ajax-v.s.-page-render">[網站結構] Ajax V.S. Page Render</h1>
+<ul>
+<li><h2>PageRender 範例： http://www.ptt.cc/bbs/R_Language/index.html</h2></li>
+<li><h2>Ajax 範例1： http://pi.isuphoto.org/uei</h2></li>
+<li><h2>Ajax 範例1 Data： http://pi.isuphoto.org/api/user/uei?page=0</h2></li>
+<li><h2>Ajax 範例2： http://ecshweb.pchome.com.tw/search/v3.2/?q=sony</h2></li>
+<li><h2>[Hw1] Ajax 範例2 Data ?</h2></li>
+</ul>
+</div></section><section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="網站結構-model-view-controler-後端-mvc">[網站結構] Model + View + Controler (後端 MVC)</h1>
+<div class="figure">
+<img src="Lec2_slide_imgs/mvc-diagram.png" />
+</div>
+</div></section><section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="網站結構-model-view-controler-前端-mvc">[網站結構] Model + View + Controler (前端 MVC)</h1>
+<div class="figure">
+<img src="Lec2_slide_imgs/concepts-controller.png" />
+</div>
+</div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="網址的祕密">網址的祕密？</h1>
+</div></section><section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="網址的祕密-----參數篇">網址的祕密 --- 參數篇</h1>
+<ul>
+<li><h1>URL?var_1=val_1&amp;var_2=val_2...</h1></li>
+<li><h2>其實，就像呼叫函數一樣</h2></li>
+<li><h2>相關訊息可在 form 中或 JS code 中找到</h2></li>
+<li><h2>[Ex1] http://finance.yahoo.com/q/hp?s=%5ETWII&amp;a=06&amp;b=2&amp;c=1997&amp;d=02&amp;e=24&amp;f=2013&amp;g=d</h2></li>
+<li><h2>[Ex2] http://www.taifex.com.tw/eng/eng3/eng3_2dl.asp?COMMODITY_ID=all&amp;DATA_DATE=2012/11/01&amp;DATA_DATE1=2012/11/15</h2></li>
+</ul>
+</div></section><section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="網址的祕密-----網址規則篇">網址的祕密 --- 網址規則篇</h1>
+<ul>
+<li><h2>有些網址會把訊息藏在 URL 中</h2></li>
+<li><h2>然後，再由後端的 URL Dispatcher 解析</h2></li>
+<li><h2>[Ex1] http://tw.stock.yahoo.com/d/s/major_2451.html</h2></li>
+<li><h2>[Ex1 Rule] major_StockID.html</h2></li>
+</ul>
+</div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="網站資料的種類">網站資料的種類？</h1>
+</div></section><section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="網站資料常見類型">網站資料常見類型：</h1>
+<ul>
+<li><h2>Page (HTML)</h2>
+<ul>
+<li><h3>http://shopping.pchome.com.tw/?m=item&amp;f=exhibit&amp;IT_NO=DGBJ50-A81412134&amp;SR_NO=DGBJ50</h3></li>
+</ul></li>
+<li><h2>Data (JSON/XML...)</h2>
+<ul>
+<li><h3>http://pi.isuphoto.org/api/user/uei?page=0</h3></li>
+</ul></li>
+<li><h2>File</h2>
+<ul>
+<li><h3>http://www.taifex.com.tw/chinese/3/3_1_5.asp</h3></li>
+</ul></li>
+</ul>
+</div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="常用的工具">常用的工具</h1>
+</div></section><section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="live-demo-常用的工具">[Live Demo] 常用的工具：</h1>
+<ul>
+<li><h2>Google Chrome Developer Tools</h2></li>
+<li><h2>Firefox</h2>
+<ul>
+<li><h3>Firebug</h3></li>
+<li><h3>Hackbar</h3></li>
+<li><h3>Cookie Manager+</h3></li>
+</ul></li>
+<li><h2>cURL</h2></li>
+<li><h2>Wireshark</h2></li>
+</ul>
+</div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="一些小範例">一些小範例</h1>
+</div></section><section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="example1-抓取股市主力進出表">[Example1] 抓取股市主力進出表：</h1>
+<p><a href="http://tw.stock.yahoo.com/d/s/major_2451.html"><img src="Lec2_slide_imgs/Web_kimo_stock.png.png" alt="Web_kimo_stock" /></a></p>
+</div></section><section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="example1-抓取股市主力進出表">[Example1] 抓取股市主力進出表：</h1>
+</div>
+<div class="cell border-box-sizing code_cell">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[1]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+</pre></div>
 
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[2]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="n">res</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">&quot;http://tw.stock.yahoo.com/d/s/major_2451.html&quot;</span><span class="p">)</span>
+<span class="n">tables</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_html</span><span class="p">(</span><span class="n">res</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+<span class="k">print</span> <span class="n">tables</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_stream output_stdout">
+<pre>
+enc_params =  
+        0    1   2    3      4    5    6   7
+0    買超券商  NaN NaN  NaN   賣超券商  NaN  NaN NaN
+1      臺銀  357   7  350   美商高盛    5   96 -91
+2      統一   29   9   20     美林    4   61 -57
+3   台灣摩根士   24   9   15   瑞士信貸    0   56 -56
+4    花旗環球    7   0    7  港商法國興    0   47 -47
+5    日盛證券   14   7    7   元大寶來  103  131 -28
+6    港商野村    5   0    5   凱基證券   17   44 -27
+7      亞東    5   0    5   鑫豐證券    0   18 -18
+8      元富   11   6    5   兆豐證券    2   15 -13
+9    大慶證券    4   1    3   陽信證券    0   12 -12
+10     合庫    2   0    2  港商德意志    1    9  -8
+11   玉山證券   13  11    2   華南永昌    4   11  -7
+12    第一金    3   2    1     高橋    0    6  -6
+13   中信銀證    1   0    1   群益金鼎   13   19  -6
+14     日茂    0   0    0   康和證券    1    6  -5
+15   致和證券    0   0    0  永豐金證券    6   11  -5
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[3]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="n">pre_df</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">r_</span><span class="p">[</span> <span class="n">tables</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="mi">1</span><span class="p">:,</span><span class="mi">0</span><span class="p">:</span><span class="mi">4</span><span class="p">],</span> <span class="n">tables</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="mi">1</span><span class="p">:,</span><span class="mi">4</span><span class="p">:]]</span>
+<span class="k">print</span> <span class="n">pre_df</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_stream output_stdout">
+<pre>
+[[u&apos;\u81fa\u9280&apos; 357.0 7.0 350.0]
+ [u&apos;\u7d71\u4e00&apos; 29.0 9.0 20.0]
+ [u&apos;\u53f0\u7063\u6469\u6839\u58eb&apos; 24.0 9.0 15.0]
+ [u&apos;\u82b1\u65d7\u74b0\u7403&apos; 7.0 0.0 7.0]
+ [u&apos;\u65e5\u76db\u8b49\u5238&apos; 14.0 7.0 7.0]
+ [u&apos;\u6e2f\u5546\u91ce\u6751&apos; 5.0 0.0 5.0]
+ [u&apos;\u4e9e\u6771&apos; 5.0 0.0 5.0]
+ [u&apos;\u5143\u5bcc&apos; 11.0 6.0 5.0]
+ [u&apos;\u5927\u6176\u8b49\u5238&apos; 4.0 1.0 3.0]
+ [u&apos;\u5408\u5eab&apos; 2.0 0.0 2.0]
+ [u&apos;\u7389\u5c71\u8b49\u5238&apos; 13.0 11.0 2.0]
+ [u&apos;\u7b2c\u4e00\u91d1&apos; 3.0 2.0 1.0]
+ [u&apos;\u4e2d\u4fe1\u9280\u8b49&apos; 1.0 0.0 1.0]
+ [u&apos;\u65e5\u8302&apos; 0.0 0.0 0.0]
+ [u&apos;\u81f4\u548c\u8b49\u5238&apos; 0.0 0.0 0.0]
+ [u&apos;\u7f8e\u5546\u9ad8\u76db&apos; 5.0 96.0 -91.0]
+ [u&apos;\u7f8e\u6797&apos; 4.0 61.0 -57.0]
+ [u&apos;\u745e\u58eb\u4fe1\u8cb8&apos; 0.0 56.0 -56.0]
+ [u&apos;\u6e2f\u5546\u6cd5\u570b\u8208&apos; 0.0 47.0 -47.0]
+ [u&apos;\u5143\u5927\u5bf6\u4f86&apos; 103.0 131.0 -28.0]
+ [u&apos;\u51f1\u57fa\u8b49\u5238&apos; 17.0 44.0 -27.0]
+ [u&apos;\u946b\u8c50\u8b49\u5238&apos; 0.0 18.0 -18.0]
+ [u&apos;\u5146\u8c50\u8b49\u5238&apos; 2.0 15.0 -13.0]
+ [u&apos;\u967d\u4fe1\u8b49\u5238&apos; 0.0 12.0 -12.0]
+ [u&apos;\u6e2f\u5546\u5fb7\u610f\u5fd7&apos; 1.0 9.0 -8.0]
+ [u&apos;\u83ef\u5357\u6c38\u660c&apos; 4.0 11.0 -7.0]
+ [u&apos;\u9ad8\u6a4b&apos; 0.0 6.0 -6.0]
+ [u&apos;\u7fa4\u76ca\u91d1\u9f0e&apos; 13.0 19.0 -6.0]
+ [u&apos;\u5eb7\u548c\u8b49\u5238&apos; 1.0 6.0 -5.0]
+ [u&apos;\u6c38\u8c50\u91d1\u8b49\u5238&apos; 6.0 11.0 -5.0]]
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[4]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">pre_df</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s">&quot;Name&quot;</span><span class="p">,</span><span class="s">&quot;Buy&quot;</span><span class="p">,</span><span class="s">&quot;Sell&quot;</span><span class="p">,</span><span class="s">&quot;Net&quot;</span><span class="p">]</span>
+<span class="k">print</span> <span class="n">df</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_stream output_stdout">
+<pre>
+     Name  Buy Sell  Net
+0      臺銀  357    7  350
+1      統一   29    9   20
+2   台灣摩根士   24    9   15
+3    花旗環球    7    0    7
+4    日盛證券   14    7    7
+5    港商野村    5    0    5
+6      亞東    5    0    5
+7      元富   11    6    5
+8    大慶證券    4    1    3
+9      合庫    2    0    2
+10   玉山證券   13   11    2
+11    第一金    3    2    1
+12   中信銀證    1    0    1
+13     日茂    0    0    0
+14   致和證券    0    0    0
+15   美商高盛    5   96  -91
+16     美林    4   61  -57
+17   瑞士信貸    0   56  -56
+18  港商法國興    0   47  -47
+19   元大寶來  103  131  -28
+20   凱基證券   17   44  -27
+21   鑫豐證券    0   18  -18
+22   兆豐證券    2   15  -13
+23   陽信證券    0   12  -12
+24  港商德意志    1    9   -8
+25   華南永昌    4   11   -7
+26     高橋    0    6   -6
+27   群益金鼎   13   19   -6
+28   康和證券    1    6   -5
+29  永豐金證券    6   11   -5
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing code_cell">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[5]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="k">def</span> <span class="nf">get_stock_major_info</span><span class="p">(</span><span class="n">stock_id</span><span class="p">):</span>
+    <span class="n">res</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">&quot;http://tw.stock.yahoo.com/d/s/major_</span><span class="si">%s</span><span class="s">.html&quot;</span> <span class="o">%</span> <span class="nb">str</span><span class="p">(</span><span class="n">stock_id</span><span class="p">))</span>
+    <span class="n">tables</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_html</span><span class="p">(</span><span class="n">res</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+    <span class="n">pre_df</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">r_</span><span class="p">[</span> <span class="n">tables</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="mi">1</span><span class="p">:,</span><span class="mi">0</span><span class="p">:</span><span class="mi">4</span><span class="p">],</span> <span class="n">tables</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="mi">1</span><span class="p">:,</span><span class="mi">4</span><span class="p">:]]</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">pre_df</span><span class="p">)</span>
+    <span class="n">df</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s">&quot;Name&quot;</span><span class="p">,</span><span class="s">&quot;Buy&quot;</span><span class="p">,</span><span class="s">&quot;Sell&quot;</span><span class="p">,</span><span class="s">&quot;Net&quot;</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">df</span> 
+
+<span class="n">stock_major_2330_df</span> <span class="o">=</span> <span class="n">get_stock_major_info</span><span class="p">(</span><span class="mi">2330</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_stream output_stdout">
+<pre>
+enc_params =  
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="example1-使用技術">[Example1] 使用技術：</h1>
+<ul>
+<li><h2>[Connector] requests.get</h2></li>
+<li><h2>[Parser] pandas.read_html / numpy</h2></li>
+</ul>
+</div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="example-2-抓股票代碼">[Example 2] 抓股票代碼：</h1>
+<p><a href="http://mops.twse.com.tw/mops/web/t51sb01"><img src="Lec2_slide_imgs/Web_mops_t51sb01.png" alt="Web_mops_t51sb01" /></a></p>
 </div>
 <div class="cell border-box-sizing code_cell">
 <div class="input">
@@ -1861,7 +2211,25 @@ div.output_prompt {
 In&nbsp;[]:
 </div>
 <div class="input_area box-flex1">
-<div class="highlight"><pre>
+<div class="highlight"><pre><span class="n">req_data</span> <span class="o">=</span> <span class="p">{</span>
+	<span class="s">&quot;encodeURIComponent&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span>
+	<span class="s">&quot;step&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span>
+	<span class="s">&quot;firstin&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span>
+	<span class="s">&quot;TYPEK&quot;</span><span class="p">:</span><span class="s">&quot;sii&quot;</span><span class="p">,</span>
+	<span class="s">&quot;code&quot;</span><span class="p">:</span><span class="s">&quot;&quot;</span>
+<span class="p">}</span>
+
+
+<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s">&quot;http://mops.twse.com.tw/mops/web/ajax_t51sb01&quot;</span><span class="p">,</span><span class="n">data</span> <span class="o">=</span> <span class="n">req_data</span><span class="p">)</span>
+
+<span class="n">req_data</span> <span class="o">=</span> <span class="p">{</span>
+<span class="s">&quot;firstin&quot;</span><span class="p">:</span><span class="s">&quot;true&quot;</span><span class="p">,</span>
+<span class="s">&quot;step&quot;</span><span class="p">:</span><span class="s">&quot;10&quot;</span><span class="p">,</span>
+<span class="s">&quot;filename&quot;</span><span class="p">:</span><span class="s">&quot;t51sb01_20140113_040331565.csv&quot;</span>
+<span class="p">}</span>
+
+
+<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s">&quot;http://mops.twse.com.tw/server-java/t105sb02&quot;</span><span class="p">,</span><span class="n">data</span> <span class="o">=</span> <span class="n">req_data</span><span class="p">)</span>
 </pre></div>
 
 </div>
