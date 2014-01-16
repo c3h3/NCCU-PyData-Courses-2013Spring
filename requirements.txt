@@ -1,0 +1,8 @@
+requests
+pyquery
+beautifulsoup4
+ujson
+html5lib
+pandas
+jinja2
+pymongo

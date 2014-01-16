@@ -22,3 +22,6 @@
 # dataset related #
 ###################
 *.csv
+
+
+get_captcha (1).py
