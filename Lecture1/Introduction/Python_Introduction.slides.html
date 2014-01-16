@@ -1770,6 +1770,30 @@ text-align: inherit;
     </section><section>
     <section>
 <div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="coding-style">Coding Style:</h1>
+<ul>
+<li>Refer to pep-0008</li>
+<li>http://www.python.org/dev/peps/pep-0008/</li>
+</ul>
+</div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="course-material">Course Material</h1>
+<p>git clone https://github.com/c3h3/NCCU-PyData-Courses-2013Spring.git</p>
+</div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="ipython-notebook">Ipython Notebook</h1>
+<h3 id="open-command-line">Open Command Line:</h3>
+<pre><code>&gt; ipython notebook</code></pre>
+<h3 id="open-browser-and-input">Open Browser And Input:</h3>
+<pre><code>127.0.0.1:8888</code></pre>
+</div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Interactive-Programming">Interactive Programming<a class="anchor-link" href="#Interactive-Programming">&#182;</a></h3>
 </div>
 </section>
@@ -3670,6 +3694,41 @@ nan
 
 </div>
 </div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[1]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="kn">import</span> <span class="nn">random</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
+<span class="k">def</span> <span class="nf">randomwalk</span><span class="p">():</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+        <span class="k">yield</span> <span class="n">x</span> <span class="c"># &#39;yield&#39; instead of &#39;return&#39;</span>
+        <span class="n">x</span> <span class="o">+=</span> <span class="mi">2</span> <span class="o">*</span> <span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span> <span class="o">&gt;</span> <span class="mf">0.5</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
+<span class="n">rw</span> <span class="o">=</span> <span class="n">randomwalk</span><span class="p">()</span> <span class="c"># &#39;rw&#39; is a iterator-like object</span>
+<span class="n">awalk</span> <span class="o">=</span> <span class="p">[</span> <span class="n">rw</span><span class="o">.</span><span class="n">next</span><span class="p">()</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span> <span class="p">]</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">awalk</span><span class="p">);</span> <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre>
+</pre></div>
 
 </div>
 </div>
