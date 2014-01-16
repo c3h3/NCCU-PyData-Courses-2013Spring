@@ -6,3 +6,4 @@ html5lib
 pandas
 jinja2
 pymongo
+lxml
