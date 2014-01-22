@@ -1748,24 +1748,24 @@ text-align: inherit;
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="types-of-database">Types of Database</h2>
 <ul>
-<li>Releational Database
+<li><h3>Releational Database</h3>
 <ul>
-<li>Commercial
+<li><h4>Commercial</h4>
 <ul>
 <li>Oracle, Sybase, Informix</li>
 <li>Oracle, MS SQL Server</li>
 </ul></li>
-<li>Open Source
+<li><h4>Open Source</h4>
 <ul>
 <li>PostgreSQL, SQLite, MySQL</li>
 </ul></li>
 </ul></li>
-<li>Non-Relational Database
+<li><h3>Non-Relational Database</h3>
 <ul>
-<li>Column: HBase, Accumulo, Cassandra</li>
-<li>Document: MarkLogic, MongoDB, Couchbase</li>
-<li>Key-value: Dynamo, Riak, Redis, MemcacheDB, Project Voldemort</li>
-<li>Graph: Neo4J, OrientDB, Allegro, Virtuoso</li>
+<li><h4>Column: HBase, Accumulo, Cassandra</h4></li>
+<li><h4>Document: MarkLogic, MongoDB, Couchbase</h4></li>
+<li><h4>Key-value: Dynamo, Riak, Redis, MemcacheDB, Project Voldemort</h4></li>
+<li><h4>Graph: Neo4J, OrientDB, Allegro, Virtuoso</h4></li>
 </ul></li>
 </ul>
 </div></section>
@@ -1774,16 +1774,16 @@ text-align: inherit;
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="sqlite">SQLite</h1>
 <ul>
-<li>Charateristic
+<li><h2>Charateristic</h2>
 <ul>
-<li>self-contained</li>
-<li>serverless</li>
-<li>zero-configuration</li>
-<li>transactional</li>
+<li><h3>self-contained</h3></li>
+<li><h3>serverless</h3></li>
+<li><h3>zero-configuration</h3></li>
+<li><h3>transactional</h3></li>
 </ul></li>
-<li><p>ACID Database</p></li>
-<li><p>Support SQL 92 Syntax</p></li>
-<li><p>Open Source</p></li>
+<li><h2>ACID Database</h2></li>
+<li><h2>Support SQL 92 Syntax</h2></li>
+<li><h2>Open Source</h2></li>
 </ul>
 </div></section>
     </section><section>
@@ -1791,21 +1791,21 @@ text-align: inherit;
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="acid-charaterstic">　ACID Charaterstic</h2>
 <ul>
-<li>Atomicity
+<li><h3>Atomicity</h3>
 <ul>
-<li>Atomicity requires that each transaction is &quot;all or nothing&quot;: if one part of the transaction fails, the entire transaction fails, and the database state is left unchanged.</li>
+<li><h4>Atomicity requires that each transaction is &quot;all or nothing&quot;: if one part of the transaction fails, the entire transaction fails, and the database state is left unchanged.</h4></li>
 </ul></li>
-<li>Consistency
+<li><h3>Consistency</h3>
 <ul>
-<li>The consistency property ensures that any transaction will bring the database from one valid state to another. Any data written to the database must be valid according to all defined rules, including but not limited to constraints, cascades, triggers, and any combination thereof.</li>
+<li><h4>The consistency property ensures that any transaction will bring the database from one valid state to another. Any data written to the database must be valid according to all defined rules, including but not limited to constraints, cascades, triggers, and any combination thereof.</h4></li>
 </ul></li>
-<li>Isolation
+<li><h3>Isolation</h3>
 <ul>
-<li>The isolation property ensures that the concurrent execution of transactions results in a system state that would be obtained if transactions were executed serially, i.e. one after the other.</li>
+<li><h4>The isolation property ensures that the concurrent execution of transactions results in a system state that would be obtained if transactions were executed serially, i.e. one after the other.</h4></li>
 </ul></li>
-<li>Durability
+<li><h3>Durability</h3>
 <ul>
-<li>Durability means that once a transaction has been committed, it will remain so, even in the event of power loss, crashes, or errors.</li>
+<li><h4>Durability means that once a transaction has been committed, it will remain so, even in the event of power loss, crashes, or errors.</h4></li>
 </ul></li>
 </ul>
 </div></section>
@@ -1813,19 +1813,49 @@ text-align: inherit;
     <section>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="install-sqlite3">Install Sqlite3</h2>
-<h3 id="sudo-apt-get-install-sqlite3">sudo apt-get install sqlite3</h3>
+<h3 id="sudo-apt-get-install-sqlite3">&gt; sudo apt-get install sqlite3</h3>
 </div></section>
     </section><section>
     <section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="sqlite3-usage">Sqlite3 Usage</h2>
+<h3 id="database-creation">Database Creation</h3>
+<pre><code>&gt; sqlite3 test.db # Create a database named as test.db under current directory</code></pre>
+</div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="view-help">View Help</h3>
+<pre><code>&gt; .help</code></pre>
+<h3 id="view-database">View Database</h3>
+<pre><code>&gt; .database</code></pre>
+<h3 id="view-schema">View Schema</h3>
+<pre><code>&gt; .schema</code></pre>
+<h3 id="view-table">View Table</h3>
+<pre><code>&gt; .tables    </code></pre>
+</div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="executing-sql-to-specified-db">Executing SQL to Specified DB</h3>
+<pre><code>&gt; sqlite3 test.db &quot;select * from User;&quot;</code></pre>
+<h3 id="dump-db-content-to-html">Dump DB Content to html：</h3>
+<pre><code>&gt; sqlite3 -html test.db &quot;select * from User;&quot;</code></pre>
+<h3 id="dump-database-to-output.sql">Dump Database to output.sql</h3>
+<pre><code>&gt; sqlite3 test.db &quot;.dump&quot; ＞ output.sql</code></pre>
+<h3 id="create-a-database-with-existing-sql">Create a database with existing SQL</h3>
+<pre><code>&gt; sqlite3 test.db ＜ output.sql</code></pre>
+</div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="sqlite3-python-integration">Sqlite3 &amp; Python Integration</h2>
 </div></section>
     </section><section>
     <section>
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[1]:
+In&nbsp;[99]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="kn">import</span> <span class="nn">sqlite3</span>
@@ -1840,7 +1870,7 @@ In&nbsp;[1]:
 
 
 <div class="hbox output_area"><div class="prompt output_prompt">
-    Out[1]:</div>
+    Out[99]:</div>
 <div class="box-flex1 output_subarea output_pyout">
 
 
@@ -1863,19 +1893,35 @@ In&nbsp;[1]:
 <h4 id="a-database-server-and-its-client-software-communicate-with-each-other">A database server and its client software communicate with each other</h4>
 <h3 id="database-cursor">Database Cursor:</h3>
 <h4 id="a-database-cursor-is-a-control-structure-that-enables-traversal-over-the-records-in-a-database">A database cursor is a control structure that enables traversal over the records in a database</h4>
-</div></section>
-    </section><section>
-    <section>
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="database-creation">Database Creation</h3>
-<pre><code>&gt; sqlite3 test.db # Create a database named as test.db under current directory</code></pre>
+<h3 id="primary-key">Primary Key:</h3>
+<h4 id="a-combination-of-columns-which-uniquely-specify-a-row">A combination of columns which uniquely specify a row</h4>
+<h3 id="unique-key">Unique Key</h3>
+<h4 id="uniquely-identify-each-row-of-data-values-in-a-database-table">Uniquely identify each row of data values in a database table</h4>
+<h3 id="foreign-key">Foreign Key</h3>
+<h4 id="a-field-in-one-table-that-uniquely-identifies-a-row-of-another-table">A field in one table that uniquely identifies a row of another table</h4>
 </div></section>
     </section><section>
     <section>
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[2]:
+In&nbsp;[100]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="c">#Speicified DB Name</span>
+<span class="n">dbname</span> <span class="o">=</span> <span class="s">&#39;test.db&#39;</span>
+</pre></div>
+
+</div>
+</div>
+
+</div></section>
+    </section><section>
+    <section>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[101]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="kn">import</span> <span class="nn">sqlite3</span> <span class="kn">as</span> <span class="nn">lite</span>
@@ -1884,7 +1930,7 @@ In&nbsp;[2]:
 <span class="n">con</span> <span class="o">=</span> <span class="bp">None</span>
 
 <span class="k">try</span><span class="p">:</span>
-    <span class="n">con</span> <span class="o">=</span> <span class="n">lite</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s">&#39;test.db&#39;</span><span class="p">)</span> <span class="c"># connect to database</span>
+    <span class="n">con</span> <span class="o">=</span> <span class="n">lite</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">dbname</span><span class="p">)</span> <span class="c"># connect to database</span>
     
     <span class="n">cur</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span> <span class="c"># create cursor   </span>
     <span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s">&#39;SELECT SQLITE_VERSION()&#39;</span><span class="p">)</span> <span class="c"># selece database version</span>
@@ -1929,22 +1975,23 @@ SQLite version: 3.6.21
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[94]:
+In&nbsp;[102]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="kn">import</span> <span class="nn">sqlite3</span> <span class="kn">as</span> <span class="nn">lite</span>
 <span class="kn">import</span> <span class="nn">sys</span>
 
-<span class="n">con</span> <span class="o">=</span> <span class="n">lite</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s">&#39;test.db&#39;</span><span class="p">)</span>
+<span class="n">con</span> <span class="o">=</span> <span class="n">lite</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">dbname</span><span class="p">)</span>
 
 <span class="k">with</span> <span class="n">con</span><span class="p">:</span>
     
     <span class="n">cur</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+    <span class="c"># Drop Table If Exisits</span>
     <span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s">&quot;DROP TABLE IF EXISTS PhoneAddress&quot;</span><span class="p">)</span>    
-    <span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s">&quot;CREATE TABLE PhoneAddress(phone TEXT PRIMARY KEY, address TEXT, name TEXT, age INT)&quot;</span><span class="p">)</span>
-    <span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s">&quot;INSERT INTO PhoneAddress VALUES(912173381,&#39;United State&#39;,&#39;Jhon Doe&#39;,53)&quot;</span><span class="p">)</span>
-    <span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s">&quot;INSERT INTO PhoneAddress VALUES(928375018,&#39;Tokyo Japan&#39;,&#39;MuMu Cat&#39;,6)&quot;</span><span class="p">)</span>
-    <span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s">&quot;INSERT INTO PhoneAddress VALUES(957209108,&#39;Taipei&#39;,&#39;Richard&#39;,29)&quot;</span><span class="p">)</span>
+    <span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s">&quot;CREATE TABLE PhoneAddress(phone CHAR(10) PRIMARY KEY, address TEXT, name TEXT unique, age INT NOT NULL)&quot;</span><span class="p">)</span>
+    <span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s">&quot;INSERT INTO PhoneAddress VALUES(0912173381,&#39;United State&#39;,&#39;Jhon Doe&#39;,53)&quot;</span><span class="p">)</span>
+    <span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s">&quot;INSERT INTO PhoneAddress VALUES(0928375018,&#39;Tokyo Japan&#39;,&#39;MuMu Cat&#39;,6)&quot;</span><span class="p">)</span>
+    <span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s">&quot;INSERT INTO PhoneAddress VALUES(0957209108,&#39;Taipei&#39;,&#39;Richard&#39;,29)&quot;</span><span class="p">)</span>
 <span class="n">con</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>    
 </pre></div>
 
@@ -1954,15 +2001,61 @@ In&nbsp;[94]:
 </div></section>
     </section><section>
     <section>
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="access-sqlite">Access SQLite</h3>
-<p>sqlite3 test.db</p>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[103]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="kn">import</span> <span class="nn">sqlite3</span> <span class="kn">as</span> <span class="nn">lite</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+
+<span class="n">con</span> <span class="o">=</span> <span class="n">lite</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">dbname</span><span class="p">)</span>
+
+<span class="k">with</span> <span class="n">con</span><span class="p">:</span>
+    
+    <span class="n">cur</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+    <span class="c"># Read Meta Information</span>
+    <span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s">&quot;PRAGMA table_info(PhoneAddress)&quot;</span><span class="p">)</span>    
+    <span class="n">rows</span> <span class="o">=</span> <span class="n">cur</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">rows</span><span class="p">:</span>
+        <span class="k">print</span> <span class="n">row</span>
+    
+<span class="n">con</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>    
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_stream output_stdout">
+<pre>
+(0, u&apos;phone&apos;, u&apos;CHAR(10)&apos;, 0, None, 1)
+(1, u&apos;address&apos;, u&apos;TEXT&apos;, 0, None, 0)
+(2, u&apos;name&apos;, u&apos;TEXT&apos;, 0, None, 0)
+(3, u&apos;age&apos;, u&apos;INT&apos;, 1, None, 0)
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div></section>
     </section><section>
     <section>
 <div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="access-sqlite">Access SQLite</h3>
+<pre><code>&gt; sqlite3 dbname</code></pre>
 <h3 id="get-column-and-header-information">Get column and header information</h3>
-<p>sqlite&gt; .mode column<br />sqlite&gt; .headers on</p>
+<pre><code>sqlite&gt; .mode column  
+sqlite&gt; .headers on
+sqlite&gt; SELECT * FROM PhoneAddress</code></pre>
 </div></section>
     </section><section>
     <section>
@@ -1975,19 +2068,20 @@ In&nbsp;[94]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[95]:
+In&nbsp;[104]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="kn">import</span> <span class="nn">sqlite3</span> <span class="kn">as</span> <span class="nn">lite</span>
 <span class="kn">import</span> <span class="nn">sys</span>
 
 
-<span class="n">con</span> <span class="o">=</span> <span class="n">lite</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s">&#39;test.db&#39;</span><span class="p">)</span>
+<span class="n">con</span> <span class="o">=</span> <span class="n">lite</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">dbname</span><span class="p">)</span>
 
 <span class="k">with</span> <span class="n">con</span><span class="p">:</span>    
     
     <span class="n">cur</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>    
-    <span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s">&quot;SELECT * FROM PhoneAddres&quot;</span><span class="p">)</span>
+    <span class="c"># Simple Query * Stands for projection of all columns</span>
+    <span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s">&quot;SELECT * FROM PhoneAddress&quot;</span><span class="p">)</span>
 
     <span class="n">rows</span> <span class="o">=</span> <span class="n">cur</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
 
@@ -2022,19 +2116,20 @@ In&nbsp;[95]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[96]:
+In&nbsp;[105]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="kn">import</span> <span class="nn">sqlite3</span> <span class="kn">as</span> <span class="nn">lite</span>
 <span class="kn">import</span> <span class="nn">sys</span>
 
 
-<span class="n">con</span> <span class="o">=</span> <span class="n">lite</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s">&#39;test.db&#39;</span><span class="p">)</span>
+<span class="n">con</span> <span class="o">=</span> <span class="n">lite</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">dbname</span><span class="p">)</span>
 
 <span class="k">with</span> <span class="n">con</span><span class="p">:</span>    
     
     <span class="n">cur</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>    
-    <span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s">&quot;SELECT * FROM PhoneAddres where address in (&#39;Taipei&#39;, &#39;Tokyo Japan&#39;)&quot;</span><span class="p">)</span>
+    <span class="c"># Select with condition In</span>
+    <span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s">&quot;SELECT * FROM PhoneAddress where address in (&#39;Taipei&#39;, &#39;Tokyo Japan&#39;)&quot;</span><span class="p">)</span>
 
     <span class="n">rows</span> <span class="o">=</span> <span class="n">cur</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
 
@@ -2068,19 +2163,20 @@ In&nbsp;[96]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[97]:
+In&nbsp;[106]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="kn">import</span> <span class="nn">sqlite3</span> <span class="kn">as</span> <span class="nn">lite</span>
 <span class="kn">import</span> <span class="nn">sys</span>
 
 
-<span class="n">con</span> <span class="o">=</span> <span class="n">lite</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s">&#39;test.db&#39;</span><span class="p">)</span>
+<span class="n">con</span> <span class="o">=</span> <span class="n">lite</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">dbname</span><span class="p">)</span>
 
 <span class="k">with</span> <span class="n">con</span><span class="p">:</span>    
     
     <span class="n">cur</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>    
-    <span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s">&quot;SELECT * FROM PhoneAddres where phone like &#39;9%&#39;&quot;</span><span class="p">)</span>
+    <span class="c"># Select with condition Like</span>
+    <span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s">&quot;SELECT * FROM PhoneAddress where phone like &#39;9%&#39;&quot;</span><span class="p">)</span>
 
     <span class="n">rows</span> <span class="o">=</span> <span class="n">cur</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
 
@@ -2115,19 +2211,20 @@ In&nbsp;[97]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[11]:
+In&nbsp;[107]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="kn">import</span> <span class="nn">sqlite3</span> <span class="kn">as</span> <span class="nn">lite</span>
 <span class="kn">import</span> <span class="nn">sys</span>
 
 
-<span class="n">con</span> <span class="o">=</span> <span class="n">lite</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s">&#39;test.db&#39;</span><span class="p">)</span>
+<span class="n">con</span> <span class="o">=</span> <span class="n">lite</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">dbname</span><span class="p">)</span>
 
 <span class="k">with</span> <span class="n">con</span><span class="p">:</span>    
     
     <span class="n">cur</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>    
-    <span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s">&quot;SELECT name, address, age FROM PhoneAddres order by age limit 1&quot;</span><span class="p">)</span> <span class="c"># get user&#39;s name address and age with least age</span>
+    <span class="c"># Order By Column Age and Get First Item</span>
+    <span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s">&quot;SELECT name, address, age FROM PhoneAddress order by age limit 1&quot;</span><span class="p">)</span> <span class="c"># get user&#39;s name address and age with least age</span>
 
     <span class="n">rows</span> <span class="o">=</span> <span class="n">cur</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
 
@@ -2157,27 +2254,77 @@ In&nbsp;[11]:
 </div></section>
     </section><section>
     <section>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[108]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="kn">import</span> <span class="nn">sqlite3</span> <span class="kn">as</span> <span class="nn">lite</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+
+
+<span class="n">con</span> <span class="o">=</span> <span class="n">lite</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">dbname</span><span class="p">)</span>
+
+<span class="k">with</span> <span class="n">con</span><span class="p">:</span>    
+    
+    <span class="n">cur</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>    
+    <span class="c"># Case-When Example</span>
+    <span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s">&quot;SELECT name, address, age, &quot;</span><span class="o">+</span>
+                <span class="s">&quot; case when age &gt;18 then &#39;Adults&#39; else &#39;Children&#39; end as type &quot;</span><span class="o">+</span>
+                <span class="s">&quot; FROM PhoneAddress&quot;</span><span class="p">)</span> 
+
+    <span class="n">rows</span> <span class="o">=</span> <span class="n">cur</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
+
+    <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">rows</span><span class="p">:</span>
+        <span class="k">print</span> <span class="n">row</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_stream output_stdout">
+<pre>
+(u&apos;Jhon Doe&apos;, u&apos;United State&apos;, 53, u&apos;Adults&apos;)
+(u&apos;MuMu Cat&apos;, u&apos;Tokyo Japan&apos;, 6, u&apos;Children&apos;)
+(u&apos;Richard&apos;, u&apos;Taipei&apos;, 29, u&apos;Adults&apos;)
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section>
+    </section><section>
+    <section>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="insert-statement">INSERT Statement</h3>
-<h4 id="add-new-rows-of-data-into-a-table-in-the-database">　add new rows of data into a table in the database</h4>
+<h4 id="add-new-rows-of-data-into-a-table-in-the-database">　Add new rows of data into a table in the database</h4>
 </div></section>
     </section><section>
     <section>
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[25]:
+In&nbsp;[109]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="kn">import</span> <span class="nn">sqlite3</span> <span class="kn">as</span> <span class="nn">lite</span>
 <span class="kn">import</span> <span class="nn">sys</span>
 
-<span class="n">con</span> <span class="o">=</span> <span class="n">lite</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s">&#39;test.db&#39;</span><span class="p">)</span>
+<span class="n">con</span> <span class="o">=</span> <span class="n">lite</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">dbname</span><span class="p">)</span>
 
 <span class="k">with</span> <span class="n">con</span><span class="p">:</span>
     
     <span class="n">cur</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>    
-    <span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s">&quot;INSERT INTO PhoneAddress VALUES(923111333,&#39;Mars&#39;,&#39;Bruno&#39;,30)&quot;</span><span class="p">)</span>
+    <span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s">&quot;INSERT INTO PhoneAddress VALUES(0923111333,&#39;Mars&#39;,&#39;Bruno&#39;,30)&quot;</span><span class="p">)</span>
     <span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s">&quot;select * from PhoneAddress&quot;</span><span class="p">)</span>
     <span class="n">rows</span> <span class="o">=</span> <span class="n">cur</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
     <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">rows</span><span class="p">:</span>
@@ -2196,7 +2343,7 @@ In&nbsp;[25]:
 <div class="box-flex1 output_subarea output_stream output_stdout">
 <pre>
 (u&apos;912173381&apos;, u&apos;United State&apos;, u&apos;Jhon Doe&apos;, 53)
-(u&apos;928375018&apos;, u&apos;Tokyo Japan&apos;, u&apos;MuMu Cat&apos;, 9)
+(u&apos;928375018&apos;, u&apos;Tokyo Japan&apos;, u&apos;MuMu Cat&apos;, 6)
 (u&apos;957209108&apos;, u&apos;Taipei&apos;, u&apos;Richard&apos;, 29)
 (u&apos;923111333&apos;, u&apos;Mars&apos;, u&apos;Bruno&apos;, 30)
 
@@ -2212,25 +2359,25 @@ In&nbsp;[25]:
     <section>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="delete-statement">DELETE Statement</h3>
-<h4 id="delete-the-existing-records-from-a-table">delete the existing records from a table</h4>
+<h4 id="delete-the-existing-records-from-a-table">Delete the existing records from a table</h4>
 </div></section>
     </section><section>
     <section>
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[27]:
+In&nbsp;[110]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="kn">import</span> <span class="nn">sqlite3</span> <span class="kn">as</span> <span class="nn">lite</span>
 <span class="kn">import</span> <span class="nn">sys</span>
 
-<span class="n">con</span> <span class="o">=</span> <span class="n">lite</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s">&#39;test.db&#39;</span><span class="p">)</span>
+<span class="n">con</span> <span class="o">=</span> <span class="n">lite</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">dbname</span><span class="p">)</span>
 
 <span class="k">with</span> <span class="n">con</span><span class="p">:</span>
     
     <span class="n">cur</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>        
-    <span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s">&quot;delete from PhoneAddress where address == &#39;Mars&#39;&quot;</span><span class="p">)</span>
+    <span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s">&quot;delete from PhoneAddress where address = &#39;Mars&#39;&quot;</span><span class="p">)</span>
     <span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s">&quot;select * from PhoneAddress&quot;</span><span class="p">)</span>
     <span class="n">rows</span> <span class="o">=</span> <span class="n">cur</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
     <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">rows</span><span class="p">:</span>
@@ -2249,7 +2396,7 @@ In&nbsp;[27]:
 <div class="box-flex1 output_subarea output_stream output_stdout">
 <pre>
 (u&apos;912173381&apos;, u&apos;United State&apos;, u&apos;Jhon Doe&apos;, 53)
-(u&apos;928375018&apos;, u&apos;Tokyo Japan&apos;, u&apos;MuMu Cat&apos;, 9)
+(u&apos;928375018&apos;, u&apos;Tokyo Japan&apos;, u&apos;MuMu Cat&apos;, 6)
 (u&apos;957209108&apos;, u&apos;Taipei&apos;, u&apos;Richard&apos;, 29)
 
 </pre>
@@ -2264,32 +2411,30 @@ In&nbsp;[27]:
     <section>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="update-statement">UPDATE Statement</h3>
-<h4 id="modify-the-existing-records-in-a-table">modify the existing records in a table</h4>
+<h4 id="modify-the-existing-records-in-a-table">Modify the existing records in a table</h4>
 </div></section>
     </section><section>
     <section>
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[19]:
+In&nbsp;[111]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="kn">import</span> <span class="nn">sqlite3</span> <span class="kn">as</span> <span class="nn">lite</span>
 <span class="kn">import</span> <span class="nn">sys</span>
 
 
-<span class="n">Phone</span> <span class="o">=</span> <span class="mi">928375018</span>
+<span class="n">Phone</span> <span class="o">=</span> <span class="mi">0928375018</span>
 <span class="n">Age</span> <span class="o">=</span> <span class="mi">7</span> 
 
-<span class="n">con</span> <span class="o">=</span> <span class="n">lite</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s">&#39;test.db&#39;</span><span class="p">)</span>
+<span class="n">con</span> <span class="o">=</span> <span class="n">lite</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">dbname</span><span class="p">)</span>
 
 <span class="k">with</span> <span class="n">con</span><span class="p">:</span>
 
     <span class="n">cur</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>    
 
     <span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s">&quot;UPDATE PhoneAddress SET age=? WHERE phone=?&quot;</span><span class="p">,</span> <span class="p">(</span><span class="n">Age</span><span class="p">,</span> <span class="n">Phone</span><span class="p">))</span>        
-    <span class="n">con</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
-    <span class="k">print</span> <span class="s">&quot;Number of rows updated: </span><span class="si">%d</span><span class="s">&quot;</span> <span class="o">%</span> <span class="n">cur</span><span class="o">.</span><span class="n">rowcount</span>
     
     <span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s">&quot;select * from PhoneAddress where phone=?&quot;</span><span class="p">,</span> <span class="p">(</span><span class="n">Phone</span><span class="p">,))</span> 
     <span class="n">rows</span> <span class="o">=</span> <span class="n">cur</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
@@ -2306,11 +2451,12 @@ In&nbsp;[19]:
 
 
 <div class="hbox output_area"><div class="prompt"></div>
-<div class="box-flex1 output_subarea output_stream output_stdout">
+<div class="box-flex1 output_subarea output_pyerr">
 <pre>
-Number of rows updated: 1
-(u&apos;928375018&apos;, u&apos;Tokyo Japan&apos;, u&apos;MuMu Cat&apos;, 7)
-
+<span class="ansicyan">  File </span><span class="ansigreen">&quot;&lt;ipython-input-111-35d0cda3c5f3&gt;&quot;</span><span class="ansicyan">, line </span><span class="ansigreen">5</span>
+<span class="ansiyellow">    Phone = 0928375018</span>
+<span class="ansigrey">                     ^</span>
+<span class="ansired">SyntaxError</span><span class="ansired">:</span> invalid token
 </pre>
 </div>
 </div>
@@ -2330,7 +2476,57 @@ Number of rows updated: 1
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[69]:
+In&nbsp;[112]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="kn">import</span> <span class="nn">sqlite3</span> <span class="kn">as</span> <span class="nn">lite</span>
+
+<span class="n">salary</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="p">(</span><span class="mi">1</span> <span class="p">,</span>          <span class="s">&#39;Paul&#39;</span>  <span class="p">,</span>      <span class="mi">32</span> <span class="p">,</span>         <span class="s">&#39;California&#39;</span><span class="p">,</span>  <span class="mi">20000</span><span class="p">),</span>
+    <span class="p">(</span><span class="mi">2</span> <span class="p">,</span>          <span class="s">&#39;Allen&#39;</span> <span class="p">,</span>      <span class="mi">25</span> <span class="p">,</span>         <span class="s">&#39;Texas&#39;</span>     <span class="p">,</span>  <span class="mi">15000</span><span class="p">),</span>
+    <span class="p">(</span><span class="mi">3</span> <span class="p">,</span>          <span class="s">&#39;Teddy&#39;</span> <span class="p">,</span>      <span class="mi">23</span> <span class="p">,</span>         <span class="s">&#39;Norway&#39;</span>    <span class="p">,</span>  <span class="mi">20000</span><span class="p">),</span>
+    <span class="p">(</span><span class="mi">4</span> <span class="p">,</span>          <span class="s">&#39;Mark&#39;</span>  <span class="p">,</span>      <span class="mi">25</span> <span class="p">,</span>         <span class="s">&#39;Rich-Mond&#39;</span> <span class="p">,</span>  <span class="mi">65000</span><span class="p">),</span>
+    <span class="p">(</span><span class="mi">5</span> <span class="p">,</span>          <span class="s">&#39;David&#39;</span> <span class="p">,</span>      <span class="mi">27</span> <span class="p">,</span>         <span class="s">&#39;Texas&#39;</span>     <span class="p">,</span>  <span class="mi">85000</span><span class="p">),</span>
+    <span class="p">(</span><span class="mi">6</span> <span class="p">,</span>          <span class="s">&#39;Kim&#39;</span>   <span class="p">,</span>      <span class="mi">22</span> <span class="p">,</span>         <span class="s">&#39;South-Hall&#39;</span><span class="p">,</span>  <span class="mi">45000</span><span class="p">),</span>
+    <span class="p">(</span><span class="mi">7</span> <span class="p">,</span>          <span class="s">&#39;James&#39;</span> <span class="p">,</span>      <span class="mi">24</span> <span class="p">,</span>         <span class="s">&#39;Houston&#39;</span>   <span class="p">,</span>  <span class="mi">10000</span><span class="p">)</span>
+<span class="p">)</span>
+<span class="n">department</span> <span class="o">=</span> <span class="p">(</span>
+<span class="p">(</span><span class="mi">1</span><span class="p">,</span>           <span class="s">&#39;IT Billing&#39;</span>  <span class="p">,</span><span class="mi">1</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">2</span><span class="p">,</span>           <span class="s">&#39;Engineerin&#39;</span>  <span class="p">,</span><span class="mi">2</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">3</span><span class="p">,</span>           <span class="s">&#39;Finance&#39;</span>     <span class="p">,</span><span class="mi">7</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">4</span><span class="p">,</span>           <span class="s">&#39;Finance&#39;</span>     <span class="p">,</span><span class="mi">5</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">5</span><span class="p">,</span>           <span class="s">&#39;Finance&#39;</span>     <span class="p">,</span><span class="mi">6</span><span class="p">)</span>
+
+<span class="p">)</span>
+
+<span class="n">con</span> <span class="o">=</span> <span class="n">lite</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">dbname</span><span class="p">)</span>
+
+<span class="k">with</span> <span class="n">con</span><span class="p">:</span>
+    
+    <span class="n">cur</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>    
+    
+    <span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s">&quot;DROP TABLE IF EXISTS Salary&quot;</span><span class="p">)</span>
+    <span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s">&quot;DROP TABLE IF EXISTS Department&quot;</span><span class="p">)</span>
+    
+    <span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s">&quot;CREATE TABLE Salary(ID INT, NAME TEXT, AGE INT, ADDRESS TEXT, SALARY INT, FOREIGN KEY(ID) REFERENCES QOO(EMP_ID))&quot;</span><span class="p">)</span>
+    <span class="n">cur</span><span class="o">.</span><span class="n">executemany</span><span class="p">(</span><span class="s">&quot;INSERT INTO Salary VALUES(?, ?, ?, ?, ?)&quot;</span><span class="p">,</span> <span class="n">salary</span><span class="p">)</span>
+    
+    
+    <span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s">&quot;CREATE TABLE Department(ID INT PRIMARY KEY, DEPT CHAR(50), EMP_ID INT)&quot;</span><span class="p">)</span>
+    <span class="n">cur</span><span class="o">.</span><span class="n">executemany</span><span class="p">(</span><span class="s">&quot;INSERT INTO Department VALUES(?, ?, ?)&quot;</span><span class="p">,</span> <span class="n">department</span><span class="p">)</span>
+<span class="n">con</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>    
+</pre></div>
+
+</div>
+</div>
+
+</div></section>
+    </section><section>
+    <section>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[113]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="kn">import</span> <span class="nn">sqlite3</span> <span class="kn">as</span> <span class="nn">lite</span>
@@ -2353,7 +2549,7 @@ In&nbsp;[69]:
 
 <span class="p">)</span>
 
-<span class="n">con</span> <span class="o">=</span> <span class="n">lite</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s">&#39;test.db&#39;</span><span class="p">)</span>
+<span class="n">con</span> <span class="o">=</span> <span class="n">lite</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">dbname</span><span class="p">)</span>
 
 <span class="k">with</span> <span class="n">con</span><span class="p">:</span>
     
@@ -2378,11 +2574,51 @@ In&nbsp;[69]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[]:
+In&nbsp;[114]:
 </div>
 <div class="input_area box-flex1">
-<div class="highlight"><pre><span class="n">JOIN</span> <span class="n">Operation</span>
+<div class="highlight"><pre><span class="kn">import</span> <span class="nn">sqlite3</span> <span class="kn">as</span> <span class="nn">lite</span>
+<span class="kn">import</span> <span class="nn">time</span>
+
+
+
+<span class="n">con</span> <span class="o">=</span> <span class="n">lite</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">dbname</span><span class="p">)</span>
+
+<span class="n">items</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">100</span><span class="p">))</span>
+<span class="k">with</span> <span class="n">con</span><span class="p">:</span>
+    
+    <span class="n">cur</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>    
+    
+    <span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s">&quot;DROP TABLE IF EXISTS ptest&quot;</span><span class="p">)</span>
+    <span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s">&quot;CREATE TABLE ptest(ID INT)&quot;</span><span class="p">)</span>
+    <span class="n">start</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">):</span>
+        <span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s">&quot;INSERT INTO ptest VALUES(</span><span class="si">%s</span><span class="s">)&quot;</span><span class="o">%</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+    <span class="n">end</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+    <span class="k">print</span> <span class="n">end</span> <span class="o">-</span><span class="n">start</span>
+    <span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s">&quot;select count(1) from ptest&quot;</span><span class="p">)</span>
+    <span class="n">rows</span> <span class="o">=</span> <span class="n">cur</span><span class="o">.</span><span class="n">fetchone</span><span class="p">()</span>
+    <span class="k">print</span> <span class="n">rows</span>
+
+<span class="n">con</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>    
 </pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_stream output_stdout">
+<pre>
+0.00100016593933
+(1,)
+
+</pre>
+</div>
+</div>
 
 </div>
 </div>
@@ -2393,14 +2629,78 @@ In&nbsp;[]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[70]:
+In&nbsp;[115]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="kn">import</span> <span class="nn">sqlite3</span> <span class="kn">as</span> <span class="nn">lite</span>
+<span class="kn">import</span> <span class="nn">time</span>
+
+<span class="n">con</span> <span class="o">=</span> <span class="n">lite</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">dbname</span><span class="p">)</span>
+
+<span class="k">with</span> <span class="n">con</span><span class="p">:</span>
+    
+    <span class="n">cur</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>    
+    
+    <span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s">&quot;DROP TABLE IF EXISTS ptest&quot;</span><span class="p">)</span>
+    <span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s">&quot;CREATE TABLE ptest(ID INT)&quot;</span><span class="p">)</span>
+    <span class="n">start</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+    <span class="n">cur</span><span class="o">.</span><span class="n">executemany</span><span class="p">(</span><span class="s">&quot;INSERT INTO ptest VALUES(?)&quot;</span><span class="p">,((</span><span class="n">id_</span><span class="p">,</span> <span class="p">)</span> <span class="k">for</span> <span class="n">id_</span> <span class="ow">in</span> <span class="nb">xrange</span><span class="p">(</span><span class="mi">1</span><span class="p">)))</span>
+    <span class="n">end</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+    <span class="k">print</span> <span class="n">end</span> <span class="o">-</span><span class="n">start</span>
+    <span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s">&quot;select count(1) from ptest&quot;</span><span class="p">)</span>
+    <span class="n">rows</span> <span class="o">=</span> <span class="n">cur</span><span class="o">.</span><span class="n">fetchone</span><span class="p">()</span>
+    <span class="k">print</span> <span class="n">rows</span>
+
+<span class="n">con</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>    
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_stream output_stdout">
+<pre>
+0.000999927520752
+(1,)
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="figure">
+<img src="postgresql_query.png" />
+</div>
+</div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="join-operation">JOIN Operation</h3>
+<h4 id="combines-records-from-two-or-more-tables-in-a-database">Combines records from two or more tables in a database</h4>
+</div></section>
+    </section><section>
+    <section>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[116]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="kn">import</span> <span class="nn">sqlite3</span> <span class="kn">as</span> <span class="nn">lite</span>
 <span class="kn">import</span> <span class="nn">sys</span>
 
 
-<span class="n">con</span> <span class="o">=</span> <span class="n">lite</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s">&#39;test.db&#39;</span><span class="p">)</span>
+<span class="n">con</span> <span class="o">=</span> <span class="n">lite</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">dbname</span><span class="p">)</span>
 
 <span class="k">with</span> <span class="n">con</span><span class="p">:</span>
 
@@ -2443,19 +2743,19 @@ In&nbsp;[70]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[71]:
+In&nbsp;[117]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="kn">import</span> <span class="nn">sqlite3</span> <span class="kn">as</span> <span class="nn">lite</span>
 <span class="kn">import</span> <span class="nn">sys</span>
 
 
-<span class="n">con</span> <span class="o">=</span> <span class="n">lite</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s">&#39;test.db&#39;</span><span class="p">)</span>
+<span class="n">con</span> <span class="o">=</span> <span class="n">lite</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">dbname</span><span class="p">)</span>
 
 <span class="k">with</span> <span class="n">con</span><span class="p">:</span>
 
     <span class="n">cur</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>    
-    <span class="c"># LEFT Join </span>
+    <span class="c"># Inner Join Type 2</span>
     <span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s">&quot;select * from Salary,Department where Salary.id = Department.id&quot;</span><span class="p">)</span> 
     <span class="n">rows</span> <span class="o">=</span> <span class="n">cur</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
 
@@ -2493,19 +2793,67 @@ In&nbsp;[71]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[65]:
+In&nbsp;[118]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="kn">import</span> <span class="nn">sqlite3</span> <span class="kn">as</span> <span class="nn">lite</span>
 <span class="kn">import</span> <span class="nn">sys</span>
 
 
-<span class="n">con</span> <span class="o">=</span> <span class="n">lite</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s">&#39;test.db&#39;</span><span class="p">)</span>
+<span class="n">con</span> <span class="o">=</span> <span class="n">lite</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">dbname</span><span class="p">)</span>
 
 <span class="k">with</span> <span class="n">con</span><span class="p">:</span>
 
     <span class="n">cur</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>    
-    <span class="c"># Inner Join Type 1</span>
+    <span class="c"># Sub-Query</span>
+    <span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s">&quot;SELECT * from Salary, ( SELECT id, dept  FROM   Department   WHERE id &lt; 3) dpt&quot;</span><span class="o">+</span>
+                <span class="s">&quot; WHERE Salary.id = dpt.id&quot;</span><span class="p">)</span> 
+    <span class="n">rows</span> <span class="o">=</span> <span class="n">cur</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
+
+    <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">rows</span><span class="p">:</span>
+        <span class="k">print</span> <span class="n">row</span>
+<span class="n">con</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_stream output_stdout">
+<pre>
+(1, u&apos;Paul&apos;, 32, u&apos;California&apos;, 20000, 1, u&apos;IT Billing&apos;)
+(2, u&apos;Allen&apos;, 25, u&apos;Texas&apos;, 15000, 2, u&apos;Engineerin&apos;)
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section>
+    </section><section>
+    <section>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[119]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="kn">import</span> <span class="nn">sqlite3</span> <span class="kn">as</span> <span class="nn">lite</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+
+
+<span class="n">con</span> <span class="o">=</span> <span class="n">lite</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">dbname</span><span class="p">)</span>
+
+<span class="k">with</span> <span class="n">con</span><span class="p">:</span>
+
+    <span class="n">cur</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>    
+    <span class="c"># Left Join</span>
     <span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s">&quot;select * from Salary LEFT join Department on Salary.id = Department.id &quot;</span><span class="p">)</span> 
     <span class="n">rows</span> <span class="o">=</span> <span class="n">cur</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
 
@@ -2527,6 +2875,8 @@ In&nbsp;[65]:
 (1, u&apos;Paul&apos;, 32, u&apos;California&apos;, 20000, 1, u&apos;IT Billing&apos;, 1)
 (2, u&apos;Allen&apos;, 25, u&apos;Texas&apos;, 15000, 2, u&apos;Engineerin&apos;, 2)
 (3, u&apos;Teddy&apos;, 23, u&apos;Norway&apos;, 20000, 3, u&apos;Finance&apos;, 7)
+(3, u&apos;Teddy&apos;, 23, u&apos;Norway&apos;, 20000, 3, u&apos;Finance&apos;, 5)
+(3, u&apos;Teddy&apos;, 23, u&apos;Norway&apos;, 20000, 3, u&apos;Finance&apos;, 6)
 (4, u&apos;Mark&apos;, 25, u&apos;Rich-Mond&apos;, 65000, None, None, None)
 (5, u&apos;David&apos;, 27, u&apos;Texas&apos;, 85000, None, None, None)
 (6, u&apos;Kim&apos;, 22, u&apos;South-Hall&apos;, 45000, None, None, None)
@@ -2545,19 +2895,19 @@ In&nbsp;[65]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[73]:
+In&nbsp;[120]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="kn">import</span> <span class="nn">sqlite3</span> <span class="kn">as</span> <span class="nn">lite</span>
 <span class="kn">import</span> <span class="nn">sys</span>
 
 
-<span class="n">con</span> <span class="o">=</span> <span class="n">lite</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s">&#39;test.db&#39;</span><span class="p">)</span>
+<span class="n">con</span> <span class="o">=</span> <span class="n">lite</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">dbname</span><span class="p">)</span>
 
 <span class="k">with</span> <span class="n">con</span><span class="p">:</span>
 
     <span class="n">cur</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>    
-    <span class="c"># Inner Join Type 1</span>
+    <span class="c"># Cross Join Example</span>
     <span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s">&quot;select * from Salary CROSS join Department on Salary.id = Department.id &quot;</span><span class="p">)</span> 
     <span class="n">rows</span> <span class="o">=</span> <span class="n">cur</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
 
@@ -2595,14 +2945,14 @@ In&nbsp;[73]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[72]:
+In&nbsp;[121]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="kn">import</span> <span class="nn">sqlite3</span> <span class="kn">as</span> <span class="nn">lite</span>
 <span class="kn">import</span> <span class="nn">sys</span>
 
 
-<span class="n">con</span> <span class="o">=</span> <span class="n">lite</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s">&#39;test.db&#39;</span><span class="p">)</span>
+<span class="n">con</span> <span class="o">=</span> <span class="n">lite</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">dbname</span><span class="p">)</span>
 
 <span class="k">with</span> <span class="n">con</span><span class="p">:</span>
 
@@ -2645,14 +2995,14 @@ In&nbsp;[72]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[75]:
+In&nbsp;[122]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="kn">import</span> <span class="nn">sqlite3</span> <span class="kn">as</span> <span class="nn">lite</span>
 <span class="kn">import</span> <span class="nn">sys</span>
 
 
-<span class="n">con</span> <span class="o">=</span> <span class="n">lite</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s">&#39;test.db&#39;</span><span class="p">)</span>
+<span class="n">con</span> <span class="o">=</span> <span class="n">lite</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">dbname</span><span class="p">)</span>
 
 <span class="k">with</span> <span class="n">con</span><span class="p">:</span>
 
@@ -2691,14 +3041,14 @@ In&nbsp;[75]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[74]:
+In&nbsp;[123]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="kn">import</span> <span class="nn">sqlite3</span> <span class="kn">as</span> <span class="nn">lite</span>
 <span class="kn">import</span> <span class="nn">sys</span>
 
 
-<span class="n">con</span> <span class="o">=</span> <span class="n">lite</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s">&#39;test.db&#39;</span><span class="p">)</span>
+<span class="n">con</span> <span class="o">=</span> <span class="n">lite</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">dbname</span><span class="p">)</span>
 
 <span class="k">with</span> <span class="n">con</span><span class="p">:</span>
 
@@ -2737,14 +3087,14 @@ In&nbsp;[74]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[91]:
+In&nbsp;[124]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="kn">import</span> <span class="nn">sqlite3</span> <span class="kn">as</span> <span class="nn">lite</span>
 <span class="kn">import</span> <span class="nn">sys</span>
 
 
-<span class="n">con</span> <span class="o">=</span> <span class="n">lite</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s">&#39;test.db&#39;</span><span class="p">)</span>
+<span class="n">con</span> <span class="o">=</span> <span class="n">lite</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">dbname</span><span class="p">)</span>
 
 <span class="k">with</span> <span class="n">con</span><span class="p">:</span>
 
@@ -2785,14 +3135,14 @@ In&nbsp;[91]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[92]:
+In&nbsp;[125]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="kn">import</span> <span class="nn">sqlite3</span> <span class="kn">as</span> <span class="nn">lite</span>
 <span class="kn">import</span> <span class="nn">sys</span>
 
 
-<span class="n">con</span> <span class="o">=</span> <span class="n">lite</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s">&#39;test.db&#39;</span><span class="p">)</span>
+<span class="n">con</span> <span class="o">=</span> <span class="n">lite</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">dbname</span><span class="p">)</span>
 
 <span class="k">with</span> <span class="n">con</span><span class="p">:</span>
 
@@ -2839,20 +3189,21 @@ In&nbsp;[92]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[79]:
+In&nbsp;[126]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="kn">import</span> <span class="nn">sqlite3</span> <span class="kn">as</span> <span class="nn">lite</span>
 <span class="kn">import</span> <span class="nn">sys</span>
 
 
-<span class="n">con</span> <span class="o">=</span> <span class="n">lite</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s">&#39;test.db&#39;</span><span class="p">)</span>
+<span class="n">con</span> <span class="o">=</span> <span class="n">lite</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">dbname</span><span class="p">)</span>
 
 <span class="k">with</span> <span class="n">con</span><span class="p">:</span>
 
     <span class="n">cur</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>    
     <span class="c"># Get Maximum Salary and Minimum Salary</span>
-    <span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s">&quot;select dept ,max(salary), min(salary) from Salary inner join Department on Salary.id = Department.emp_id group by dept &quot;</span><span class="p">)</span> 
+    <span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s">&quot;select dept ,max(salary), min(salary) from Salary inner join&quot;</span> <span class="o">+</span> 
+                <span class="s">&quot; Department on Salary.id = Department.emp_id group by dept &quot;</span><span class="p">)</span> 
     <span class="n">rows</span> <span class="o">=</span> <span class="n">cur</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
 
     <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">rows</span><span class="p">:</span>
@@ -2887,14 +3238,14 @@ In&nbsp;[79]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[80]:
+In&nbsp;[127]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="kn">import</span> <span class="nn">sqlite3</span> <span class="kn">as</span> <span class="nn">lite</span>
 <span class="kn">import</span> <span class="nn">sys</span>
 
 
-<span class="n">con</span> <span class="o">=</span> <span class="n">lite</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s">&#39;test.db&#39;</span><span class="p">)</span>
+<span class="n">con</span> <span class="o">=</span> <span class="n">lite</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">dbname</span><span class="p">)</span>
 
 <span class="k">with</span> <span class="n">con</span><span class="p">:</span>
 
@@ -2936,14 +3287,14 @@ In&nbsp;[80]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[87]:
+In&nbsp;[128]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="kn">import</span> <span class="nn">sqlite3</span> <span class="kn">as</span> <span class="nn">lite</span>
 <span class="kn">import</span> <span class="nn">sys</span>
 
 
-<span class="n">con</span> <span class="o">=</span> <span class="n">lite</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s">&#39;test.db&#39;</span><span class="p">)</span>
+<span class="n">con</span> <span class="o">=</span> <span class="n">lite</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">dbname</span><span class="p">)</span>
 
 <span class="k">with</span> <span class="n">con</span><span class="p">:</span>
 
@@ -2985,14 +3336,14 @@ In&nbsp;[87]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[85]:
+In&nbsp;[129]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="kn">import</span> <span class="nn">sqlite3</span> <span class="kn">as</span> <span class="nn">lite</span>
 <span class="kn">import</span> <span class="nn">sys</span>
 
 
-<span class="n">con</span> <span class="o">=</span> <span class="n">lite</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s">&#39;test.db&#39;</span><span class="p">)</span>
+<span class="n">con</span> <span class="o">=</span> <span class="n">lite</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">dbname</span><span class="p">)</span>
 
 <span class="k">with</span> <span class="n">con</span><span class="p">:</span>
 
@@ -3038,25 +3389,24 @@ In&nbsp;[85]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[23]:
+In&nbsp;[130]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="kn">import</span> <span class="nn">sqlite3</span> <span class="kn">as</span> <span class="nn">lite</span>
 <span class="kn">import</span> <span class="nn">sys</span>
 
-<span class="n">Phone</span> <span class="o">=</span> <span class="mi">928375018</span>
+<span class="n">Phone</span> <span class="o">=</span> <span class="mi">0928375018</span>
 <span class="n">Age</span> <span class="o">=</span> <span class="mi">9</span> 
 
-<span class="n">con</span> <span class="o">=</span> <span class="n">lite</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s">&#39;test.db&#39;</span><span class="p">)</span>
+<span class="n">con</span> <span class="o">=</span> <span class="n">lite</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">dbname</span><span class="p">)</span>
 
 <span class="k">with</span> <span class="n">con</span><span class="p">:</span>
 
     <span class="n">cur</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>    
 
     <span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s">&quot;UPDATE PhoneAddress SET age=? WHERE phone=?&quot;</span><span class="p">,</span> <span class="p">(</span><span class="n">Age</span><span class="p">,</span> <span class="n">Phone</span><span class="p">))</span>        
-    <span class="n">con</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
-    <span class="c">#con.rollback()</span>
-    <span class="k">print</span> <span class="s">&quot;Number of rows updated: </span><span class="si">%d</span><span class="s">&quot;</span> <span class="o">%</span> <span class="n">cur</span><span class="o">.</span><span class="n">rowcount</span>
+    <span class="c">#con.commit()</span>
+    <span class="n">con</span><span class="o">.</span><span class="n">rollback</span><span class="p">()</span>
     
     <span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s">&quot;select * from PhoneAddress where phone=?&quot;</span><span class="p">,</span> <span class="p">(</span><span class="n">Phone</span><span class="p">,))</span> 
     <span class="n">rows</span> <span class="o">=</span> <span class="n">cur</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
@@ -3074,11 +3424,12 @@ In&nbsp;[23]:
 
 
 <div class="hbox output_area"><div class="prompt"></div>
-<div class="box-flex1 output_subarea output_stream output_stdout">
+<div class="box-flex1 output_subarea output_pyerr">
 <pre>
-Number of rows updated: 1
-(u&apos;928375018&apos;, u&apos;Tokyo Japan&apos;, u&apos;MuMu Cat&apos;, 9)
-
+<span class="ansicyan">  File </span><span class="ansigreen">&quot;&lt;ipython-input-130-ecd803566bda&gt;&quot;</span><span class="ansicyan">, line </span><span class="ansigreen">4</span>
+<span class="ansiyellow">    Phone = 0928375018</span>
+<span class="ansigrey">                     ^</span>
+<span class="ansired">SyntaxError</span><span class="ansired">:</span> invalid token
 </pre>
 </div>
 </div>
@@ -3098,14 +3449,14 @@ Number of rows updated: 1
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[28]:
+In&nbsp;[131]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="kn">import</span> <span class="nn">sqlite3</span> <span class="kn">as</span> <span class="nn">lite</span>
 <span class="kn">import</span> <span class="nn">sys</span>
 
 <span class="k">def</span> <span class="nf">SelectData</span><span class="p">(</span><span class="n">phone</span><span class="p">):</span>
-    <span class="n">con</span> <span class="o">=</span> <span class="n">lite</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s">&#39;test.db&#39;</span><span class="p">)</span>
+    <span class="n">con</span> <span class="o">=</span> <span class="n">lite</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">dbname</span><span class="p">)</span>
     
     <span class="k">with</span> <span class="n">con</span><span class="p">:</span>
     
@@ -3130,11 +3481,24 @@ In&nbsp;[28]:
 
 
 <div class="hbox output_area"><div class="prompt"></div>
-<div class="box-flex1 output_subarea output_stream output_stdout">
+<div class="box-flex1 output_subarea output_pyerr">
 <pre>
-(u&apos;928375018&apos;, u&apos;Tokyo Japan&apos;, u&apos;MuMu Cat&apos;, 9)
+<span class="ansired">---------------------------------------------------------------------------</span>
+<span class="ansired">NameError</span>                                 Traceback (most recent call last)
+<span class="ansigreen">&lt;ipython-input-131-dc59bc3c431e&gt;</span> in <span class="ansicyan">&lt;module&gt;</span><span class="ansiblue">()</span>
+<span class="ansigreen">     16</span>     con<span class="ansiyellow">.</span>close<span class="ansiyellow">(</span><span class="ansiyellow">)</span><span class="ansiyellow"></span>
+<span class="ansigreen">     17</span> <span class="ansiyellow"></span>
+<span class="ansigreen">---&gt; 18</span><span class="ansiyellow"> </span>SelectData<span class="ansiyellow">(</span><span class="ansicyan">928375018</span><span class="ansiyellow">)</span><span class="ansiyellow"></span>
+<span class="ansigreen">     19</span> <span class="ansiyellow"></span>
 
-</pre>
+<span class="ansigreen">&lt;ipython-input-131-dc59bc3c431e&gt;</span> in <span class="ansicyan">SelectData</span><span class="ansiblue">(phone)</span>
+<span class="ansigreen">      9</span>         cur <span class="ansiyellow">=</span> con<span class="ansiyellow">.</span>cursor<span class="ansiyellow">(</span><span class="ansiyellow">)</span><span class="ansiyellow"></span>
+<span class="ansigreen">     10</span> <span class="ansiyellow"></span>
+<span class="ansigreen">---&gt; 11</span><span class="ansiyellow">         </span>cur<span class="ansiyellow">.</span>execute<span class="ansiyellow">(</span><span class="ansiblue">&quot;select * from PhoneAddress where phone=?&quot;</span><span class="ansiyellow">,</span> <span class="ansiyellow">(</span>Phone<span class="ansiyellow">,</span><span class="ansiyellow">)</span><span class="ansiyellow">)</span><span class="ansiyellow"></span>
+<span class="ansigreen">     12</span>         rows <span class="ansiyellow">=</span> cur<span class="ansiyellow">.</span>fetchall<span class="ansiyellow">(</span><span class="ansiyellow">)</span><span class="ansiyellow"></span>
+<span class="ansigreen">     13</span> <span class="ansiyellow"></span>
+
+<span class="ansired">NameError</span>: global name &apos;Phone&apos; is not defined</pre>
 </div>
 </div>
 
@@ -3147,14 +3511,14 @@ In&nbsp;[28]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[30]:
+In&nbsp;[132]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="kn">import</span> <span class="nn">sqlite3</span> <span class="kn">as</span> <span class="nn">lite</span>
 <span class="kn">import</span> <span class="nn">sys</span>
 
 <span class="k">def</span> <span class="nf">SelectData</span><span class="p">(</span><span class="n">phone</span><span class="p">):</span>
-    <span class="n">con</span> <span class="o">=</span> <span class="n">lite</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s">&#39;test.db&#39;</span><span class="p">)</span>
+    <span class="n">con</span> <span class="o">=</span> <span class="n">lite</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">dbname</span><span class="p">)</span>
     
     <span class="k">with</span> <span class="n">con</span><span class="p">:</span>
     
@@ -3167,7 +3531,7 @@ In&nbsp;[30]:
             <span class="k">print</span> <span class="n">row</span>
     <span class="n">con</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
     
-<span class="n">SelectData</span><span class="p">(</span><span class="s">&#39;928375018 or 1=1&#39;</span><span class="p">)</span>
+<span class="n">SelectData</span><span class="p">(</span><span class="s">&#39;0928375018 or 1=1&#39;</span><span class="p">)</span>
     
 </pre></div>
 
@@ -3179,11 +3543,24 @@ In&nbsp;[30]:
 
 
 <div class="hbox output_area"><div class="prompt"></div>
-<div class="box-flex1 output_subarea output_stream output_stdout">
+<div class="box-flex1 output_subarea output_pyerr">
 <pre>
-(u&apos;928375018&apos;, u&apos;Tokyo Japan&apos;, u&apos;MuMu Cat&apos;, 9)
+<span class="ansired">---------------------------------------------------------------------------</span>
+<span class="ansired">NameError</span>                                 Traceback (most recent call last)
+<span class="ansigreen">&lt;ipython-input-132-2da57f7282cf&gt;</span> in <span class="ansicyan">&lt;module&gt;</span><span class="ansiblue">()</span>
+<span class="ansigreen">     16</span>     con<span class="ansiyellow">.</span>close<span class="ansiyellow">(</span><span class="ansiyellow">)</span><span class="ansiyellow"></span>
+<span class="ansigreen">     17</span> <span class="ansiyellow"></span>
+<span class="ansigreen">---&gt; 18</span><span class="ansiyellow"> </span>SelectData<span class="ansiyellow">(</span><span class="ansiblue">&apos;0928375018 or 1=1&apos;</span><span class="ansiyellow">)</span><span class="ansiyellow"></span>
+<span class="ansigreen">     19</span> <span class="ansiyellow"></span>
 
-</pre>
+<span class="ansigreen">&lt;ipython-input-132-2da57f7282cf&gt;</span> in <span class="ansicyan">SelectData</span><span class="ansiblue">(phone)</span>
+<span class="ansigreen">      9</span>         cur <span class="ansiyellow">=</span> con<span class="ansiyellow">.</span>cursor<span class="ansiyellow">(</span><span class="ansiyellow">)</span><span class="ansiyellow"></span>
+<span class="ansigreen">     10</span> <span class="ansiyellow"></span>
+<span class="ansigreen">---&gt; 11</span><span class="ansiyellow">         </span>cur<span class="ansiyellow">.</span>execute<span class="ansiyellow">(</span><span class="ansiblue">&quot;select * from PhoneAddress where phone=?&quot;</span><span class="ansiyellow">,</span> <span class="ansiyellow">(</span>Phone<span class="ansiyellow">,</span><span class="ansiyellow">)</span><span class="ansiyellow">)</span><span class="ansiyellow"></span>
+<span class="ansigreen">     12</span>         rows <span class="ansiyellow">=</span> cur<span class="ansiyellow">.</span>fetchall<span class="ansiyellow">(</span><span class="ansiyellow">)</span><span class="ansiyellow"></span>
+<span class="ansigreen">     13</span> <span class="ansiyellow"></span>
+
+<span class="ansired">NameError</span>: global name &apos;Phone&apos; is not defined</pre>
 </div>
 </div>
 
@@ -3196,14 +3573,14 @@ In&nbsp;[30]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[41]:
+In&nbsp;[133]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="kn">import</span> <span class="nn">sqlite3</span> <span class="kn">as</span> <span class="nn">lite</span>
 <span class="kn">import</span> <span class="nn">sys</span>
 
 <span class="k">def</span> <span class="nf">SelectData</span><span class="p">(</span><span class="n">PhoneNumber</span><span class="p">):</span>
-    <span class="n">con</span> <span class="o">=</span> <span class="n">lite</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s">&#39;test.db&#39;</span><span class="p">)</span>
+    <span class="n">con</span> <span class="o">=</span> <span class="n">lite</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">dbname</span><span class="p">)</span>
     
     <span class="k">with</span> <span class="n">con</span><span class="p">:</span>
     
@@ -3230,14 +3607,14 @@ In&nbsp;[41]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[52]:
+In&nbsp;[134]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="kn">import</span> <span class="nn">sqlite3</span> <span class="kn">as</span> <span class="nn">lite</span>
 <span class="kn">import</span> <span class="nn">sys</span>
 
 <span class="k">def</span> <span class="nf">SelectData</span><span class="p">(</span><span class="n">PhoneNumber</span><span class="p">):</span>
-    <span class="n">con</span> <span class="o">=</span> <span class="n">lite</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s">&#39;test.db&#39;</span><span class="p">)</span>
+    <span class="n">con</span> <span class="o">=</span> <span class="n">lite</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">dbname</span><span class="p">)</span>
     
     <span class="k">with</span> <span class="n">con</span><span class="p">:</span>
     
@@ -3251,7 +3628,7 @@ In&nbsp;[52]:
     <span class="n">con</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
     
     
-<span class="n">SelectData</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\&#39;\&#39;</span><span class="s"> or 1=1; INSERT INTO PhoneAddress VALUES(923111999,&#39;Hacker&#39;,&#39;Qoo&#39;,0);&quot;</span><span class="p">)</span>
+<span class="n">SelectData</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\&#39;\&#39;</span><span class="s"> or 1=1; INSERT INTO PhoneAddress VALUES(0923111999,&#39;Hacker&#39;,&#39;Qoo&#39;,0);&quot;</span><span class="p">)</span>
     
 </pre></div>
 
@@ -3267,13 +3644,13 @@ In&nbsp;[52]:
 <pre>
 <span class="ansired">---------------------------------------------------------------------------</span>
 <span class="ansired">Warning</span>                                   Traceback (most recent call last)
-<span class="ansigreen">&lt;ipython-input-52-759f87c2b5fd&gt;</span> in <span class="ansicyan">&lt;module&gt;</span><span class="ansiblue">()</span>
+<span class="ansigreen">&lt;ipython-input-134-827eccbf8011&gt;</span> in <span class="ansicyan">&lt;module&gt;</span><span class="ansiblue">()</span>
 <span class="ansigreen">     17</span> <span class="ansiyellow"></span>
 <span class="ansigreen">     18</span> <span class="ansiyellow"></span>
-<span class="ansigreen">---&gt; 19</span><span class="ansiyellow"> </span>SelectData<span class="ansiyellow">(</span><span class="ansiblue">&quot;\&apos;\&apos; or 1=1; INSERT INTO PhoneAddress VALUES(923111999,&apos;Hacker&apos;,&apos;Qoo&apos;,0);&quot;</span><span class="ansiyellow">)</span><span class="ansiyellow"></span>
+<span class="ansigreen">---&gt; 19</span><span class="ansiyellow"> </span>SelectData<span class="ansiyellow">(</span><span class="ansiblue">&quot;\&apos;\&apos; or 1=1; INSERT INTO PhoneAddress VALUES(0923111999,&apos;Hacker&apos;,&apos;Qoo&apos;,0);&quot;</span><span class="ansiyellow">)</span><span class="ansiyellow"></span>
 <span class="ansigreen">     20</span> <span class="ansiyellow"></span>
 
-<span class="ansigreen">&lt;ipython-input-52-759f87c2b5fd&gt;</span> in <span class="ansicyan">SelectData</span><span class="ansiblue">(PhoneNumber)</span>
+<span class="ansigreen">&lt;ipython-input-134-827eccbf8011&gt;</span> in <span class="ansicyan">SelectData</span><span class="ansiblue">(PhoneNumber)</span>
 <span class="ansigreen">      9</span>         cur <span class="ansiyellow">=</span> con<span class="ansiyellow">.</span>cursor<span class="ansiyellow">(</span><span class="ansiyellow">)</span><span class="ansiyellow"></span>
 <span class="ansigreen">     10</span> <span class="ansiyellow"></span>
 <span class="ansigreen">---&gt; 11</span><span class="ansiyellow">         </span>cur<span class="ansiyellow">.</span>execute<span class="ansiyellow">(</span><span class="ansiblue">&quot;select * from PhoneAddress where phone= &quot;</span> <span class="ansiyellow">+</span> PhoneNumber<span class="ansiyellow">)</span><span class="ansiyellow"></span>
@@ -3290,6 +3667,96 @@ In&nbsp;[52]:
 </div></section>
     </section><section>
     <section>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[135]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="kn">import</span> <span class="nn">sqlite3</span> <span class="kn">as</span> <span class="nn">lite</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+
+<span class="k">def</span> <span class="nf">SelectData</span><span class="p">(</span><span class="n">PhoneNumber</span><span class="p">):</span>
+    <span class="n">con</span> <span class="o">=</span> <span class="n">lite</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">dbname</span><span class="p">)</span>
+    
+    <span class="k">with</span> <span class="n">con</span><span class="p">:</span>
+    
+        <span class="n">cur</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>    
+        <span class="c">#using execute script</span>
+        <span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s">&quot;delete from PhoneAddress where phone = &#39;0923111999&#39;&quot;</span><span class="p">)</span> 
+        <span class="n">cur</span><span class="o">.</span><span class="n">executescript</span><span class="p">(</span><span class="s">&quot;select * from PhoneAddress where phone= &quot;</span> <span class="o">+</span> <span class="n">PhoneNumber</span><span class="p">)</span>        
+
+        <span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s">&quot;select * from PhoneAddress&quot;</span><span class="p">)</span>        
+        <span class="n">rows</span> <span class="o">=</span> <span class="n">cur</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
+    
+        <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">rows</span><span class="p">:</span>
+            <span class="k">print</span> <span class="n">row</span>            
+    <span class="n">con</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+    
+    
+<span class="n">SelectData</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\&#39;\&#39;</span><span class="s"> or 1=1; INSERT INTO PhoneAddress VALUES(0923111999,&#39;Hacker&#39;,&#39;Qoo&#39;,0);&quot;</span><span class="p">)</span>
+    
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_stream output_stdout">
+<pre>
+(u&apos;912173381&apos;, u&apos;United State&apos;, u&apos;Jhon Doe&apos;, 53)
+(u&apos;928375018&apos;, u&apos;Tokyo Japan&apos;, u&apos;MuMu Cat&apos;, 6)
+(u&apos;957209108&apos;, u&apos;Taipei&apos;, u&apos;Richard&apos;, 29)
+(u&apos;923111999&apos;, u&apos;Hacker&apos;, u&apos;Qoo&apos;, 0)
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section>
+    </section><section>
+    <section>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[136]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="kn">import</span> <span class="nn">sqlite3</span> <span class="kn">as</span> <span class="nn">lite</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+
+<span class="k">def</span> <span class="nf">SelectData</span><span class="p">(</span><span class="n">PhoneNumber</span><span class="p">):</span>
+    <span class="n">con</span> <span class="o">=</span> <span class="n">lite</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">dbname</span><span class="p">)</span>
+    
+    <span class="k">with</span> <span class="n">con</span><span class="p">:</span>
+    
+        <span class="n">cur</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>    
+        
+        <span class="n">cur</span><span class="o">.</span><span class="n">executescript</span><span class="p">(</span><span class="s">&quot;select * from PhoneAddress &quot;</span> <span class="p">)</span>        
+        <span class="n">rows</span> <span class="o">=</span> <span class="n">cur</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
+    
+        <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">rows</span><span class="p">:</span>
+            <span class="k">print</span> <span class="n">row</span>
+    <span class="n">con</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+    
+    
+<span class="n">SelectData</span><span class="p">(</span><span class="s">&quot;qoo&quot;</span><span class="p">)</span>
+    
+</pre></div>
+
+</div>
+</div>
+
+</div></section>
+    </section><section>
+    <section>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="hacking-into-system">Hacking into system</h3>
 <h4 id="get-all-username-and-password-using-sql-injection">Get all username and password using SQL Injection</h4>
@@ -3299,17 +3766,18 @@ In&nbsp;[52]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[54]:
+In&nbsp;[137]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="kn">import</span> <span class="nn">sqlite3</span> <span class="kn">as</span> <span class="nn">lite</span>
 <span class="kn">import</span> <span class="nn">sys</span>
 
-<span class="n">con</span> <span class="o">=</span> <span class="n">lite</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s">&#39;test.db&#39;</span><span class="p">)</span>
+<span class="n">con</span> <span class="o">=</span> <span class="n">lite</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">dbname</span><span class="p">)</span>
 
 <span class="k">with</span> <span class="n">con</span><span class="p">:</span>
     
     <span class="n">cur</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>    
+    <span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s">&quot;DROP TABLE IF EXISTS User&quot;</span><span class="p">)</span> 
     <span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s">&quot;CREATE TABLE User(username TEXT, password TEXT)&quot;</span><span class="p">)</span>
     <span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s">&quot;INSERT INTO User VALUES(&#39;Jhon Doe&#39;,&#39;1QWE#$!@#&#39;)&quot;</span><span class="p">)</span>
 <span class="n">con</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>    
@@ -3324,14 +3792,14 @@ In&nbsp;[54]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[58]:
+In&nbsp;[138]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="kn">import</span> <span class="nn">sqlite3</span> <span class="kn">as</span> <span class="nn">lite</span>
 <span class="kn">import</span> <span class="nn">sys</span>
 
 <span class="k">def</span> <span class="nf">SelectData</span><span class="p">(</span><span class="n">UserName</span><span class="p">,</span> <span class="n">PassWord</span><span class="p">):</span>
-    <span class="n">con</span> <span class="o">=</span> <span class="n">lite</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s">&#39;test.db&#39;</span><span class="p">)</span>
+    <span class="n">con</span> <span class="o">=</span> <span class="n">lite</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">dbname</span><span class="p">)</span>
     
     <span class="k">with</span> <span class="n">con</span><span class="p">:</span>
     
@@ -3364,6 +3832,19 @@ In&nbsp;[58]:
 </pre>
 </div>
 </div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[138]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre>
+</pre></div>
 
 </div>
 </div>
