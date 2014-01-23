@@ -1855,7 +1855,7 @@ text-align: inherit;
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[99]:
+In&nbsp;[12]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="kn">import</span> <span class="nn">sqlite3</span>
@@ -1870,7 +1870,7 @@ In&nbsp;[99]:
 
 
 <div class="hbox output_area"><div class="prompt output_prompt">
-    Out[99]:</div>
+    Out[12]:</div>
 <div class="box-flex1 output_subarea output_pyout">
 
 
@@ -1905,7 +1905,7 @@ In&nbsp;[99]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[100]:
+In&nbsp;[13]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="c">#Speicified DB Name</span>
@@ -1921,7 +1921,7 @@ In&nbsp;[100]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[101]:
+In&nbsp;[14]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="kn">import</span> <span class="nn">sqlite3</span> <span class="kn">as</span> <span class="nn">lite</span>
@@ -1975,7 +1975,7 @@ SQLite version: 3.6.21
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[102]:
+In&nbsp;[15]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="kn">import</span> <span class="nn">sqlite3</span> <span class="kn">as</span> <span class="nn">lite</span>
@@ -1989,9 +1989,9 @@ In&nbsp;[102]:
     <span class="c"># Drop Table If Exisits</span>
     <span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s">&quot;DROP TABLE IF EXISTS PhoneAddress&quot;</span><span class="p">)</span>    
     <span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s">&quot;CREATE TABLE PhoneAddress(phone CHAR(10) PRIMARY KEY, address TEXT, name TEXT unique, age INT NOT NULL)&quot;</span><span class="p">)</span>
-    <span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s">&quot;INSERT INTO PhoneAddress VALUES(0912173381,&#39;United State&#39;,&#39;Jhon Doe&#39;,53)&quot;</span><span class="p">)</span>
-    <span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s">&quot;INSERT INTO PhoneAddress VALUES(0928375018,&#39;Tokyo Japan&#39;,&#39;MuMu Cat&#39;,6)&quot;</span><span class="p">)</span>
-    <span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s">&quot;INSERT INTO PhoneAddress VALUES(0957209108,&#39;Taipei&#39;,&#39;Richard&#39;,29)&quot;</span><span class="p">)</span>
+    <span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s">&quot;INSERT INTO PhoneAddress VALUES(&#39;0912173381&#39;,&#39;United State&#39;,&#39;Jhon Doe&#39;,53)&quot;</span><span class="p">)</span>
+    <span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s">&quot;INSERT INTO PhoneAddress VALUES(&#39;0928375018&#39;,&#39;Tokyo Japan&#39;,&#39;MuMu Cat&#39;,6)&quot;</span><span class="p">)</span>
+    <span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s">&quot;INSERT INTO PhoneAddress VALUES(&#39;0957209108&#39;,&#39;Taipei&#39;,&#39;Richard&#39;,29)&quot;</span><span class="p">)</span>
 <span class="n">con</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>    
 </pre></div>
 
@@ -2004,7 +2004,7 @@ In&nbsp;[102]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[103]:
+In&nbsp;[16]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="kn">import</span> <span class="nn">sqlite3</span> <span class="kn">as</span> <span class="nn">lite</span>
@@ -2068,7 +2068,7 @@ sqlite&gt; SELECT * FROM PhoneAddress</code></pre>
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[104]:
+In&nbsp;[17]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="kn">import</span> <span class="nn">sqlite3</span> <span class="kn">as</span> <span class="nn">lite</span>
@@ -2099,9 +2099,9 @@ In&nbsp;[104]:
 <div class="hbox output_area"><div class="prompt"></div>
 <div class="box-flex1 output_subarea output_stream output_stdout">
 <pre>
-(u&apos;912173381&apos;, u&apos;United State&apos;, u&apos;Jhon Doe&apos;, 53)
-(u&apos;928375018&apos;, u&apos;Tokyo Japan&apos;, u&apos;MuMu Cat&apos;, 6)
-(u&apos;957209108&apos;, u&apos;Taipei&apos;, u&apos;Richard&apos;, 29)
+(u&apos;0912173381&apos;, u&apos;United State&apos;, u&apos;Jhon Doe&apos;, 53)
+(u&apos;0928375018&apos;, u&apos;Tokyo Japan&apos;, u&apos;MuMu Cat&apos;, 6)
+(u&apos;0957209108&apos;, u&apos;Taipei&apos;, u&apos;Richard&apos;, 29)
 
 </pre>
 </div>
@@ -2116,7 +2116,7 @@ In&nbsp;[104]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[105]:
+In&nbsp;[18]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="kn">import</span> <span class="nn">sqlite3</span> <span class="kn">as</span> <span class="nn">lite</span>
@@ -2147,8 +2147,8 @@ In&nbsp;[105]:
 <div class="hbox output_area"><div class="prompt"></div>
 <div class="box-flex1 output_subarea output_stream output_stdout">
 <pre>
-(u&apos;928375018&apos;, u&apos;Tokyo Japan&apos;, u&apos;MuMu Cat&apos;, 6)
-(u&apos;957209108&apos;, u&apos;Taipei&apos;, u&apos;Richard&apos;, 29)
+(u&apos;0928375018&apos;, u&apos;Tokyo Japan&apos;, u&apos;MuMu Cat&apos;, 6)
+(u&apos;0957209108&apos;, u&apos;Taipei&apos;, u&apos;Richard&apos;, 29)
 
 </pre>
 </div>
@@ -2163,7 +2163,7 @@ In&nbsp;[105]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[106]:
+In&nbsp;[19]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="kn">import</span> <span class="nn">sqlite3</span> <span class="kn">as</span> <span class="nn">lite</span>
@@ -2176,7 +2176,7 @@ In&nbsp;[106]:
     
     <span class="n">cur</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>    
     <span class="c"># Select with condition Like</span>
-    <span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s">&quot;SELECT * FROM PhoneAddress where phone like &#39;9%&#39;&quot;</span><span class="p">)</span>
+    <span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s">&quot;SELECT * FROM PhoneAddress where phone like &#39;09%&#39;&quot;</span><span class="p">)</span>
 
     <span class="n">rows</span> <span class="o">=</span> <span class="n">cur</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
 
@@ -2194,9 +2194,9 @@ In&nbsp;[106]:
 <div class="hbox output_area"><div class="prompt"></div>
 <div class="box-flex1 output_subarea output_stream output_stdout">
 <pre>
-(u&apos;912173381&apos;, u&apos;United State&apos;, u&apos;Jhon Doe&apos;, 53)
-(u&apos;928375018&apos;, u&apos;Tokyo Japan&apos;, u&apos;MuMu Cat&apos;, 6)
-(u&apos;957209108&apos;, u&apos;Taipei&apos;, u&apos;Richard&apos;, 29)
+(u&apos;0912173381&apos;, u&apos;United State&apos;, u&apos;Jhon Doe&apos;, 53)
+(u&apos;0928375018&apos;, u&apos;Tokyo Japan&apos;, u&apos;MuMu Cat&apos;, 6)
+(u&apos;0957209108&apos;, u&apos;Taipei&apos;, u&apos;Richard&apos;, 29)
 
 </pre>
 </div>
@@ -2211,7 +2211,7 @@ In&nbsp;[106]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[107]:
+In&nbsp;[20]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="kn">import</span> <span class="nn">sqlite3</span> <span class="kn">as</span> <span class="nn">lite</span>
@@ -2257,7 +2257,7 @@ In&nbsp;[107]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[108]:
+In&nbsp;[21]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="kn">import</span> <span class="nn">sqlite3</span> <span class="kn">as</span> <span class="nn">lite</span>
@@ -2301,6 +2301,11 @@ In&nbsp;[108]:
 </div>
 </div>
 
+</div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="explain-query-plan">EXPLAIN QUERY PLAN</h3>
+<pre><code>sqlite&gt; EXPLAIN QUERY PLAN SELECT * FROM PhoneAddress where phone like &#39;0957209108&#39;; 
+sqlite&gt; EXPLAIN QUERY PLAN SELECT * FROM PhoneAddress where phone =  &#39;0957209108&#39; ;</code></pre>
 </div></section>
     </section><section>
     <section>
@@ -2313,7 +2318,7 @@ In&nbsp;[108]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[109]:
+In&nbsp;[22]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="kn">import</span> <span class="nn">sqlite3</span> <span class="kn">as</span> <span class="nn">lite</span>
@@ -2324,7 +2329,7 @@ In&nbsp;[109]:
 <span class="k">with</span> <span class="n">con</span><span class="p">:</span>
     
     <span class="n">cur</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>    
-    <span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s">&quot;INSERT INTO PhoneAddress VALUES(0923111333,&#39;Mars&#39;,&#39;Bruno&#39;,30)&quot;</span><span class="p">)</span>
+    <span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s">&quot;INSERT INTO PhoneAddress VALUES(&#39;0923111333&#39;,&#39;Mars&#39;,&#39;Bruno&#39;,30)&quot;</span><span class="p">)</span>
     <span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s">&quot;select * from PhoneAddress&quot;</span><span class="p">)</span>
     <span class="n">rows</span> <span class="o">=</span> <span class="n">cur</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
     <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">rows</span><span class="p">:</span>
@@ -2342,10 +2347,10 @@ In&nbsp;[109]:
 <div class="hbox output_area"><div class="prompt"></div>
 <div class="box-flex1 output_subarea output_stream output_stdout">
 <pre>
-(u&apos;912173381&apos;, u&apos;United State&apos;, u&apos;Jhon Doe&apos;, 53)
-(u&apos;928375018&apos;, u&apos;Tokyo Japan&apos;, u&apos;MuMu Cat&apos;, 6)
-(u&apos;957209108&apos;, u&apos;Taipei&apos;, u&apos;Richard&apos;, 29)
-(u&apos;923111333&apos;, u&apos;Mars&apos;, u&apos;Bruno&apos;, 30)
+(u&apos;0912173381&apos;, u&apos;United State&apos;, u&apos;Jhon Doe&apos;, 53)
+(u&apos;0928375018&apos;, u&apos;Tokyo Japan&apos;, u&apos;MuMu Cat&apos;, 6)
+(u&apos;0957209108&apos;, u&apos;Taipei&apos;, u&apos;Richard&apos;, 29)
+(u&apos;0923111333&apos;, u&apos;Mars&apos;, u&apos;Bruno&apos;, 30)
 
 </pre>
 </div>
@@ -2366,7 +2371,7 @@ In&nbsp;[109]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[110]:
+In&nbsp;[23]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="kn">import</span> <span class="nn">sqlite3</span> <span class="kn">as</span> <span class="nn">lite</span>
@@ -2395,9 +2400,9 @@ In&nbsp;[110]:
 <div class="hbox output_area"><div class="prompt"></div>
 <div class="box-flex1 output_subarea output_stream output_stdout">
 <pre>
-(u&apos;912173381&apos;, u&apos;United State&apos;, u&apos;Jhon Doe&apos;, 53)
-(u&apos;928375018&apos;, u&apos;Tokyo Japan&apos;, u&apos;MuMu Cat&apos;, 6)
-(u&apos;957209108&apos;, u&apos;Taipei&apos;, u&apos;Richard&apos;, 29)
+(u&apos;0912173381&apos;, u&apos;United State&apos;, u&apos;Jhon Doe&apos;, 53)
+(u&apos;0928375018&apos;, u&apos;Tokyo Japan&apos;, u&apos;MuMu Cat&apos;, 6)
+(u&apos;0957209108&apos;, u&apos;Taipei&apos;, u&apos;Richard&apos;, 29)
 
 </pre>
 </div>
@@ -2418,7 +2423,7 @@ In&nbsp;[110]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[111]:
+In&nbsp;[24]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="kn">import</span> <span class="nn">sqlite3</span> <span class="kn">as</span> <span class="nn">lite</span>
@@ -2453,7 +2458,7 @@ In&nbsp;[111]:
 <div class="hbox output_area"><div class="prompt"></div>
 <div class="box-flex1 output_subarea output_pyerr">
 <pre>
-<span class="ansicyan">  File </span><span class="ansigreen">&quot;&lt;ipython-input-111-35d0cda3c5f3&gt;&quot;</span><span class="ansicyan">, line </span><span class="ansigreen">5</span>
+<span class="ansicyan">  File </span><span class="ansigreen">&quot;&lt;ipython-input-24-35d0cda3c5f3&gt;&quot;</span><span class="ansicyan">, line </span><span class="ansigreen">5</span>
 <span class="ansiyellow">    Phone = 0928375018</span>
 <span class="ansigrey">                     ^</span>
 <span class="ansired">SyntaxError</span><span class="ansired">:</span> invalid token
@@ -2476,7 +2481,7 @@ In&nbsp;[111]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[112]:
+In&nbsp;[25]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="kn">import</span> <span class="nn">sqlite3</span> <span class="kn">as</span> <span class="nn">lite</span>
@@ -2526,7 +2531,7 @@ In&nbsp;[112]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[113]:
+In&nbsp;[26]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="kn">import</span> <span class="nn">sqlite3</span> <span class="kn">as</span> <span class="nn">lite</span>
@@ -2574,7 +2579,7 @@ In&nbsp;[113]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[114]:
+In&nbsp;[27]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="kn">import</span> <span class="nn">sqlite3</span> <span class="kn">as</span> <span class="nn">lite</span>
@@ -2629,7 +2634,7 @@ In&nbsp;[114]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[115]:
+In&nbsp;[28]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="kn">import</span> <span class="nn">sqlite3</span> <span class="kn">as</span> <span class="nn">lite</span>
@@ -2693,7 +2698,7 @@ In&nbsp;[115]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[116]:
+In&nbsp;[29]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="kn">import</span> <span class="nn">sqlite3</span> <span class="kn">as</span> <span class="nn">lite</span>
@@ -2743,7 +2748,7 @@ In&nbsp;[116]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[117]:
+In&nbsp;[30]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="kn">import</span> <span class="nn">sqlite3</span> <span class="kn">as</span> <span class="nn">lite</span>
@@ -2793,7 +2798,7 @@ In&nbsp;[117]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[118]:
+In&nbsp;[31]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="kn">import</span> <span class="nn">sqlite3</span> <span class="kn">as</span> <span class="nn">lite</span>
@@ -2841,7 +2846,7 @@ In&nbsp;[118]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[119]:
+In&nbsp;[32]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="kn">import</span> <span class="nn">sqlite3</span> <span class="kn">as</span> <span class="nn">lite</span>
@@ -2895,7 +2900,7 @@ In&nbsp;[119]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[120]:
+In&nbsp;[33]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="kn">import</span> <span class="nn">sqlite3</span> <span class="kn">as</span> <span class="nn">lite</span>
@@ -2945,7 +2950,7 @@ In&nbsp;[120]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[121]:
+In&nbsp;[34]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="kn">import</span> <span class="nn">sqlite3</span> <span class="kn">as</span> <span class="nn">lite</span>
@@ -2995,7 +3000,7 @@ In&nbsp;[121]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[122]:
+In&nbsp;[35]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="kn">import</span> <span class="nn">sqlite3</span> <span class="kn">as</span> <span class="nn">lite</span>
@@ -3041,7 +3046,7 @@ In&nbsp;[122]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[123]:
+In&nbsp;[36]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="kn">import</span> <span class="nn">sqlite3</span> <span class="kn">as</span> <span class="nn">lite</span>
@@ -3087,7 +3092,7 @@ In&nbsp;[123]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[124]:
+In&nbsp;[37]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="kn">import</span> <span class="nn">sqlite3</span> <span class="kn">as</span> <span class="nn">lite</span>
@@ -3135,7 +3140,7 @@ In&nbsp;[124]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[125]:
+In&nbsp;[38]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="kn">import</span> <span class="nn">sqlite3</span> <span class="kn">as</span> <span class="nn">lite</span>
@@ -3189,7 +3194,7 @@ In&nbsp;[125]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[126]:
+In&nbsp;[39]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="kn">import</span> <span class="nn">sqlite3</span> <span class="kn">as</span> <span class="nn">lite</span>
@@ -3238,7 +3243,7 @@ In&nbsp;[126]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[127]:
+In&nbsp;[40]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="kn">import</span> <span class="nn">sqlite3</span> <span class="kn">as</span> <span class="nn">lite</span>
@@ -3287,7 +3292,7 @@ In&nbsp;[127]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[128]:
+In&nbsp;[41]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="kn">import</span> <span class="nn">sqlite3</span> <span class="kn">as</span> <span class="nn">lite</span>
@@ -3336,7 +3341,7 @@ In&nbsp;[128]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[129]:
+In&nbsp;[42]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="kn">import</span> <span class="nn">sqlite3</span> <span class="kn">as</span> <span class="nn">lite</span>
@@ -3389,13 +3394,13 @@ In&nbsp;[129]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[130]:
+In&nbsp;[43]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="kn">import</span> <span class="nn">sqlite3</span> <span class="kn">as</span> <span class="nn">lite</span>
 <span class="kn">import</span> <span class="nn">sys</span>
 
-<span class="n">Phone</span> <span class="o">=</span> <span class="mi">0928375018</span>
+<span class="n">Phone</span> <span class="o">=</span> <span class="s">&#39;0928375018&#39;</span>
 <span class="n">Age</span> <span class="o">=</span> <span class="mi">9</span> 
 
 <span class="n">con</span> <span class="o">=</span> <span class="n">lite</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">dbname</span><span class="p">)</span>
@@ -3424,12 +3429,10 @@ In&nbsp;[130]:
 
 
 <div class="hbox output_area"><div class="prompt"></div>
-<div class="box-flex1 output_subarea output_pyerr">
+<div class="box-flex1 output_subarea output_stream output_stdout">
 <pre>
-<span class="ansicyan">  File </span><span class="ansigreen">&quot;&lt;ipython-input-130-ecd803566bda&gt;&quot;</span><span class="ansicyan">, line </span><span class="ansigreen">4</span>
-<span class="ansiyellow">    Phone = 0928375018</span>
-<span class="ansigrey">                     ^</span>
-<span class="ansired">SyntaxError</span><span class="ansired">:</span> invalid token
+(u&apos;0928375018&apos;, u&apos;Tokyo Japan&apos;, u&apos;MuMu Cat&apos;, 6)
+
 </pre>
 </div>
 </div>
@@ -3449,7 +3452,7 @@ In&nbsp;[130]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[131]:
+In&nbsp;[44]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="kn">import</span> <span class="nn">sqlite3</span> <span class="kn">as</span> <span class="nn">lite</span>
@@ -3469,7 +3472,7 @@ In&nbsp;[131]:
             <span class="k">print</span> <span class="n">row</span>
     <span class="n">con</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
     
-<span class="n">SelectData</span><span class="p">(</span><span class="mi">928375018</span><span class="p">)</span>
+<span class="n">SelectData</span><span class="p">(</span><span class="s">&#39;0928375018&#39;</span><span class="p">)</span>
     
 </pre></div>
 
@@ -3481,24 +3484,11 @@ In&nbsp;[131]:
 
 
 <div class="hbox output_area"><div class="prompt"></div>
-<div class="box-flex1 output_subarea output_pyerr">
+<div class="box-flex1 output_subarea output_stream output_stdout">
 <pre>
-<span class="ansired">---------------------------------------------------------------------------</span>
-<span class="ansired">NameError</span>                                 Traceback (most recent call last)
-<span class="ansigreen">&lt;ipython-input-131-dc59bc3c431e&gt;</span> in <span class="ansicyan">&lt;module&gt;</span><span class="ansiblue">()</span>
-<span class="ansigreen">     16</span>     con<span class="ansiyellow">.</span>close<span class="ansiyellow">(</span><span class="ansiyellow">)</span><span class="ansiyellow"></span>
-<span class="ansigreen">     17</span> <span class="ansiyellow"></span>
-<span class="ansigreen">---&gt; 18</span><span class="ansiyellow"> </span>SelectData<span class="ansiyellow">(</span><span class="ansicyan">928375018</span><span class="ansiyellow">)</span><span class="ansiyellow"></span>
-<span class="ansigreen">     19</span> <span class="ansiyellow"></span>
+(u&apos;0928375018&apos;, u&apos;Tokyo Japan&apos;, u&apos;MuMu Cat&apos;, 6)
 
-<span class="ansigreen">&lt;ipython-input-131-dc59bc3c431e&gt;</span> in <span class="ansicyan">SelectData</span><span class="ansiblue">(phone)</span>
-<span class="ansigreen">      9</span>         cur <span class="ansiyellow">=</span> con<span class="ansiyellow">.</span>cursor<span class="ansiyellow">(</span><span class="ansiyellow">)</span><span class="ansiyellow"></span>
-<span class="ansigreen">     10</span> <span class="ansiyellow"></span>
-<span class="ansigreen">---&gt; 11</span><span class="ansiyellow">         </span>cur<span class="ansiyellow">.</span>execute<span class="ansiyellow">(</span><span class="ansiblue">&quot;select * from PhoneAddress where phone=?&quot;</span><span class="ansiyellow">,</span> <span class="ansiyellow">(</span>Phone<span class="ansiyellow">,</span><span class="ansiyellow">)</span><span class="ansiyellow">)</span><span class="ansiyellow"></span>
-<span class="ansigreen">     12</span>         rows <span class="ansiyellow">=</span> cur<span class="ansiyellow">.</span>fetchall<span class="ansiyellow">(</span><span class="ansiyellow">)</span><span class="ansiyellow"></span>
-<span class="ansigreen">     13</span> <span class="ansiyellow"></span>
-
-<span class="ansired">NameError</span>: global name &apos;Phone&apos; is not defined</pre>
+</pre>
 </div>
 </div>
 
@@ -3511,7 +3501,7 @@ In&nbsp;[131]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[132]:
+In&nbsp;[45]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="kn">import</span> <span class="nn">sqlite3</span> <span class="kn">as</span> <span class="nn">lite</span>
@@ -3543,24 +3533,11 @@ In&nbsp;[132]:
 
 
 <div class="hbox output_area"><div class="prompt"></div>
-<div class="box-flex1 output_subarea output_pyerr">
+<div class="box-flex1 output_subarea output_stream output_stdout">
 <pre>
-<span class="ansired">---------------------------------------------------------------------------</span>
-<span class="ansired">NameError</span>                                 Traceback (most recent call last)
-<span class="ansigreen">&lt;ipython-input-132-2da57f7282cf&gt;</span> in <span class="ansicyan">&lt;module&gt;</span><span class="ansiblue">()</span>
-<span class="ansigreen">     16</span>     con<span class="ansiyellow">.</span>close<span class="ansiyellow">(</span><span class="ansiyellow">)</span><span class="ansiyellow"></span>
-<span class="ansigreen">     17</span> <span class="ansiyellow"></span>
-<span class="ansigreen">---&gt; 18</span><span class="ansiyellow"> </span>SelectData<span class="ansiyellow">(</span><span class="ansiblue">&apos;0928375018 or 1=1&apos;</span><span class="ansiyellow">)</span><span class="ansiyellow"></span>
-<span class="ansigreen">     19</span> <span class="ansiyellow"></span>
+(u&apos;0928375018&apos;, u&apos;Tokyo Japan&apos;, u&apos;MuMu Cat&apos;, 6)
 
-<span class="ansigreen">&lt;ipython-input-132-2da57f7282cf&gt;</span> in <span class="ansicyan">SelectData</span><span class="ansiblue">(phone)</span>
-<span class="ansigreen">      9</span>         cur <span class="ansiyellow">=</span> con<span class="ansiyellow">.</span>cursor<span class="ansiyellow">(</span><span class="ansiyellow">)</span><span class="ansiyellow"></span>
-<span class="ansigreen">     10</span> <span class="ansiyellow"></span>
-<span class="ansigreen">---&gt; 11</span><span class="ansiyellow">         </span>cur<span class="ansiyellow">.</span>execute<span class="ansiyellow">(</span><span class="ansiblue">&quot;select * from PhoneAddress where phone=?&quot;</span><span class="ansiyellow">,</span> <span class="ansiyellow">(</span>Phone<span class="ansiyellow">,</span><span class="ansiyellow">)</span><span class="ansiyellow">)</span><span class="ansiyellow"></span>
-<span class="ansigreen">     12</span>         rows <span class="ansiyellow">=</span> cur<span class="ansiyellow">.</span>fetchall<span class="ansiyellow">(</span><span class="ansiyellow">)</span><span class="ansiyellow"></span>
-<span class="ansigreen">     13</span> <span class="ansiyellow"></span>
-
-<span class="ansired">NameError</span>: global name &apos;Phone&apos; is not defined</pre>
+</pre>
 </div>
 </div>
 
@@ -3573,7 +3550,7 @@ In&nbsp;[132]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[133]:
+In&nbsp;[46]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="kn">import</span> <span class="nn">sqlite3</span> <span class="kn">as</span> <span class="nn">lite</span>
@@ -3607,7 +3584,7 @@ In&nbsp;[133]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[134]:
+In&nbsp;[47]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="kn">import</span> <span class="nn">sqlite3</span> <span class="kn">as</span> <span class="nn">lite</span>
@@ -3644,13 +3621,13 @@ In&nbsp;[134]:
 <pre>
 <span class="ansired">---------------------------------------------------------------------------</span>
 <span class="ansired">Warning</span>                                   Traceback (most recent call last)
-<span class="ansigreen">&lt;ipython-input-134-827eccbf8011&gt;</span> in <span class="ansicyan">&lt;module&gt;</span><span class="ansiblue">()</span>
+<span class="ansigreen">&lt;ipython-input-47-827eccbf8011&gt;</span> in <span class="ansicyan">&lt;module&gt;</span><span class="ansiblue">()</span>
 <span class="ansigreen">     17</span> <span class="ansiyellow"></span>
 <span class="ansigreen">     18</span> <span class="ansiyellow"></span>
 <span class="ansigreen">---&gt; 19</span><span class="ansiyellow"> </span>SelectData<span class="ansiyellow">(</span><span class="ansiblue">&quot;\&apos;\&apos; or 1=1; INSERT INTO PhoneAddress VALUES(0923111999,&apos;Hacker&apos;,&apos;Qoo&apos;,0);&quot;</span><span class="ansiyellow">)</span><span class="ansiyellow"></span>
 <span class="ansigreen">     20</span> <span class="ansiyellow"></span>
 
-<span class="ansigreen">&lt;ipython-input-134-827eccbf8011&gt;</span> in <span class="ansicyan">SelectData</span><span class="ansiblue">(PhoneNumber)</span>
+<span class="ansigreen">&lt;ipython-input-47-827eccbf8011&gt;</span> in <span class="ansicyan">SelectData</span><span class="ansiblue">(PhoneNumber)</span>
 <span class="ansigreen">      9</span>         cur <span class="ansiyellow">=</span> con<span class="ansiyellow">.</span>cursor<span class="ansiyellow">(</span><span class="ansiyellow">)</span><span class="ansiyellow"></span>
 <span class="ansigreen">     10</span> <span class="ansiyellow"></span>
 <span class="ansigreen">---&gt; 11</span><span class="ansiyellow">         </span>cur<span class="ansiyellow">.</span>execute<span class="ansiyellow">(</span><span class="ansiblue">&quot;select * from PhoneAddress where phone= &quot;</span> <span class="ansiyellow">+</span> PhoneNumber<span class="ansiyellow">)</span><span class="ansiyellow"></span>
@@ -3670,7 +3647,7 @@ In&nbsp;[134]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[135]:
+In&nbsp;[48]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="kn">import</span> <span class="nn">sqlite3</span> <span class="kn">as</span> <span class="nn">lite</span>
@@ -3708,9 +3685,9 @@ In&nbsp;[135]:
 <div class="hbox output_area"><div class="prompt"></div>
 <div class="box-flex1 output_subarea output_stream output_stdout">
 <pre>
-(u&apos;912173381&apos;, u&apos;United State&apos;, u&apos;Jhon Doe&apos;, 53)
-(u&apos;928375018&apos;, u&apos;Tokyo Japan&apos;, u&apos;MuMu Cat&apos;, 6)
-(u&apos;957209108&apos;, u&apos;Taipei&apos;, u&apos;Richard&apos;, 29)
+(u&apos;0912173381&apos;, u&apos;United State&apos;, u&apos;Jhon Doe&apos;, 53)
+(u&apos;0928375018&apos;, u&apos;Tokyo Japan&apos;, u&apos;MuMu Cat&apos;, 6)
+(u&apos;0957209108&apos;, u&apos;Taipei&apos;, u&apos;Richard&apos;, 29)
 (u&apos;923111999&apos;, u&apos;Hacker&apos;, u&apos;Qoo&apos;, 0)
 
 </pre>
@@ -3726,7 +3703,7 @@ In&nbsp;[135]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[136]:
+In&nbsp;[49]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="kn">import</span> <span class="nn">sqlite3</span> <span class="kn">as</span> <span class="nn">lite</span>
@@ -3766,7 +3743,7 @@ In&nbsp;[136]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[137]:
+In&nbsp;[50]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="kn">import</span> <span class="nn">sqlite3</span> <span class="kn">as</span> <span class="nn">lite</span>
@@ -3792,7 +3769,7 @@ In&nbsp;[137]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[138]:
+In&nbsp;[51]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="kn">import</span> <span class="nn">sqlite3</span> <span class="kn">as</span> <span class="nn">lite</span>
@@ -3840,7 +3817,7 @@ In&nbsp;[138]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[138]:
+In&nbsp;[51]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre>
