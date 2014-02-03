@@ -26,3 +26,6 @@
 
 get_captcha (1).py
 test.db
+
+Lecture1/crawler/ptt_crawler/
+Lecture1/crawler/test_ptt_crawler.py
