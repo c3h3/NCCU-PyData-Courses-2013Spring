@@ -1,0 +1,72 @@
+strict graph  {
+	node [fixedsize=true,
+		fontcolor="#FFFFFF",
+		shape=circle,
+		style=filled
+	];
+	0	 [fillcolor="# 00000",
+		height="0.5",
+		width="0.5"];
+	2	 [fillcolor="#200000",
+		height="0.625",
+		width="0.625"];
+	0 -- 2;
+	4	 [fillcolor="#400000",
+		height="0.75",
+		width="0.75"];
+	0 -- 4;
+	5	 [fillcolor="#500000",
+		height="0.8125",
+		width="0.8125"];
+	0 -- 5;
+	6	 [fillcolor="#600000",
+		height="0.875",
+		width="0.875"];
+	0 -- 6;
+	7	 [fillcolor="#700000",
+		height="0.9375",
+		width="0.9375"];
+	0 -- 7;
+	8	 [fillcolor="#800000",
+		height="1.0",
+		width="1.0"];
+	0 -- 8;
+	9	 [fillcolor="#900000",
+		height="1.0625",
+		width="1.0625"];
+	0 -- 9;
+	12	 [fillcolor="#c00000",
+		height="1.25",
+		width="1.25"];
+	0 -- 12;
+	11	 [fillcolor="#b00000",
+		height="1.1875",
+		width="1.1875"];
+	0 -- 11;
+	14	 [fillcolor="#e00000",
+		height="1.375",
+		width="1.375"];
+	0 -- 14;
+	0;
+	0 -- 0;
+	1	 [fillcolor="#100000",
+		height="0.5625",
+		width="0.5625"];
+	0 -- 1;
+	3	 [fillcolor="#300000",
+		height="0.6875",
+		width="0.6875"];
+	0 -- 3;
+	10	 [fillcolor="#a00000",
+		height="1.125",
+		width="1.125"];
+	0 -- 10;
+	13	 [fillcolor="#d00000",
+		height="1.3125",
+		width="1.3125"];
+	0 -- 13;
+	15	 [fillcolor="#f00000",
+		height="1.4375",
+		width="1.4375"];
+	0 -- 15;
+}
