@@ -4,31 +4,26 @@
 <head>
 
 <meta charset="utf-8" />
-<meta http-equiv="X-UA-Compatible" content="chrome=1" />
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
 
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-<title>Pandas slides</title>
-
 <!-- General and theme style sheets -->
-<link rel="stylesheet" href="reveal.js/css/reveal.css">
-<link rel="stylesheet" href="reveal.js/css/theme/simple.css" id="theme">
+<link rel="stylesheet" href="//cdn.jsdelivr.net/reveal.js/2.4.0/css/reveal.css">
+<link rel="stylesheet" href="//cdn.jsdelivr.net/reveal.js/2.4.0/css/theme/simple.css" id="theme">
 
 <!-- For syntax highlighting -->
-<link rel="stylesheet" href="reveal.js/lib/css/zenburn.css">
+<link rel="stylesheet" href="//cdn.jsdelivr.net/reveal.js/2.4.0/lib/css/zenburn.css">
 
 <!-- If the query includes 'print-pdf', use the PDF print sheet -->
 <script>
-document.write( '<link rel="stylesheet" href="reveal.js/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+document.write( '<link rel="stylesheet" href="//cdn.jsdelivr.net/reveal.js/2.4.0/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
 </script>
 
 <!--[if lt IE 9]>
-<script src="reveal.js/lib/js/html5shiv.js"></script>
+<script src="//cdn.jsdelivr.net/reveal.js/2.4.0/lib/js/html5shiv.js"></script>
 <![endif]-->
-
-<!-- Get Font-awesome from cdn -->
-<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css">
 
 <style type="text/css">
     .clearfix{*zoom:1;}.clearfix:before,.clearfix:after{display:table;content:"";line-height:0;}
@@ -1418,10 +1413,6 @@ ul.icons-ul{list-style-type:none;text-indent:-0.7142857142857143em;margin-left:2
 .start{-webkit-box-pack:start;-moz-box-pack:start;box-pack:start;}
 .end{-webkit-box-pack:end;-moz-box-pack:end;box-pack:end;}
 .center{-webkit-box-pack:center;-moz-box-pack:center;box-pack:center;}
-div.error{margin:2em;text-align:center;}
-div.error>h1{font-size:500%;line-height:normal;}
-div.error>p{font-size:200%;line-height:normal;}
-div.traceback-wrapper{text-align:left;max-width:800px;margin:auto;}
 body{background-color:white;position:absolute;left:0px;right:0px;top:0px;bottom:0px;overflow:visible;}
 div#header{display:none;}
 #ipython_notebook{padding-left:16px;}
@@ -1448,7 +1439,6 @@ span#login_widget{float:right;}
 .list_container>div{border-bottom:1px solid #ababab;}.list_container>div:hover .list-item{background-color:red;}
 .list_container>div:last-child{border:none;}
 .list_item:hover .list_item{background-color:#ddd;}
-.item_name{line-height:24px;}
 .list_container>div>span,.list_container>div>div{padding:8px;}
 .list_item a{text-decoration:none;}
 input.nbname_input{height:15px;}
@@ -1472,21 +1462,44 @@ input.engine_num_input{height:20px;margin-bottom:2px;padding-top:0;padding-botto
 .ansibgpurple{background-color:magenta;}
 .ansibgcyan{background-color:cyan;}
 .ansibggray{background-color:gray;}
-div.cell{border:1px solid transparent;display:-webkit-box;-webkit-box-orient:vertical;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:vertical;-moz-box-align:stretch;display:box;box-orient:vertical;box-align:stretch;width:100%;}div.cell.selected{border-radius:4px;border:thin #ababab solid;}
-div.cell.edit_mode{border-radius:4px;border:thin green solid;}
-div.cell{width:100%;padding:5px 5px 5px 0px;margin:0px;outline:none;}
-div.prompt{min-width:11ex;padding:0.4em;margin:0px;font-family:monospace;text-align:right;line-height:1.231em;}
-div.inner_cell{display:-webkit-box;-webkit-box-orient:vertical;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:vertical;-moz-box-align:stretch;display:box;box-orient:vertical;box-align:stretch;width:100%;-webkit-box-flex:1;-moz-box-flex:1;box-flex:1;}
-div.prompt:empty{padding-top:0;padding-bottom:0;}
+.cell{border:1px solid transparent;display:-webkit-box;-webkit-box-orient:vertical;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:vertical;-moz-box-align:stretch;display:box;box-orient:vertical;box-align:stretch;width:100%;}.cell.selected{border-radius:4px;border:thin #ababab solid;}
+div.cell{width:100%;padding:5px 5px 5px 0px;margin:2px 0px 2px 7px;outline:none;}
+div.prompt{width:11ex;padding:0.4em;margin:0px;font-family:monospace;text-align:right;line-height:1.231em;}
+.celltoolbar{border:thin solid #CFCFCF;border-bottom:none;background:#EEE;border-top-right-radius:3px;border-top-left-radius:3px;width:100%;-webkit-box-pack:end;height:22px;}
+.no_input_radius{border-top-right-radius:0px;border-top-left-radius:0px;}
+.text_cell .ctb_prompt{display:none;}
+.code_cell .ctb_prompt{display:block;}
+.ctb_hideshow{display:none;vertical-align:bottom;padding-right:2px;}
+.celltoolbar>div{padding-top:0px;}
+.ctb_area{margin:0;padding:0;width:100%;}
+.ctb_show.ctb_hideshow,.ctb_show .ctb_hideshow{display:block;}
+.ctb_show .input_area,.ctb_show .ctb_hideshow+div.text_cell_input{border-top-right-radius:0px;border-top-left-radius:0px;}
+.ctb_show>.celltoolbar{border-bottom-right-radius:0px;border-bottom-left-radius:0px;}
+.button_container{margin-top:0;margin-bottom:0;}
+.ui-button{min-width:30px;}
+.celltoolbar .button_container select{margin:10px;margin-top:1px;margin-bottom:0px;padding:0;font-size:87%;width:auto;display:inline-block;height:18px;line-height:18px;vertical-align:top;}
+.celltoolbar label{display:inline-block;height:15px;line-height:15px;vertical-align:top;}
+.celltoolbar label span{font-size:85%;}
+.celltoolbar input[type=checkbox]{margin:0px;margin-left:4px;margin-right:4px;}
+.celltoolbar .ui-button{border:none;vertical-align:top;height:20px;}
 div.input{page-break-inside:avoid;display:-webkit-box;-webkit-box-orient:horizontal;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:horizontal;-moz-box-align:stretch;display:box;box-orient:horizontal;box-align:stretch;}
 div.input_area{border:1px solid #cfcfcf;border-radius:4px;background:#f7f7f7;}
 div.input_prompt{color:navy;border-top:1px solid transparent;}
+div.output_wrapper{margin-top:5px;position:relative;display:-webkit-box;-webkit-box-orient:vertical;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:vertical;-moz-box-align:stretch;display:box;box-orient:vertical;box-align:stretch;width:100%;}
+div.output_scroll{height:24em;width:100%;overflow:auto;border-radius:4px;-webkit-box-shadow:inset 0 2px 8px rgba(0, 0, 0, 0.8);-moz-box-shadow:inset 0 2px 8px rgba(0, 0, 0, 0.8);box-shadow:inset 0 2px 8px rgba(0, 0, 0, 0.8);}
+div.output_collapsed{margin:0px;padding:0px;display:-webkit-box;-webkit-box-orient:vertical;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:vertical;-moz-box-align:stretch;display:box;box-orient:vertical;box-align:stretch;width:100%;}
+div.out_prompt_overlay{height:100%;padding:0px 0.4em;position:absolute;border-radius:4px;}
+div.out_prompt_overlay:hover{-webkit-box-shadow:inset 0 0 1px #000000;-moz-box-shadow:inset 0 0 1px #000000;box-shadow:inset 0 0 1px #000000;background:rgba(240, 240, 240, 0.5);}
+div.output_prompt{color:darkred;}
 .CodeMirror{line-height:1.231em;height:auto;background:none;}
 .CodeMirror-scroll{overflow-y:hidden;overflow-x:auto;}
-@-moz-document url-prefix(){.CodeMirror-scroll{overflow-x:hidden;}}.CodeMirror-lines{padding:0.4em;}
+@-moz-document {.CodeMirror-scroll{overflow-x:hidden;}}.CodeMirror-lines{padding:0.4em;}
 .CodeMirror-linenumber{padding:0 8px 0 4px;}
 .CodeMirror-gutters{border-bottom-left-radius:4px;border-top-left-radius:4px;}
 .CodeMirror pre{padding:0;border:0;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0;}
+.completions{position:absolute;z-index:10;overflow:hidden;border:1px solid #ababab;border-radius:4px;-webkit-box-shadow:0px 6px 10px -1px #adadad;-moz-box-shadow:0px 6px 10px -1px #adadad;box-shadow:0px 6px 10px -1px #adadad;}
+.completions select{background:white;outline:none;border:none;padding:0px;margin:0px;overflow:auto;font-family:monospace;font-size:110%;color:#000000;}
+.completions select option.context{color:#0064cd;}
 pre code{display:block;padding:0.5em;}
 .highlight-base,pre code,pre .subst,pre .tag .title,pre .lisp .title,pre .clojure .built_in,pre .nginx .title{color:black;}
 .highlight-string,pre .string,pre .constant,pre .parent,pre .tag .value,pre .rules .value,pre .rules .value .number,pre .preprocessor,pre .ruby .symbol,pre .ruby .symbol .string,pre .aggregate,pre .template_tag,pre .django .variable,pre .smalltalk .class,pre .addition,pre .flow,pre .stream,pre .bash .variable,pre .apache .tag,pre .apache .cbracket,pre .tex .command,pre .tex .special,pre .erlang_repl .function_or_atom,pre .markdown .header{color:#BA2121;}
@@ -1507,28 +1520,42 @@ pre .coffeescript .javascript,pre .javascript .xml,pre .tex .formula,pre .xml .j
 .cm-s-ipython span.cm-error{color:#f00;}
 .cm-s-ipython span.cm-operator{color:#AA22FF;font-weight:bold;}
 .cm-s-ipython span.cm-meta{color:#AA22FF;}
-.cm-s-ipython span.cm-tab{background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAMCAYAAAAkuj5RAAAAAXNSR0IArs4c6QAAAGFJREFUSMft1LsRQFAQheHPowAKoACx3IgEKtaEHujDjORSgWTH/ZOdnZOcM/sgk/kFFWY0qV8foQwS4MKBCS3qR6ixBJvElOobYAtivseIE120FaowJPN75GMu8j/LfMwNjh4HUpwg4LUAAAAASUVORK5CYII=);background-position:right;background-repeat:no-repeat;}
-div.output_wrapper{position:relative;display:-webkit-box;-webkit-box-orient:vertical;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:vertical;-moz-box-align:stretch;display:box;box-orient:vertical;box-align:stretch;width:100%;}
-div.output_scroll{height:24em;width:100%;overflow:auto;border-radius:4px;-webkit-box-shadow:inset 0 2px 8px rgba(0, 0, 0, 0.8);-moz-box-shadow:inset 0 2px 8px rgba(0, 0, 0, 0.8);box-shadow:inset 0 2px 8px rgba(0, 0, 0, 0.8);}
-div.output_collapsed{margin:0px;padding:0px;display:-webkit-box;-webkit-box-orient:vertical;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:vertical;-moz-box-align:stretch;display:box;box-orient:vertical;box-align:stretch;width:100%;}
-div.out_prompt_overlay{height:100%;padding:0px 0.4em;position:absolute;border-radius:4px;}
-div.out_prompt_overlay:hover{-webkit-box-shadow:inset 0 0 1px #000000;-moz-box-shadow:inset 0 0 1px #000000;box-shadow:inset 0 0 1px #000000;background:rgba(240, 240, 240, 0.5);}
-div.output_prompt{color:darkred;}
-div.output_area{padding:0px;page-break-inside:avoid;display:-webkit-box;-webkit-box-orient:horizontal;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:horizontal;-moz-box-align:stretch;display:box;box-orient:horizontal;box-align:stretch;}div.output_area .MathJax_Display{text-align:left !important;}
-div.output_area .rendered_html table{margin-left:0;margin-right:0;}
-div.output_area .rendered_html img{margin-left:0;margin-right:0;}
-.output{display:-webkit-box;-webkit-box-orient:vertical;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:vertical;-moz-box-align:stretch;display:box;box-orient:vertical;box-align:stretch;width:100%;}
+#menubar .navbar-inner{min-height:28px;border-top:1px;border-radius:0px 0px 4px 4px;}
+#menubar .navbar{margin-bottom:8px;}
+.nav-wrapper{border-bottom:1px solid #d4d4d4;}
+#menubar li.dropdown{line-height:12px;}
+body{background-color:#ffffff;}
+body.notebook_app{overflow:hidden;}
+span#notebook_name{height:1em;line-height:1em;padding:3px;border:none;font-size:146.5%;}
+div#notebook_panel{margin:0px 0px 0px 0px;padding:0px;-webkit-box-shadow:0 -1px 10px rgba(0, 0, 0, 0.1);-moz-box-shadow:0 -1px 10px rgba(0, 0, 0, 0.1);box-shadow:0 -1px 10px rgba(0, 0, 0, 0.1);}
+div#notebook{overflow-y:scroll;overflow-x:auto;width:100%;padding:5px 5px 15px 5px;margin:0px;border-top:1px solid #ababab;}
+div.ui-widget-content{border:1px solid #ababab;outline:none;}
+pre.dialog{background-color:#f7f7f7;border:1px solid #ddd;border-radius:4px;padding:0.4em;padding-left:2em;}
+p.dialog{padding:0.2em;}
+pre,code,kbd,samp{white-space:pre-wrap;}
+#fonttest{font-family:monospace;}
+p{margin-bottom:0;}
+.end_space{height:200px;}
+#notification_area{z-index:10;}
+.notification_widget{color:#777777;padding:1px 12px;margin:2px 4px;z-index:10;border:1px solid #ccc;border-radius:4px;background:rgba(240, 240, 240, 0.5);}
+div.output_area{padding:0px;page-break-inside:avoid;display:-webkit-box;-webkit-box-orient:horizontal;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:horizontal;-moz-box-align:stretch;display:box;box-orient:horizontal;box-align:stretch;}
 div.output_area pre{font-family:monospace;margin:0;padding:0;border:0;font-size:100%;vertical-align:baseline;color:black;background-color:transparent;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0;line-height:inherit;}
-div.output_subarea{padding:0.4em 0.4em 0em 0.4em;-webkit-box-flex:1;-moz-box-flex:1;box-flex:1;}
+div.output_subarea{padding:0.44em 0.4em 0.4em 1px;margin-left:6px;-webkit-box-flex:1;-moz-box-flex:1;box-flex:1;}
 div.output_text{text-align:left;color:#000000;font-family:monospace;line-height:1.231em;}
+div.output_stream{padding-top:0.0em;padding-bottom:0.0em;}
 div.output_stderr{background:#fdd;}
 div.output_latex{text-align:left;}
-div.output_javascript:empty{padding:0;}
 .js-error{color:darkred;}
 div.raw_input{padding-top:0px;padding-bottom:0px;height:1em;line-height:1em;font-family:monospace;}
 span.input_prompt{font-family:inherit;}
 input.raw_input{font-family:inherit;font-size:inherit;color:inherit;width:auto;margin:-2px 0px 0px 1px;padding-left:1px;padding-top:2px;height:1em;}
 p.p-space{margin-bottom:10px;}
+div#pager_splitter{height:8px;}
+#pager-container{position:relative;padding:15px 0px;}
+div#pager{overflow:auto;display:none;}div#pager pre{font-size:13px;line-height:1.231em;color:#000000;background-color:#f7f7f7;padding:0.4em;}
+.shortcut_key{display:inline-block;width:15ex;text-align:right;font-family:monospace;}
+.shortcut_descr{display:inline-block;}
+div.quickhelp{float:left;width:50%;}
 .rendered_html{color:black;}.rendered_html em{font-style:italic;}
 .rendered_html strong{font-weight:bold;}
 .rendered_html u{text-decoration:underline;}
@@ -1552,59 +1579,19 @@ p.p-space{margin-bottom:10px;}
 .rendered_html pre{margin:1em 2em;}
 .rendered_html pre,.rendered_html code{border:0;background-color:#ffffff;color:#000000;font-size:100%;padding:0px;}
 .rendered_html blockquote{margin:1em 2em;}
-.rendered_html table{margin-left:auto;margin-right:auto;border:1px solid black;border-collapse:collapse;}
-.rendered_html tr,.rendered_html th,.rendered_html td{border:1px solid black;border-collapse:collapse;margin:1em 2em;}
+.rendered_html table,.rendered_html tr,.rendered_html th,.rendered_html td{border:1px solid black;border-collapse:collapse;margin:1em 2em;}
 .rendered_html td,.rendered_html th{text-align:left;vertical-align:middle;padding:4px;}
 .rendered_html th{font-weight:bold;}
 .rendered_html p{text-align:justify;}
-.rendered_html img{display:block;margin-left:auto;margin-right:auto;}
-.rendered_html *+p{margin-top:1em;}
-.rendered_html *+table{margin-top:1em;}
-.rendered_html *+img{margin-top:1em;}
-div.text_cell{padding:5px 5px 5px 0px;display:-webkit-box;-webkit-box-orient:horizontal;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:horizontal;-moz-box-align:stretch;display:box;box-orient:horizontal;box-align:stretch;}
+.rendered_html p+p{margin-top:1em;}
+span#save_widget{padding:0px 5px;margin-top:12px;}
+span#checkpoint_status,span#autosave_status{font-size:small;}
+@media (max-width:767px){span#save_widget{font-size:small;} span#checkpoint_status,span#autosave_status{font-size:x-small;}}@media (max-width:767px){span#checkpoint_status,span#autosave_status{display:none;}}@media (min-width:768px) and (max-width:979px){span#checkpoint_status{display:none;} span#autosave_status{font-size:x-small;}}div.text_cell{padding:5px 5px 5px 5px;}
 div.text_cell_input{color:#000000;border:1px solid #cfcfcf;border-radius:4px;background:#f7f7f7;}
 div.text_cell_render{outline:none;resize:none;width:inherit;border-style:none;padding:5px;color:#000000;}
 a.anchor-link:link{text-decoration:none;padding:0px 20px;visibility:hidden;}
 h1:hover .anchor-link,h2:hover .anchor-link,h3:hover .anchor-link,h4:hover .anchor-link,h5:hover .anchor-link,h6:hover .anchor-link{visibility:visible;}
-body{background-color:#ffffff;}
-body.notebook_app{overflow:hidden;}
-span#notebook_name{height:1em;line-height:1em;padding:3px;border:none;font-size:146.5%;}
-div#notebook_panel{margin:0px 0px 0px 0px;padding:0px;-webkit-box-shadow:0 -1px 10px rgba(0, 0, 0, 0.1);-moz-box-shadow:0 -1px 10px rgba(0, 0, 0, 0.1);box-shadow:0 -1px 10px rgba(0, 0, 0, 0.1);}
-div#notebook{overflow-y:scroll;overflow-x:auto;width:100%;padding:5px 5px 15px 5px;margin:0px;border-top:1px solid #ababab;outline:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;}
-div.ui-widget-content{border:1px solid #ababab;outline:none;}
-pre.dialog{background-color:#f7f7f7;border:1px solid #ddd;border-radius:4px;padding:0.4em;padding-left:2em;}
-p.dialog{padding:0.2em;}
-pre,code,kbd,samp{white-space:pre-wrap;}
-#fonttest{font-family:monospace;}
-p{margin-bottom:0;}
-.end_space{height:200px;}
-.celltoolbar{border:thin solid #CFCFCF;border-bottom:none;background:#EEE;border-radius:3px 3px 0px 0px;width:100%;-webkit-box-pack:end;height:22px;display:-webkit-box;-webkit-box-orient:horizontal;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:horizontal;-moz-box-align:stretch;display:box;box-orient:horizontal;box-align:stretch;-webkit-box-direction:reverse;-moz-box-direction:reverse;box-direction:reverse;}
-.ctb_hideshow{display:none;vertical-align:bottom;padding-right:2px;}
-.celltoolbar>div{padding-top:0px;}
-.ctb_global_show .ctb_show.ctb_hideshow{display:block;}
-.ctb_global_show .ctb_show+.input_area,.ctb_global_show .ctb_show+div.text_cell_input{border-top-right-radius:0px;border-top-left-radius:0px;}
-.celltoolbar .button_container select{margin:10px;margin-top:1px;margin-bottom:0px;padding:0;font-size:87%;width:auto;display:inline-block;height:18px;line-height:18px;vertical-align:top;}
-.celltoolbar label{display:inline-block;height:15px;line-height:15px;vertical-align:top;}
-.celltoolbar label span{font-size:85%;}
-.celltoolbar input[type=checkbox]{margin:0px;margin-left:4px;margin-right:4px;}
-.celltoolbar .ui-button{border:none;vertical-align:top;height:20px;min-width:30px;}
-.completions{position:absolute;z-index:10;overflow:hidden;border:1px solid #ababab;border-radius:4px;-webkit-box-shadow:0px 6px 10px -1px #adadad;-moz-box-shadow:0px 6px 10px -1px #adadad;box-shadow:0px 6px 10px -1px #adadad;}
-.completions select{background:white;outline:none;border:none;padding:0px;margin:0px;overflow:auto;font-family:monospace;font-size:110%;color:#000000;}
-.completions select option.context{color:#0064cd;}
-#menubar .navbar-inner{min-height:28px;border-top:1px;border-radius:0px 0px 4px 4px;}
-#menubar .navbar{margin-bottom:8px;}
-.nav-wrapper{border-bottom:1px solid #d4d4d4;}
-#menubar li.dropdown{line-height:12px;}
-#notification_area{z-index:10;}
-.notification_widget{color:#777777;padding:1px 12px;margin:2px 4px;z-index:10;border:1px solid #ccc;border-radius:4px;background:rgba(240, 240, 240, 0.5);}
-div#pager_splitter{height:8px;}
-#pager-container{position:relative;padding:15px 0px;}
-div#pager{overflow:auto;display:none;}div#pager pre{font-size:13px;line-height:1.231em;color:#000000;background-color:#f7f7f7;padding:0.4em;}
-.shortcut_key{display:inline-block;width:15ex;text-align:right;font-family:monospace;}
-.shortcut_descr{display:inline-block;}
-span#save_widget{padding:0px 5px;margin-top:12px;}
-span#checkpoint_status,span#autosave_status{font-size:small;}
-@media (max-width:767px){span#save_widget{font-size:small;} span#checkpoint_status,span#autosave_status{font-size:x-small;}}@media (max-width:767px){span#checkpoint_status,span#autosave_status{display:none;}}@media (min-width:768px) and (max-width:979px){span#checkpoint_status{display:none;} span#autosave_status{font-size:x-small;}}.toolbar{padding:0px 10px;margin-top:-5px;}.toolbar select,.toolbar label{width:auto;height:26px;vertical-align:middle;margin-right:2px;margin-bottom:0px;display:inline;font-size:92%;margin-left:0.3em;margin-right:0.3em;padding:0px;padding-top:3px;}
+.toolbar{padding:0px 10px;margin-top:-5px;}.toolbar select,.toolbar label{width:auto;height:26px;vertical-align:middle;margin-right:2px;margin-bottom:0px;display:inline;font-size:92%;margin-left:0.3em;margin-right:0.3em;padding:0px;padding-top:3px;}
 .toolbar .btn{padding:2px 8px;}
 .toolbar .btn-group{margin-top:0px;}
 .toolbar-inner{border:none !important;-webkit-box-shadow:none !important;-moz-box-shadow:none !important;box-shadow:none !important;}
@@ -1687,62 +1674,53 @@ span#checkpoint_status,span#autosave_status{font-size:small;}
 
 <style type="text/css">
 /* Overrides of notebook CSS for static HTML export */
-html {
-  overflow-y: auto;
-}
 .reveal {
-  font-size: 160%;
+font-size: 20px;
+overflow-y: auto;
+overflow-x: hidden;
 }
 .reveal pre {
-  width: inherit;
-  padding: 0.4em;
-  margin: 0px;
-  font-family: monospace, sans-serif;
-  font-size: 80%;
-  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+width: 95%;
+padding: 0.4em;
+margin: 0px;
+font-family: monospace, sans-serif;
+font-size: 80%;
+box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
 }
 .reveal section img {
-  border: 0px solid black;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0);
-}
-.reveal i {
-  font-style: normal;
-  font-family: FontAwesome;
-  font-size: 2em;
+border: 0px solid black;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0);
 }
 .reveal .slides {
-  text-align: left;
+text-align: left;
 }
 .reveal.fade {
-  opacity: 1;
-}
-.reveal .progress {
-  position: static;
+opacity: 1;
 }
 div.input_area {
-  padding: 0.06em;
+padding: 0.06em;
 }
 div.code_cell {
-  background-color: transparent;
+background-color: transparent;
 }
 div.prompt {
-  width: 11ex;
-  padding: 0.4em;
-  margin: 0px;
-  font-family: monospace, sans-serif;
-  font-size: 80%;
-  text-align: right;
+width: 11ex;
+padding: 0.4em;
+margin: 0px;
+font-family: monospace, sans-serif;
+font-size: 80%;
+text-align: right;
 }
 div.output_area pre {
-  font-family: monospace, sans-serif;
-  font-size: 80%;
+font-family: monospace, sans-serif;
+font-size: 80%;
 }
 div.output_prompt {
-  /* 5px right shift to account for margin in parent container */
-  margin: 5px 5px 0 0;
+    /* 5px right shift to account for margin in parent container */
+    margin: 5px 5px 0 0;
 }
 .rendered_html p {
-  text-align: inherit;
+text-align: inherit;
 }
 </style>
 
@@ -1756,8 +1734,8 @@ div.output_prompt {
 <div class="slides">
 <div style=display:none>
     
-<div class="cell border-box-sizing code_cell">
-<div class="input">
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
 <div class="prompt input_prompt">
 In&nbsp;[67]:
 </div>
@@ -1768,11 +1746,11 @@ In&nbsp;[67]:
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
+<div class="vbox output_wrapper">
+<div class="output vbox">
 
 
-<div class="output_area"><div class="prompt"></div>
+<div class="hbox output_area"><div class="prompt"></div>
 <div class="box-flex1 output_subarea output_stream output_stdout">
 <pre>
 Populating the interactive namespace from numpy and matplotlib
@@ -1781,7 +1759,7 @@ Populating the interactive namespace from numpy and matplotlib
 </div>
 </div>
 
-<div class="output_area"><div class="prompt"></div>
+<div class="hbox output_area"><div class="prompt"></div>
 <div class="box-flex1 output_subarea output_stream output_stderr">
 <pre>
 WARNING: pylab import has clobbered these variables: [&apos;axes&apos;]
@@ -1799,17 +1777,17 @@ WARNING: pylab import has clobbered these variables: [&apos;axes&apos;]
     </section><section>
     <section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="pandas">Pandas</h1>
+<h1 id="pandas">Pandas</h1>
 </div></section>
     </section><section>
     <section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="lets-begin-by-list">Let's begin by List</h1>
-<p><code>List</code> is a list of comman-sepratated values (items) between square brackets</p>
+<h1 id="lets-begin-by-list">Let's begin by List</h1>
+<p><code>List</code> is a list of comman-sepratated values (items) between square brackets</p>
 </div><div class="fragment">
     
-<div class="cell border-box-sizing code_cell">
-<div class="input">
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
 <div class="prompt input_prompt">
 In&nbsp;[68]:
 </div>
@@ -1821,11 +1799,11 @@ In&nbsp;[68]:
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
+<div class="vbox output_wrapper">
+<div class="output vbox">
 
 
-<div class="output_area"><div class="prompt"></div>
+<div class="hbox output_area"><div class="prompt"></div>
 <div class="box-flex1 output_subarea output_stream output_stdout">
 <pre>
 [1, 3, 5, 7, 9]
@@ -1840,10 +1818,10 @@ In&nbsp;[68]:
 </div>
     </div></section><section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="how-to-mupliply-two-list-element-wise">How to mupliply two list element-wise?</h1>
+<h1 id="how-to-mupliply-two-list-element-wise">How to mupliply two list element-wise?</h1>
 </div>
-<div class="cell border-box-sizing code_cell">
-<div class="input">
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
 <div class="prompt input_prompt">
 In&nbsp;[69]:
 </div>
@@ -1857,8 +1835,8 @@ In&nbsp;[69]:
 
 </div><div class="fragment">
     
-<div class="cell border-box-sizing code_cell">
-<div class="input">
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
 <div class="prompt input_prompt">
 In&nbsp;[70]:
 </div>
@@ -1869,11 +1847,11 @@ In&nbsp;[70]:
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
+<div class="vbox output_wrapper">
+<div class="output vbox">
 
 
-<div class="output_area"><div class="prompt"></div>
+<div class="hbox output_area"><div class="prompt"></div>
 <div class="box-flex1 output_subarea output_stream output_stdout">
 <pre>
 [(1, 2), (3, 4), (5, 6), (7, 8), (9, 10)]
@@ -1888,8 +1866,8 @@ In&nbsp;[70]:
 </div>
     </div><div class="fragment">
     
-<div class="cell border-box-sizing code_cell">
-<div class="input">
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
 <div class="prompt input_prompt">
 In&nbsp;[71]:
 </div>
@@ -1901,11 +1879,11 @@ In&nbsp;[71]:
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
+<div class="vbox output_wrapper">
+<div class="output vbox">
 
 
-<div class="output_area"><div class="prompt"></div>
+<div class="hbox output_area"><div class="prompt"></div>
 <div class="box-flex1 output_subarea output_stream output_stdout">
 <pre>
 [2, 12, 30, 56, 90]
@@ -1920,11 +1898,11 @@ In&nbsp;[71]:
 </div>
     </div></section><section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="i-hope-that-i-can-multiply-them-directly...">I hope that I can multiply them directly...</h1>
+<h1 id="i-hope-that-i-can-multiply-them-directly...">I hope that I can multiply them directly...</h1>
 </div><div class="fragment">
     
-<div class="cell border-box-sizing code_cell">
-<div class="input">
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
 <div class="prompt input_prompt">
 In&nbsp;[72]:
 </div>
@@ -1935,11 +1913,11 @@ In&nbsp;[72]:
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
+<div class="vbox output_wrapper">
+<div class="output vbox">
 
 
-<div class="output_area"><div class="prompt"></div>
+<div class="hbox output_area"><div class="prompt"></div>
 <div class="box-flex1 output_subarea output_pyerr">
 <pre>
 <span class="ansired">---------------------------------------------------------------------------</span>
@@ -1957,14 +1935,14 @@ In&nbsp;[72]:
 </div>
     </div></section><section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="numpy-to-rescue">NumPy to Rescue</h1>
-<div class="figure">
-<img src="pandas-dataset/numpy_logo.png" />
-</div>
+<h1 id="numpy-to-rescue">NumPy to Rescue</h1>
+<div class="figure">
+<img src="pandas-dataset/numpy_logo.png" />
+</div>
 </div><div class="fragment">
     
-<div class="cell border-box-sizing code_cell">
-<div class="input">
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
 <div class="prompt input_prompt">
 In&nbsp;[103]:
 </div>
@@ -1981,11 +1959,11 @@ In&nbsp;[103]:
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
+<div class="vbox output_wrapper">
+<div class="output vbox">
 
 
-<div class="output_area"><div class="prompt"></div>
+<div class="hbox output_area"><div class="prompt"></div>
 <div class="box-flex1 output_subarea output_stream output_stdout">
 <pre>
 [1 3 5 7 9]
@@ -2001,8 +1979,8 @@ In&nbsp;[103]:
 </div>
     </div><div class="fragment">
     
-<div class="cell border-box-sizing code_cell">
-<div class="input">
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
 <div class="prompt input_prompt">
 In&nbsp;[104]:
 </div>
@@ -2015,11 +1993,11 @@ In&nbsp;[104]:
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
+<div class="vbox output_wrapper">
+<div class="output vbox">
 
 
-<div class="output_area"><div class="prompt"></div>
+<div class="hbox output_area"><div class="prompt"></div>
 <div class="box-flex1 output_subarea output_stream output_stdout">
 <pre>
 [ 2 12 30 56 90]
@@ -2036,23 +2014,23 @@ In&nbsp;[104]:
     </section><section>
     <section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="numpy">Numpy</h1>
-<p><a href="http://www.numpy.org/">http://www.numpy.org/</a></p>
-<p>NumPy is the fundamental package for scientific computing with Python. It contains:</p>
-<ul>
-<li>a powerful N-dimensional array object</li>
-<li>sophisticated functions</li>
-<li>tools for integrating C/C++ and Fortran code</li>
-<li>linear algebra, Fourieir transform, and random number cpabilities</li>
-</ul>
+<h1 id="numpy">Numpy</h1>
+<p><a href="http://www.numpy.org/">http://www.numpy.org/</a></p>
+<p>NumPy is the fundamental package for scientific computing with Python. It contains:</p>
+<ul>
+<li>a powerful N-dimensional array object</li>
+<li>sophisticated functions</li>
+<li>tools for integrating C/C++ and Fortran code</li>
+<li>linear algebra, Fourieir transform, and random number cpabilities</li>
+</ul>
 </div></section>
     </section><section>
     <section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="one-dimentional-array">One Dimentional Array</h1>
+<h1 id="one-dimentional-array">One Dimentional Array</h1>
 </div>
-<div class="cell border-box-sizing code_cell">
-<div class="input">
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
 <div class="prompt input_prompt">
 In&nbsp;[105]:
 </div>
@@ -2064,11 +2042,11 @@ In&nbsp;[105]:
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
+<div class="vbox output_wrapper">
+<div class="output vbox">
 
 
-<div class="output_area"><div class="prompt output_prompt">
+<div class="hbox output_area"><div class="prompt output_prompt">
     Out[105]:</div>
 <div class="box-flex1 output_subarea output_pyout">
 
@@ -2085,8 +2063,8 @@ array([1, 2, 3, 4, 5])
 
 </div><div class="fragment">
     
-<div class="cell border-box-sizing code_cell">
-<div class="input">
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
 <div class="prompt input_prompt">
 In&nbsp;[106]:
 </div>
@@ -2097,11 +2075,11 @@ In&nbsp;[106]:
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
+<div class="vbox output_wrapper">
+<div class="output vbox">
 
 
-<div class="output_area"><div class="prompt output_prompt">
+<div class="hbox output_area"><div class="prompt output_prompt">
     Out[106]:</div>
 <div class="box-flex1 output_subarea output_pyout">
 
@@ -2119,8 +2097,8 @@ In&nbsp;[106]:
 </div>
     </div><div class="fragment">
     
-<div class="cell border-box-sizing code_cell">
-<div class="input">
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
 <div class="prompt input_prompt">
 In&nbsp;[107]:
 </div>
@@ -2131,11 +2109,11 @@ In&nbsp;[107]:
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
+<div class="vbox output_wrapper">
+<div class="output vbox">
 
 
-<div class="output_area"><div class="prompt output_prompt">
+<div class="hbox output_area"><div class="prompt output_prompt">
     Out[107]:</div>
 <div class="box-flex1 output_subarea output_pyout">
 
@@ -2153,8 +2131,8 @@ array([2, 3])
 </div>
     </div><div class="fragment">
     
-<div class="cell border-box-sizing code_cell">
-<div class="input">
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
 <div class="prompt input_prompt">
 In&nbsp;[108]:
 </div>
@@ -2165,11 +2143,11 @@ In&nbsp;[108]:
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
+<div class="vbox output_wrapper">
+<div class="output vbox">
 
 
-<div class="output_area"><div class="prompt output_prompt">
+<div class="hbox output_area"><div class="prompt output_prompt">
     Out[108]:</div>
 <div class="box-flex1 output_subarea output_pyout">
 
@@ -2189,10 +2167,10 @@ array([4, 5])
     </section><section>
     <section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="two-dimentional-array">Two Dimentional Array</h1>
+<h1 id="two-dimentional-array">Two Dimentional Array</h1>
 </div>
-<div class="cell border-box-sizing code_cell">
-<div class="input">
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
 <div class="prompt input_prompt">
 In&nbsp;[109]:
 </div>
@@ -2204,11 +2182,11 @@ In&nbsp;[109]:
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
+<div class="vbox output_wrapper">
+<div class="output vbox">
 
 
-<div class="output_area"><div class="prompt output_prompt">
+<div class="hbox output_area"><div class="prompt output_prompt">
     Out[109]:</div>
 <div class="box-flex1 output_subarea output_pyout">
 
@@ -2226,8 +2204,8 @@ array([[ 1,  2,  3,  4,  5],
 
 </div><div class="fragment">
     
-<div class="cell border-box-sizing code_cell">
-<div class="input">
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
 <div class="prompt input_prompt">
 In&nbsp;[110]:
 </div>
@@ -2238,11 +2216,11 @@ In&nbsp;[110]:
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
+<div class="vbox output_wrapper">
+<div class="output vbox">
 
 
-<div class="output_area"><div class="prompt output_prompt">
+<div class="hbox output_area"><div class="prompt output_prompt">
     Out[110]:</div>
 <div class="box-flex1 output_subarea output_pyout">
 
@@ -2260,8 +2238,8 @@ In&nbsp;[110]:
 </div>
     </div><div class="fragment">
     
-<div class="cell border-box-sizing code_cell">
-<div class="input">
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
 <div class="prompt input_prompt">
 In&nbsp;[111]:
 </div>
@@ -2272,11 +2250,11 @@ In&nbsp;[111]:
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
+<div class="vbox output_wrapper">
+<div class="output vbox">
 
 
-<div class="output_area"><div class="prompt output_prompt">
+<div class="hbox output_area"><div class="prompt output_prompt">
     Out[111]:</div>
 <div class="box-flex1 output_subarea output_pyout">
 
@@ -2294,8 +2272,8 @@ array([1, 2, 3, 4, 5])
 </div>
     </div><div class="fragment">
     
-<div class="cell border-box-sizing code_cell">
-<div class="input">
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
 <div class="prompt input_prompt">
 In&nbsp;[112]:
 </div>
@@ -2306,11 +2284,11 @@ In&nbsp;[112]:
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
+<div class="vbox output_wrapper">
+<div class="output vbox">
 
 
-<div class="output_area"><div class="prompt output_prompt">
+<div class="hbox output_area"><div class="prompt output_prompt">
     Out[112]:</div>
 <div class="box-flex1 output_subarea output_pyout">
 
@@ -2328,8 +2306,8 @@ array([1, 6])
 </div>
     </div><div class="fragment">
     
-<div class="cell border-box-sizing code_cell">
-<div class="input">
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
 <div class="prompt input_prompt">
 In&nbsp;[113]:
 </div>
@@ -2340,11 +2318,11 @@ In&nbsp;[113]:
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
+<div class="vbox output_wrapper">
+<div class="output vbox">
 
 
-<div class="output_area"><div class="prompt output_prompt">
+<div class="hbox output_area"><div class="prompt output_prompt">
     Out[113]:</div>
 <div class="box-flex1 output_subarea output_pyout">
 
@@ -2366,11 +2344,11 @@ array([[ 1,  6],
 </div>
     </div></section><section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="what-if-we-want-to-label-the-data">What if we want to label the data?</h1>
+<h1 id="what-if-we-want-to-label-the-data">What if we want to label the data?</h1>
 </div><div class="fragment">
     
-<div class="cell border-box-sizing code_cell">
-<div class="input">
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
 <div class="prompt input_prompt">
 In&nbsp;[114]:
 </div>
@@ -2382,11 +2360,11 @@ In&nbsp;[114]:
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
+<div class="vbox output_wrapper">
+<div class="output vbox">
 
 
-<div class="output_area"><div class="prompt output_prompt">
+<div class="hbox output_area"><div class="prompt output_prompt">
     Out[114]:</div>
 <div class="box-flex1 output_subarea output_pyout">
 
@@ -2411,14 +2389,14 @@ array([[&apos;frank&apos;, &apos;M&apos;, &apos;29&apos;],
     </div><div class="fragment">
     
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="it-might-be-a-good-idea-to-label-the-first-column-as-name-the-second-as-gender-the-last-as-age">It might be a good idea to label the first column as <code>name</code>, the second as <code>gender</code>, the last as <code>age</code></h3>
+<h3 id="it-might-be-a-good-idea-to-label-the-first-column-as-name-the-second-as-gender-the-last-as-age">It might be a good idea to label the first column as <code>name</code>, the second as <code>gender</code>, the last as <code>age</code></h3>
 </div>
     </div></section><section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="kind-of-strange-...">Kind of strange ...</h1>
+<h1 id="kind-of-strange-...">Kind of strange ...</h1>
 </div>
-<div class="cell border-box-sizing code_cell">
-<div class="input">
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
 <div class="prompt input_prompt">
 In&nbsp;[115]:
 </div>
@@ -2430,11 +2408,11 @@ In&nbsp;[115]:
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
+<div class="vbox output_wrapper">
+<div class="output vbox">
 
 
-<div class="output_area"><div class="prompt output_prompt">
+<div class="hbox output_area"><div class="prompt output_prompt">
     Out[115]:</div>
 <div class="box-flex1 output_subarea output_pyout">
 
@@ -2458,32 +2436,32 @@ array([[&apos;name&apos;, &apos;gender&apos;, &apos;age&apos;],
 
 </div></section><section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="someone-is-coming-to-rescue">Someone is coming to Rescue</h1>
+<h1 id="someone-is-coming-to-rescue">Someone is coming to Rescue</h1>
 </div><div class="fragment">
     
 <div class="text_cell_render border-box-sizing rendered_html">
-<div class="figure">
-<img src="pandas-dataset/pandas.png" />
-</div>
+<div class="figure">
+<img src="pandas-dataset/pandas.png" />
+</div>
 </div>
     </div><div class="fragment">
     
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="not-this-one-...">Not This One ...</h2>
+<h2 id="not-this-one-...">Not This One ...</h2>
 </div>
     </div></section><section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="but-this-one">But This One</h1>
-<div class="figure">
-<img src="pandas-dataset/pandas_logo.png" />
-</div>
+<h1 id="but-this-one">But This One</h1>
+<div class="figure">
+<img src="pandas-dataset/pandas_logo.png" />
+</div>
 </div></section><section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="cant-wait-to-try-pandas">Can't wait to try Pandas!!!</h1>
+<h1 id="cant-wait-to-try-pandas">Can't wait to try Pandas!!!</h1>
 </div><div class="fragment">
     
-<div class="cell border-box-sizing code_cell">
-<div class="input">
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
 <div class="prompt input_prompt">
 In&nbsp;[180]:
 </div>
@@ -2496,11 +2474,11 @@ In&nbsp;[180]:
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
+<div class="vbox output_wrapper">
+<div class="output vbox">
 
 
-<div class="output_area"><div class="prompt output_prompt">
+<div class="hbox output_area"><div class="prompt output_prompt">
     Out[180]:</div>
 <div class="box-flex1 output_subarea output_pyout">
 
@@ -2567,8 +2545,8 @@ In&nbsp;[180]:
 </div>
     </div><div class="fragment">
     
-<div class="cell border-box-sizing code_cell">
-<div class="input">
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
 <div class="prompt input_prompt">
 In&nbsp;[117]:
 </div>
@@ -2580,11 +2558,11 @@ In&nbsp;[117]:
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
+<div class="vbox output_wrapper">
+<div class="output vbox">
 
 
-<div class="output_area"><div class="prompt output_prompt">
+<div class="hbox output_area"><div class="prompt output_prompt">
     Out[117]:</div>
 <div class="box-flex1 output_subarea output_pyout">
 
@@ -2653,17 +2631,17 @@ In&nbsp;[117]:
     </section><section>
     <section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="pandas">Pandas</h1>
-<p><a href="http://pandas.pydata.org/">http://pandas.pydata.org/</a></p>
-<p><code>pandas</code> is a python library providing high-performance, easy-to-use data structures and data analysis tools.</p>
+<h1 id="pandas">Pandas</h1>
+<p><a href="http://pandas.pydata.org/">http://pandas.pydata.org/</a></p>
+<p><code>pandas</code> is a python library providing high-performance, easy-to-use data structures and data analysis tools.</p>
 </div></section>
     </section><section>
     <section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="series">Series</h1>
+<h1 id="series">Series</h1>
 </div>
-<div class="cell border-box-sizing code_cell">
-<div class="input">
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
 <div class="prompt input_prompt">
 In&nbsp;[118]:
 </div>
@@ -2675,11 +2653,11 @@ In&nbsp;[118]:
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
+<div class="vbox output_wrapper">
+<div class="output vbox">
 
 
-<div class="output_area"><div class="prompt output_prompt">
+<div class="hbox output_area"><div class="prompt output_prompt">
     Out[118]:</div>
 <div class="box-flex1 output_subarea output_pyout">
 
@@ -2701,11 +2679,11 @@ dtype: int64
 
 </div></section><section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="statistical-description">Statistical Description</h1>
+<h1 id="statistical-description">Statistical Description</h1>
 </div><div class="fragment">
     
-<div class="cell border-box-sizing code_cell">
-<div class="input">
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
 <div class="prompt input_prompt">
 In&nbsp;[119]:
 </div>
@@ -2716,11 +2694,11 @@ In&nbsp;[119]:
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
+<div class="vbox output_wrapper">
+<div class="output vbox">
 
 
-<div class="output_area"><div class="prompt output_prompt">
+<div class="hbox output_area"><div class="prompt output_prompt">
     Out[119]:</div>
 <div class="box-flex1 output_subarea output_pyout">
 
@@ -2738,8 +2716,8 @@ In&nbsp;[119]:
 </div>
     </div><div class="fragment">
     
-<div class="cell border-box-sizing code_cell">
-<div class="input">
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
 <div class="prompt input_prompt">
 In&nbsp;[120]:
 </div>
@@ -2750,11 +2728,11 @@ In&nbsp;[120]:
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
+<div class="vbox output_wrapper">
+<div class="output vbox">
 
 
-<div class="output_area"><div class="prompt output_prompt">
+<div class="hbox output_area"><div class="prompt output_prompt">
     Out[120]:</div>
 <div class="box-flex1 output_subarea output_pyout">
 
@@ -2772,8 +2750,8 @@ In&nbsp;[120]:
 </div>
     </div><div class="fragment">
     
-<div class="cell border-box-sizing code_cell">
-<div class="input">
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
 <div class="prompt input_prompt">
 In&nbsp;[121]:
 </div>
@@ -2784,11 +2762,11 @@ In&nbsp;[121]:
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
+<div class="vbox output_wrapper">
+<div class="output vbox">
 
 
-<div class="output_area"><div class="prompt output_prompt">
+<div class="hbox output_area"><div class="prompt output_prompt">
     Out[121]:</div>
 <div class="box-flex1 output_subarea output_pyout">
 
@@ -2814,11 +2792,11 @@ dtype: float64
 </div>
     </div></section><section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="indexing-and-slicing">Indexing and Slicing</h1>
+<h1 id="indexing-and-slicing">Indexing and Slicing</h1>
 </div><div class="fragment">
     
-<div class="cell border-box-sizing code_cell">
-<div class="input">
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
 <div class="prompt input_prompt">
 In&nbsp;[122]:
 </div>
@@ -2829,11 +2807,11 @@ In&nbsp;[122]:
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
+<div class="vbox output_wrapper">
+<div class="output vbox">
 
 
-<div class="output_area"><div class="prompt output_prompt">
+<div class="hbox output_area"><div class="prompt output_prompt">
     Out[122]:</div>
 <div class="box-flex1 output_subarea output_pyout">
 
@@ -2856,8 +2834,8 @@ dtype: int64
 </div>
     </div><div class="fragment">
     
-<div class="cell border-box-sizing code_cell">
-<div class="input">
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
 <div class="prompt input_prompt">
 In&nbsp;[123]:
 </div>
@@ -2868,11 +2846,11 @@ In&nbsp;[123]:
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
+<div class="vbox output_wrapper">
+<div class="output vbox">
 
 
-<div class="output_area"><div class="prompt output_prompt">
+<div class="hbox output_area"><div class="prompt output_prompt">
     Out[123]:</div>
 <div class="box-flex1 output_subarea output_pyout">
 
@@ -2890,8 +2868,8 @@ In&nbsp;[123]:
 </div>
     </div><div class="fragment">
     
-<div class="cell border-box-sizing code_cell">
-<div class="input">
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
 <div class="prompt input_prompt">
 In&nbsp;[124]:
 </div>
@@ -2902,11 +2880,11 @@ In&nbsp;[124]:
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
+<div class="vbox output_wrapper">
+<div class="output vbox">
 
 
-<div class="output_area"><div class="prompt output_prompt">
+<div class="hbox output_area"><div class="prompt output_prompt">
     Out[124]:</div>
 <div class="box-flex1 output_subarea output_pyout">
 
@@ -2928,10 +2906,10 @@ dtype: int64
     </section><section>
     <section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="dataframe">DataFrame</h1>
+<h1 id="dataframe">DataFrame</h1>
 </div>
-<div class="cell border-box-sizing code_cell">
-<div class="input">
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
 <div class="prompt input_prompt">
 In&nbsp;[183]:
 </div>
@@ -2944,11 +2922,11 @@ In&nbsp;[183]:
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
+<div class="vbox output_wrapper">
+<div class="output vbox">
 
 
-<div class="output_area"><div class="prompt output_prompt">
+<div class="hbox output_area"><div class="prompt output_prompt">
     Out[183]:</div>
 <div class="box-flex1 output_subarea output_pyout">
 
@@ -3014,10 +2992,10 @@ In&nbsp;[183]:
 
 </div></section><section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="statistical-description">Statistical Description</h1>
+<h1 id="statistical-description">Statistical Description</h1>
 </div>
-<div class="cell border-box-sizing code_cell">
-<div class="input">
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
 <div class="prompt input_prompt">
 In&nbsp;[184]:
 </div>
@@ -3028,11 +3006,11 @@ In&nbsp;[184]:
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
+<div class="vbox output_wrapper">
+<div class="output vbox">
 
 
-<div class="output_area"><div class="prompt output_prompt">
+<div class="hbox output_area"><div class="prompt output_prompt">
     Out[184]:</div>
 <div class="box-flex1 output_subarea output_pyout">
 
@@ -3092,11 +3070,11 @@ In&nbsp;[184]:
 
 </div></section><section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="indexing-and-slicing---row">Indexing and Slicing - (Row)</h1>
+<h1 id="indexing-and-slicing---row">Indexing and Slicing - (Row)</h1>
 </div><div class="fragment">
     
-<div class="cell border-box-sizing code_cell">
-<div class="input">
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
 <div class="prompt input_prompt">
 In&nbsp;[127]:
 </div>
@@ -3107,11 +3085,11 @@ In&nbsp;[127]:
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
+<div class="vbox output_wrapper">
+<div class="output vbox">
 
 
-<div class="output_area"><div class="prompt output_prompt">
+<div class="hbox output_area"><div class="prompt output_prompt">
     Out[127]:</div>
 <div class="box-flex1 output_subarea output_pyout">
 
@@ -3132,8 +3110,8 @@ Name: 1, dtype: object
 </div>
     </div><div class="fragment">
     
-<div class="cell border-box-sizing code_cell">
-<div class="input">
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
 <div class="prompt input_prompt">
 In&nbsp;[128]:
 </div>
@@ -3144,11 +3122,11 @@ In&nbsp;[128]:
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
+<div class="vbox output_wrapper">
+<div class="output vbox">
 
 
-<div class="output_area"><div class="prompt output_prompt">
+<div class="hbox output_area"><div class="prompt output_prompt">
     Out[128]:</div>
 <div class="box-flex1 output_subarea output_pyout">
 
@@ -3203,11 +3181,11 @@ In&nbsp;[128]:
 </div>
     </div></section><section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="indexing-and-slicing---column">Indexing and Slicing - (Column)</h1>
+<h1 id="indexing-and-slicing---column">Indexing and Slicing - (Column)</h1>
 </div><div class="fragment">
     
-<div class="cell border-box-sizing code_cell">
-<div class="input">
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
 <div class="prompt input_prompt">
 In&nbsp;[129]:
 </div>
@@ -3218,11 +3196,11 @@ In&nbsp;[129]:
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
+<div class="vbox output_wrapper">
+<div class="output vbox">
 
 
-<div class="output_area"><div class="prompt output_prompt">
+<div class="hbox output_area"><div class="prompt output_prompt">
     Out[129]:</div>
 <div class="box-flex1 output_subarea output_pyout">
 
@@ -3246,8 +3224,8 @@ Name: name, dtype: object
 </div>
     </div><div class="fragment">
     
-<div class="cell border-box-sizing code_cell">
-<div class="input">
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
 <div class="prompt input_prompt">
 In&nbsp;[130]:
 </div>
@@ -3258,11 +3236,11 @@ In&nbsp;[130]:
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
+<div class="vbox output_wrapper">
+<div class="output vbox">
 
 
-<div class="output_area"><div class="prompt output_prompt">
+<div class="hbox output_area"><div class="prompt output_prompt">
     Out[130]:</div>
 <div class="box-flex1 output_subarea output_pyout">
 
@@ -3322,11 +3300,11 @@ In&nbsp;[130]:
 </div>
     </div></section><section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="whats-the-average-age-for-males-and-females">What's the Average Age for Males and Females?</h1>
+<h1 id="whats-the-average-age-for-males-and-females">What's the Average Age for Males and Females?</h1>
 </div><div class="fragment">
     
-<div class="cell border-box-sizing code_cell">
-<div class="input">
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
 <div class="prompt input_prompt">
 In&nbsp;[186]:
 </div>
@@ -3337,11 +3315,11 @@ In&nbsp;[186]:
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
+<div class="vbox output_wrapper">
+<div class="output vbox">
 
 
-<div class="output_area"><div class="prompt output_prompt">
+<div class="hbox output_area"><div class="prompt output_prompt">
     Out[186]:</div>
 <div class="box-flex1 output_subarea output_pyout">
 
@@ -3365,8 +3343,8 @@ Name: gender, dtype: bool
 </div>
     </div><div class="fragment">
     
-<div class="cell border-box-sizing code_cell">
-<div class="input">
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
 <div class="prompt input_prompt">
 In&nbsp;[131]:
 </div>
@@ -3377,11 +3355,11 @@ In&nbsp;[131]:
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
+<div class="vbox output_wrapper">
+<div class="output vbox">
 
 
-<div class="output_area"><div class="prompt output_prompt">
+<div class="hbox output_area"><div class="prompt output_prompt">
     Out[131]:</div>
 <div class="box-flex1 output_subarea output_pyout">
 
@@ -3430,8 +3408,8 @@ In&nbsp;[131]:
 </div>
     </div><div class="fragment">
     
-<div class="cell border-box-sizing code_cell">
-<div class="input">
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
 <div class="prompt input_prompt">
 In&nbsp;[132]:
 </div>
@@ -3442,11 +3420,11 @@ In&nbsp;[132]:
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
+<div class="vbox output_wrapper">
+<div class="output vbox">
 
 
-<div class="output_area"><div class="prompt output_prompt">
+<div class="hbox output_area"><div class="prompt output_prompt">
     Out[132]:</div>
 <div class="box-flex1 output_subarea output_pyout">
 
@@ -3465,8 +3443,8 @@ dtype: float64
 </div>
     </div><div class="fragment">
     
-<div class="cell border-box-sizing code_cell">
-<div class="input">
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
 <div class="prompt input_prompt">
 In&nbsp;[133]:
 </div>
@@ -3477,11 +3455,11 @@ In&nbsp;[133]:
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
+<div class="vbox output_wrapper">
+<div class="output vbox">
 
 
-<div class="output_area"><div class="prompt output_prompt">
+<div class="hbox output_area"><div class="prompt output_prompt">
     Out[133]:</div>
 <div class="box-flex1 output_subarea output_pyout">
 
@@ -3500,24 +3478,24 @@ dtype: float64
 </div>
     </div></section><section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="if-there-were-1000-kinds-of-gender-then-we-need-to-do-that-1000-times....">If there were 1000 kinds of gender, then we need to do that 1000 times....</h1>
+<h1 id="if-there-were-1000-kinds-of-gender-then-we-need-to-do-that-1000-times....">If there were 1000 kinds of gender, then we need to do that 1000 times....</h1>
 </div></section><section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="who-is-coming-to-rescue-this-time">Who is Coming to Rescue this time?</h1>
+<h1 id="who-is-coming-to-rescue-this-time">Who is Coming to Rescue this time?</h1>
 </div></section><section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="silence-...">Silence ...</h1>
+<h1 id="silence-...">Silence ...</h1>
 </div></section><section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="sql">SQL ?</h1>
-<pre><code>SELECT gender, AVERAGE(age) FROM df GROUP BY gender</code></pre>
+<h1 id="sql">SQL ?</h1>
+<pre><code>SELECT gender, AVERAGE(age) FROM df GROUP BY gender</code></pre>
 </div></section><section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="pandas-says-that-he-is-also-good-at-group-by">Pandas says that he is also good at GROUP BY</h1>
+<h1 id="pandas-says-that-he-is-also-good-at-group-by">Pandas says that he is also good at GROUP BY</h1>
 </div><div class="fragment">
     
-<div class="cell border-box-sizing code_cell">
-<div class="input">
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
 <div class="prompt input_prompt">
 In&nbsp;[134]:
 </div>
@@ -3528,11 +3506,11 @@ In&nbsp;[134]:
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
+<div class="vbox output_wrapper">
+<div class="output vbox">
 
 
-<div class="output_area"><div class="prompt output_prompt">
+<div class="hbox output_area"><div class="prompt output_prompt">
     Out[134]:</div>
 <div class="box-flex1 output_subarea output_pyout">
 
@@ -3599,8 +3577,8 @@ In&nbsp;[134]:
 </div>
     </div><div class="fragment">
     
-<div class="cell border-box-sizing code_cell">
-<div class="input">
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
 <div class="prompt input_prompt">
 In&nbsp;[135]:
 </div>
@@ -3611,11 +3589,11 @@ In&nbsp;[135]:
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
+<div class="vbox output_wrapper">
+<div class="output vbox">
 
 
-<div class="output_area"><div class="prompt output_prompt">
+<div class="hbox output_area"><div class="prompt output_prompt">
     Out[135]:</div>
 <div class="box-flex1 output_subarea output_pyout">
 
@@ -3637,30 +3615,30 @@ Name: age, dtype: float64
     </div><div class="fragment">
     
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="similar-to-sql">Similar to SQL</h3>
-<pre><code>SELECT gender, AVERAGE(age) FROM df GROUP BY gender</code></pre>
+<h3 id="similar-to-sql">Similar to SQL</h3>
+<pre><code>SELECT gender, AVERAGE(age) FROM df GROUP BY gender</code></pre>
 </div>
     </div></section><section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="pandas-provides-lots-of-useful-functions.">Pandas provides lots of useful functions.</h1>
-<h1 id="lets-learn-by-doing-a-simple-project.">Let's learn by doing a simple project.</h1>
+<h1 id="pandas-provides-lots-of-useful-functions.">Pandas provides lots of useful functions.</h1>
+<h1 id="lets-learn-by-doing-a-simple-project.">Let's learn by doing a simple project.</h1>
 </div></section>
     </section><section>
     <section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="dataset---us-baby-names-1880---2010">DataSet - US Baby Names (1880 - 2010)</h1>
-<p><a href="https://dl.dropboxusercontent.com/u/61771162/names.zip">https://dl.dropboxusercontent.com/u/61771162/names.zip</a></p>
+<h1 id="dataset---us-baby-names-1880---2010">DataSet - US Baby Names (1880 - 2010)</h1>
+<p><a href="https://dl.dropboxusercontent.com/u/61771162/names.zip">https://dl.dropboxusercontent.com/u/61771162/names.zip</a></p>
 </div>
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><a href="http://0rz.tw/cdUtn">http://0rz.tw/cdUtn</a></p>
+<p><a href="http://0rz.tw/cdUtn">http://0rz.tw/cdUtn</a></p>
 </div></section>
     </section><section>
     <section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="glance-at-the-data">Glance at the Data</h1>
+<h1 id="glance-at-the-data">Glance at the Data</h1>
 </div>
-<div class="cell border-box-sizing code_cell">
-<div class="input">
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
 <div class="prompt input_prompt">
 In&nbsp;[136]:
 </div>
@@ -3671,23 +3649,23 @@ In&nbsp;[136]:
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
+<div class="vbox output_wrapper">
+<div class="output vbox">
 
 
-<div class="output_area"><div class="prompt"></div>
+<div class="hbox output_area"><div class="prompt"></div>
 <div class="box-flex1 output_subarea output_stream output_stdout">
 <pre>
-Mary,F,7065
-Anna,F,2604
-Emma,F,2003
-Elizabeth,F,1939
-Minnie,F,1746
-Margaret,F,1578
-Ida,F,1472
-Alice,F,1414
-Bertha,F,1320
-Sarah,F,1288
+Mary,F,7065
+Anna,F,2604
+Emma,F,2003
+Elizabeth,F,1939
+Minnie,F,1746
+Margaret,F,1578
+Ida,F,1472
+Alice,F,1414
+Bertha,F,1320
+Sarah,F,1288
 
 </pre>
 </div>
@@ -3698,34 +3676,34 @@ Sarah,F,1288
 
 </div></section><section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="seems-its-a-csv-file">Seems it's a CSV file</h1>
+<h1 id="seems-its-a-csv-file">Seems it's a CSV file</h1>
 </div><div class="fragment">
     
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="you-know...-pandas-is-coming-to-rescue">You know... Pandas is coming to rescue</h2>
+<h2 id="you-know...-pandas-is-coming-to-rescue">You know... Pandas is coming to rescue</h2>
 </div>
     </div><div class="fragment">
     
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="pandas-provides-many-io-tools-including">Pandas provides many IO tools including:</h3>
-<ul>
-<li>csv</li>
-<li>excel</li>
-<li>sql</li>
-<li>json</li>
-<li>html</li>
-<li>etc...</li>
-</ul>
-<p>We're going to use <a href="http://pandas.pydata.org/pandas-docs/stable/generated/pandas.io.parsers.read_csv.html">read_csv</a> to read the CSV file into DataFrame</p>
+<h3 id="pandas-provides-many-io-tools-including">Pandas provides many IO tools including:</h3>
+<ul>
+<li>csv</li>
+<li>excel</li>
+<li>sql</li>
+<li>json</li>
+<li>html</li>
+<li>etc...</li>
+</ul>
+<p>We're going to use <a href="http://pandas.pydata.org/pandas-docs/stable/generated/pandas.io.parsers.read_csv.html">read_csv</a> to read the CSV file into DataFrame</p>
 </div>
     </div></section>
     </section><section>
     <section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="first-lets-import-the-pandas-module">First, let's import the pandas module</h1>
+<h1 id="first-lets-import-the-pandas-module">First, let's import the pandas module</h1>
 </div>
-<div class="cell border-box-sizing code_cell">
-<div class="input">
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
 <div class="prompt input_prompt">
 In&nbsp;[137]:
 </div>
@@ -3738,10 +3716,10 @@ In&nbsp;[137]:
 
 </div></section><section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="now-you-can-read-the-csv-into-the-dataframe">Now, You can Read the CSV into the DataFrame</h1>
+<h1 id="now-you-can-read-the-csv-into-the-dataframe">Now, You can Read the CSV into the DataFrame</h1>
 </div>
-<div class="cell border-box-sizing code_cell">
-<div class="input">
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
 <div class="prompt input_prompt">
 In&nbsp;[138]:
 </div>
@@ -3754,11 +3732,11 @@ In&nbsp;[138]:
 
 </div></section><section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="take-a-look-at-the-first-10-data">Take a look at the first 10 data</h1>
+<h1 id="take-a-look-at-the-first-10-data">Take a look at the first 10 data</h1>
 </div><div class="fragment">
     
-<div class="cell border-box-sizing code_cell">
-<div class="input">
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
 <div class="prompt input_prompt">
 In&nbsp;[139]:
 </div>
@@ -3769,11 +3747,11 @@ In&nbsp;[139]:
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
+<div class="vbox output_wrapper">
+<div class="output vbox">
 
 
-<div class="output_area"><div class="prompt output_prompt">
+<div class="hbox output_area"><div class="prompt output_prompt">
     Out[139]:</div>
 <div class="box-flex1 output_subarea output_pyout">
 
@@ -3864,11 +3842,11 @@ In&nbsp;[139]:
 </div>
     </div></section><section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="how-about-the-last-10">How about the last 10 ?</h1>
+<h1 id="how-about-the-last-10">How about the last 10 ?</h1>
 </div><div class="fragment">
     
-<div class="cell border-box-sizing code_cell">
-<div class="input">
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
 <div class="prompt input_prompt">
 In&nbsp;[140]:
 </div>
@@ -3879,11 +3857,11 @@ In&nbsp;[140]:
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
+<div class="vbox output_wrapper">
+<div class="output vbox">
 
 
-<div class="output_area"><div class="prompt output_prompt">
+<div class="hbox output_area"><div class="prompt output_prompt">
     Out[140]:</div>
 <div class="box-flex1 output_subarea output_pyout">
 
@@ -3974,11 +3952,11 @@ In&nbsp;[140]:
 </div>
     </div></section><section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="seems-therere-two-kinds-of-gender-proof-it">Seems there're two kinds of gender, Proof it!</h1>
+<h1 id="seems-therere-two-kinds-of-gender-proof-it">Seems there're two kinds of gender, Proof it!</h1>
 </div><div class="fragment">
     
-<div class="cell border-box-sizing code_cell">
-<div class="input">
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
 <div class="prompt input_prompt">
 In&nbsp;[141]:
 </div>
@@ -3989,11 +3967,11 @@ In&nbsp;[141]:
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
+<div class="vbox output_wrapper">
+<div class="output vbox">
 
 
-<div class="output_area"><div class="prompt output_prompt">
+<div class="hbox output_area"><div class="prompt output_prompt">
     Out[141]:</div>
 <div class="box-flex1 output_subarea output_pyout">
 
@@ -4011,11 +3989,11 @@ array([&apos;F&apos;, &apos;M&apos;], dtype=object)
 </div>
     </div></section><section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="the-total-births-number-for-males-and-females">The total births number for Males and Females?</h1>
+<h1 id="the-total-births-number-for-males-and-females">The total births number for Males and Females?</h1>
 </div><div class="fragment">
     
-<div class="cell border-box-sizing code_cell">
-<div class="input">
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
 <div class="prompt input_prompt">
 In&nbsp;[142]:
 </div>
@@ -4026,11 +4004,11 @@ In&nbsp;[142]:
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
+<div class="vbox output_wrapper">
+<div class="output vbox">
 
 
-<div class="output_area"><div class="prompt output_prompt">
+<div class="hbox output_area"><div class="prompt output_prompt">
     Out[142]:</div>
 <div class="box-flex1 output_subarea output_pyout">
 
@@ -4053,10 +4031,10 @@ Name: births, dtype: int64
     </section><section>
     <section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="now-you-got-some-basic-idea-for-each-dataset.-its-time-to-load-all-the-dataset.">Now, you got some basic idea for each dataset. It's time to load all the dataset.</h1>
+<h1 id="now-you-got-some-basic-idea-for-each-dataset.-its-time-to-load-all-the-dataset.">Now, you got some basic idea for each dataset. It's time to load all the dataset.</h1>
 </div>
-<div class="cell border-box-sizing code_cell">
-<div class="input">
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
 <div class="prompt input_prompt">
 In&nbsp;[143]:
 </div>
@@ -4075,8 +4053,8 @@ In&nbsp;[143]:
 
 </div><div class="fragment">
     
-<div class="cell border-box-sizing code_cell">
-<div class="input">
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
 <div class="prompt input_prompt">
 In&nbsp;[144]:
 </div>
@@ -4087,11 +4065,11 @@ In&nbsp;[144]:
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
+<div class="vbox output_wrapper">
+<div class="output vbox">
 
 
-<div class="output_area"><div class="prompt"></div>
+<div class="hbox output_area"><div class="prompt"></div>
 <div class="box-flex1 output_subarea output_stream output_stdout">
 <pre>
         name sex  births  year
@@ -4118,16 +4096,16 @@ In&nbsp;[144]:
 </div>
     </div></section><section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="how-to-concatenate-them">How to concatenate them?</h1>
+<h1 id="how-to-concatenate-them">How to concatenate them?</h1>
 </div><div class="fragment">
     
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="pandas-says-just-concat-them">Pandas says: Just concat them!</h3>
+<h3 id="pandas-says-just-concat-them">Pandas says: Just concat them!</h3>
 </div>
     </div><div class="fragment">
     
-<div class="cell border-box-sizing code_cell">
-<div class="input">
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
 <div class="prompt input_prompt">
 In&nbsp;[145]:
 </div>
@@ -4139,11 +4117,11 @@ In&nbsp;[145]:
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
+<div class="vbox output_wrapper">
+<div class="output vbox">
 
 
-<div class="output_area"><div class="prompt output_prompt">
+<div class="hbox output_area"><div class="prompt output_prompt">
     Out[145]:</div>
 <div class="box-flex1 output_subarea output_pyout">
 
@@ -4172,17 +4150,17 @@ array([1880, 1881, 1882, 1883, 1884, 1885, 1886, 1887, 1888, 1889, 1890,
 </div>
     </div></section><section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="were-still-interested-in-the-total-births-for-males-and-females">We're still interested in the total births for Males and Females</h1>
-<h1 id="but-please-seperate-them-by-year">But please seperate them by year</h1>
+<h1 id="were-still-interested-in-the-total-births-for-males-and-females">We're still interested in the total births for Males and Females</h1>
+<h1 id="but-please-seperate-them-by-year">But please seperate them by year</h1>
 </div><div class="fragment">
     
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="i-know-you-remember-...-groupby">I know you remember ... groupby</h1>
+<h1 id="i-know-you-remember-...-groupby">I know you remember ... groupby</h1>
 </div>
     </div><div class="fragment">
     
-<div class="cell border-box-sizing code_cell">
-<div class="input">
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
 <div class="prompt input_prompt">
 In&nbsp;[146]:
 </div>
@@ -4193,11 +4171,11 @@ In&nbsp;[146]:
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
+<div class="vbox output_wrapper">
+<div class="output vbox">
 
 
-<div class="output_area"><div class="prompt output_prompt">
+<div class="hbox output_area"><div class="prompt output_prompt">
     Out[146]:</div>
 <div class="box-flex1 output_subarea output_pyout">
 
@@ -4227,14 +4205,14 @@ Name: births, dtype: int64
     </div><div class="fragment">
     
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="it-might-be-better-if-i-can-set-f-and-m-as-columns">It might be better if I can set F and M as columns</h3>
+<h3 id="it-might-be-better-if-i-can-set-f-and-m-as-columns">It might be better if I can set F and M as columns</h3>
 </div>
     </div></section><section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="you-need-pivot-table">You need Pivot Table!</h2>
+<h2 id="you-need-pivot-table">You need Pivot Table!</h2>
 </div>
-<div class="cell border-box-sizing code_cell">
-<div class="input">
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
 <div class="prompt input_prompt">
 In&nbsp;[147]:
 </div>
@@ -4246,11 +4224,11 @@ In&nbsp;[147]:
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
+<div class="vbox output_wrapper">
+<div class="output vbox">
 
 
-<div class="output_area"><div class="prompt output_prompt">
+<div class="hbox output_area"><div class="prompt output_prompt">
     Out[147]:</div>
 <div class="box-flex1 output_subarea output_pyout">
 
@@ -4309,8 +4287,8 @@ In&nbsp;[147]:
 
 </div><div class="fragment">
     
-<div class="cell border-box-sizing code_cell">
-<div class="input">
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
 <div class="prompt input_prompt">
 In&nbsp;[148]:
 </div>
@@ -4321,11 +4299,11 @@ In&nbsp;[148]:
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
+<div class="vbox output_wrapper">
+<div class="output vbox">
 
 
-<div class="output_area"><div class="prompt output_prompt">
+<div class="hbox output_area"><div class="prompt output_prompt">
     Out[148]:</div>
 <div class="box-flex1 output_subarea output_pyout">
 
@@ -4387,16 +4365,16 @@ In&nbsp;[148]:
     </section><section>
     <section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="is-there-a-much-better-way-that-i-can-understand-my-data">Is there a much better way that I can understand my data?</h1>
+<h1 id="is-there-a-much-better-way-that-i-can-understand-my-data">Is there a much better way that I can understand my data?</h1>
 </div><div class="fragment">
     
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="how-about-this">How about this</h2>
+<h2 id="how-about-this">How about this</h2>
 </div>
     </div><div class="fragment">
     
-<div class="cell border-box-sizing code_cell">
-<div class="input">
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
 <div class="prompt input_prompt">
 In&nbsp;[149]:
 </div>
@@ -4411,11 +4389,11 @@ In&nbsp;[149]:
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
+<div class="vbox output_wrapper">
+<div class="output vbox">
 
 
-<div class="output_area"><div class="prompt output_prompt">
+<div class="hbox output_area"><div class="prompt output_prompt">
     Out[149]:</div>
 <div class="box-flex1 output_subarea output_pyout">
 
@@ -4427,7 +4405,7 @@ In&nbsp;[149]:
 </div>
 </div>
 
-<div class="output_area"><div class="prompt"></div>
+<div class="hbox output_area"><div class="prompt"></div>
 <div class="box-flex1 output_subarea output_display_data">
 
 
@@ -4979,21 +4957,21 @@ EREREREREREpnv8HPOtz2nyvZAgAAAAASUVORK5CYII=
     </section><section>
     <section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="case-study---last-letter-revolution">Case Study - &quot;Last Letter&quot; Revolution</h1>
-<p><a href="http://www.babynamewizard.com/archives/2007/7/where-all-boys-end-up-nowadays">http://www.babynamewizard.com/archives/2007/7/where-all-boys-end-up-nowadays</a></p>
-<p>In 2007, Laura Wattenberg, a name reasearcher, said that the distribution of the last letter of boy names has changed significantly over the last 100 years</p>
+<h1 id="case-study---last-letter-revolution">Case Study - &quot;Last Letter&quot; Revolution</h1>
+<p><a href="http://www.babynamewizard.com/archives/2007/7/where-all-boys-end-up-nowadays">http://www.babynamewizard.com/archives/2007/7/where-all-boys-end-up-nowadays</a></p>
+<p>In 2007, Laura Wattenberg, a name reasearcher, said that the distribution of the last letter of boy names has changed significantly over the last 100 years</p>
 </div></section><section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="how-about-learning-by-simulation">How about learning by simulation ?</h1>
+<h1 id="how-about-learning-by-simulation">How about learning by simulation ?</h1>
 </div></section>
     </section><section>
     <section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="first-lets-extract-the-last-letters-for-the-males">First, lets extract the last letters for the males</h1>
+<h1 id="first-lets-extract-the-last-letters-for-the-males">First, lets extract the last letters for the males</h1>
 </div><div class="fragment">
     
-<div class="cell border-box-sizing code_cell">
-<div class="input">
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
 <div class="prompt input_prompt">
 In&nbsp;[150]:
 </div>
@@ -5004,11 +4982,11 @@ In&nbsp;[150]:
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
+<div class="vbox output_wrapper">
+<div class="output vbox">
 
 
-<div class="output_area"><div class="prompt output_prompt">
+<div class="hbox output_area"><div class="prompt output_prompt">
     Out[150]:</div>
 <div class="box-flex1 output_subarea output_pyout">
 
@@ -5031,8 +5009,8 @@ Name: name, dtype: object
 </div>
     </div><div class="fragment">
     
-<div class="cell border-box-sizing code_cell">
-<div class="input">
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
 <div class="prompt input_prompt">
 In&nbsp;[151]:
 </div>
@@ -5045,11 +5023,11 @@ In&nbsp;[151]:
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
+<div class="vbox output_wrapper">
+<div class="output vbox">
 
 
-<div class="output_area"><div class="prompt output_prompt">
+<div class="hbox output_area"><div class="prompt output_prompt">
     Out[151]:</div>
 <div class="box-flex1 output_subarea output_pyout">
 
@@ -5164,16 +5142,16 @@ In&nbsp;[151]:
     </section><section>
     <section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="we-only-focus-on-last_letter-year-and-births">We only focus on last_letter, year, and births</h1>
+<h1 id="we-only-focus-on-last_letter-year-and-births">We only focus on last_letter, year, and births</h1>
 </div><div class="fragment">
     
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="so-we-need-pivot_table-again">So we need pivot_table again</h3>
+<h3 id="so-we-need-pivot_table-again">So we need pivot_table again</h3>
 </div>
     </div><div class="fragment">
     
-<div class="cell border-box-sizing code_cell">
-<div class="input">
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
 <div class="prompt input_prompt">
 In&nbsp;[152]:
 </div>
@@ -5185,11 +5163,11 @@ In&nbsp;[152]:
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
+<div class="vbox output_wrapper">
+<div class="output vbox">
 
 
-<div class="output_area"><div class="prompt output_prompt">
+<div class="hbox output_area"><div class="prompt output_prompt">
     Out[152]:</div>
 <div class="box-flex1 output_subarea output_pyout">
 
@@ -5885,11 +5863,11 @@ In&nbsp;[152]:
 </div>
     </div></section><section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="we-only-focus-on-year-1906-1956-and-2006">We only focus on year 1906, 1956, and 2006</h1>
+<h1 id="we-only-focus-on-year-1906-1956-and-2006">We only focus on year 1906, 1956, and 2006</h1>
 </div><div class="fragment">
     
-<div class="cell border-box-sizing code_cell">
-<div class="input">
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
 <div class="prompt input_prompt">
 In&nbsp;[153]:
 </div>
@@ -5901,11 +5879,11 @@ In&nbsp;[153]:
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
+<div class="vbox output_wrapper">
+<div class="output vbox">
 
 
-<div class="output_area"><div class="prompt output_prompt">
+<div class="hbox output_area"><div class="prompt output_prompt">
     Out[153]:</div>
 <div class="box-flex1 output_subarea output_pyout">
 
@@ -6100,11 +6078,11 @@ In&nbsp;[153]:
     </section><section>
     <section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="its-always-a-good-idea-to-plot">It's always a good idea to plot</h1>
+<h1 id="its-always-a-good-idea-to-plot">It's always a good idea to plot</h1>
 </div><div class="fragment">
     
-<div class="cell border-box-sizing code_cell">
-<div class="input">
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
 <div class="prompt input_prompt">
 In&nbsp;[154]:
 </div>
@@ -6125,11 +6103,11 @@ In&nbsp;[154]:
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
+<div class="vbox output_wrapper">
+<div class="output vbox">
 
 
-<div class="output_area"><div class="prompt output_prompt">
+<div class="hbox output_area"><div class="prompt output_prompt">
     Out[154]:</div>
 <div class="box-flex1 output_subarea output_pyout">
 
@@ -6141,7 +6119,7 @@ In&nbsp;[154]:
 </div>
 </div>
 
-<div class="output_area"><div class="prompt"></div>
+<div class="hbox output_area"><div class="prompt"></div>
 <div class="box-flex1 output_subarea output_display_data">
 
 
@@ -6553,11 +6531,11 @@ B5BOC3IBT0EIAAAAAElFTkSuQmCC
 </div>
     </div></section><section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="how-to-plot-them-in-the-same-figure">How to plot them in the same figure</h1>
+<h1 id="how-to-plot-them-in-the-same-figure">How to plot them in the same figure</h1>
 </div><div class="fragment">
     
-<div class="cell border-box-sizing code_cell">
-<div class="input">
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
 <div class="prompt input_prompt">
 In&nbsp;[155]:
 </div>
@@ -6568,11 +6546,11 @@ In&nbsp;[155]:
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
+<div class="vbox output_wrapper">
+<div class="output vbox">
 
 
-<div class="output_area"><div class="prompt output_prompt">
+<div class="hbox output_area"><div class="prompt output_prompt">
     Out[155]:</div>
 <div class="box-flex1 output_subarea output_pyout">
 
@@ -6584,7 +6562,7 @@ In&nbsp;[155]:
 </div>
 </div>
 
-<div class="output_area"><div class="prompt"></div>
+<div class="hbox output_area"><div class="prompt"></div>
 <div class="box-flex1 output_subarea output_display_data">
 
 
@@ -6884,15 +6862,15 @@ kiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkgrr/wPX45r0dxbhhQAAAABJRU5ErkJggg==
     </div><div class="fragment">
     
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="oops-not-a-good-idea...">Oops, not a good idea...</h3>
+<h3 id="oops-not-a-good-idea...">Oops, not a good idea...</h3>
 </div>
     </div></section><section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="it-makes-more-sense-if-we-convert-the-birth-number-to-the-ratio-before-plotting">It makes more sense if we convert the birth number to the ratio before plotting</h1>
+<h1 id="it-makes-more-sense-if-we-convert-the-birth-number-to-the-ratio-before-plotting">It makes more sense if we convert the birth number to the ratio before plotting</h1>
 </div><div class="fragment">
     
-<div class="cell border-box-sizing code_cell">
-<div class="input">
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
 <div class="prompt input_prompt">
 In&nbsp;[156]:
 </div>
@@ -6903,11 +6881,11 @@ In&nbsp;[156]:
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
+<div class="vbox output_wrapper">
+<div class="output vbox">
 
 
-<div class="output_area"><div class="prompt output_prompt">
+<div class="hbox output_area"><div class="prompt output_prompt">
     Out[156]:</div>
 <div class="box-flex1 output_subarea output_pyout">
 
@@ -6929,8 +6907,8 @@ dtype: float64
 </div>
     </div><div class="fragment">
     
-<div class="cell border-box-sizing code_cell">
-<div class="input">
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
 <div class="prompt input_prompt">
 In&nbsp;[157]:
 </div>
@@ -6942,11 +6920,11 @@ In&nbsp;[157]:
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
+<div class="vbox output_wrapper">
+<div class="output vbox">
 
 
-<div class="output_area"><div class="prompt output_prompt">
+<div class="hbox output_area"><div class="prompt output_prompt">
     Out[157]:</div>
 <div class="box-flex1 output_subarea output_pyout">
 
@@ -7139,10 +7117,10 @@ In&nbsp;[157]:
 </div>
     </div></section><section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="awesome">Awesome!</h1>
+<h1 id="awesome">Awesome!</h1>
 </div>
-<div class="cell border-box-sizing code_cell">
-<div class="input">
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
 <div class="prompt input_prompt">
 In&nbsp;[158]:
 </div>
@@ -7153,11 +7131,11 @@ In&nbsp;[158]:
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
+<div class="vbox output_wrapper">
+<div class="output vbox">
 
 
-<div class="output_area"><div class="prompt output_prompt">
+<div class="hbox output_area"><div class="prompt output_prompt">
     Out[158]:</div>
 <div class="box-flex1 output_subarea output_pyout">
 
@@ -7169,7 +7147,7 @@ In&nbsp;[158]:
 </div>
 </div>
 
-<div class="output_area"><div class="prompt"></div>
+<div class="hbox output_area"><div class="prompt"></div>
 <div class="box-flex1 output_subarea output_display_data">
 
 
@@ -7440,10 +7418,10 @@ SZIkSZIkSZIkSZIkSZIkSZIkSarg/wfPLhavxOWHzAAAAABJRU5ErkJggg==
     </section><section>
     <section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="whats-wrong-for-the-names-ending-with-d-and-e">What's wrong for the names ending with d and e?</h1>
+<h1 id="whats-wrong-for-the-names-ending-with-d-and-e">What's wrong for the names ending with d and e?</h1>
 </div>
-<div class="cell border-box-sizing code_cell">
-<div class="input">
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
 <div class="prompt input_prompt">
 In&nbsp;[159]:
 </div>
@@ -7454,11 +7432,11 @@ In&nbsp;[159]:
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
+<div class="vbox output_wrapper">
+<div class="output vbox">
 
 
-<div class="output_area"><div class="prompt output_prompt">
+<div class="hbox output_area"><div class="prompt output_prompt">
     Out[159]:</div>
 <div class="box-flex1 output_subarea output_pyout">
 
@@ -7470,7 +7448,7 @@ In&nbsp;[159]:
 </div>
 </div>
 
-<div class="output_area"><div class="prompt"></div>
+<div class="hbox output_area"><div class="prompt"></div>
 <div class="box-flex1 output_subarea output_display_data">
 
 
@@ -7739,10 +7717,10 @@ SZIkSZIkSZIkSZIkSZIkSZIkSarg/wfPLhavxOWHzAAAAABJRU5ErkJggg==
 
 </div></section><section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="lets-examine-all-the-years">Let's examine all the years!</h1>
+<h1 id="lets-examine-all-the-years">Let's examine all the years!</h1>
 </div>
-<div class="cell border-box-sizing code_cell">
-<div class="input">
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
 <div class="prompt input_prompt">
 In&nbsp;[160]:
 </div>
@@ -7753,11 +7731,11 @@ In&nbsp;[160]:
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
+<div class="vbox output_wrapper">
+<div class="output vbox">
 
 
-<div class="output_area"><div class="prompt output_prompt">
+<div class="hbox output_area"><div class="prompt output_prompt">
     Out[160]:</div>
 <div class="box-flex1 output_subarea output_pyout">
 
@@ -8068,10 +8046,10 @@ In&nbsp;[160]:
 
 </div></section><section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="again-lets-convert-it-to-ratio-first">Again, let's convert it to ratio first</h1>
+<h1 id="again-lets-convert-it-to-ratio-first">Again, let's convert it to ratio first</h1>
 </div>
-<div class="cell border-box-sizing code_cell">
-<div class="input">
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
 <div class="prompt input_prompt">
 In&nbsp;[161]:
 </div>
@@ -8083,11 +8061,11 @@ In&nbsp;[161]:
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
+<div class="vbox output_wrapper">
+<div class="output vbox">
 
 
-<div class="output_area"><div class="prompt output_prompt">
+<div class="hbox output_area"><div class="prompt output_prompt">
     Out[161]:</div>
 <div class="box-flex1 output_subarea output_pyout">
 
@@ -8782,11 +8760,11 @@ In&nbsp;[161]:
 
 </div></section><section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="we-only-care-about-d-n-and-y">We only care about d, n, and y</h1>
+<h1 id="we-only-care-about-d-n-and-y">We only care about d, n, and y</h1>
 </div><div class="fragment">
     
-<div class="cell border-box-sizing code_cell">
-<div class="input">
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
 <div class="prompt input_prompt">
 In&nbsp;[162]:
 </div>
@@ -8798,11 +8776,11 @@ In&nbsp;[162]:
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
+<div class="vbox output_wrapper">
+<div class="output vbox">
 
 
-<div class="output_area"><div class="prompt output_prompt">
+<div class="hbox output_area"><div class="prompt output_prompt">
     Out[162]:</div>
 <div class="box-flex1 output_subarea output_pyout">
 
@@ -8923,11 +8901,11 @@ In&nbsp;[162]:
 </div>
     </div></section><section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="happy-plotting-time">Happy Plotting Time!!!</h1>
+<h1 id="happy-plotting-time">Happy Plotting Time!!!</h1>
 </div><div class="fragment">
     
-<div class="cell border-box-sizing code_cell">
-<div class="input">
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
 <div class="prompt input_prompt">
 In&nbsp;[163]:
 </div>
@@ -8938,11 +8916,11 @@ In&nbsp;[163]:
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
+<div class="vbox output_wrapper">
+<div class="output vbox">
 
 
-<div class="output_area"><div class="prompt output_prompt">
+<div class="hbox output_area"><div class="prompt output_prompt">
     Out[163]:</div>
 <div class="box-flex1 output_subarea output_pyout">
 
@@ -8954,7 +8932,7 @@ In&nbsp;[163]:
 </div>
 </div>
 
-<div class="output_area"><div class="prompt"></div>
+<div class="hbox output_area"><div class="prompt"></div>
 <div class="box-flex1 output_subarea output_display_data">
 
 
@@ -11011,11 +10989,11 @@ gAcARxHwAOAolioAMKKSk5PbfT7f4Iu4/J9KTk5u7+npGekxAAAAAAAAAAAAAAAAgAT1P8PZkHj4
 </div>
     </div></section><section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="what-happen">What happen?</h1>
+<h1 id="what-happen">What happen?</h1>
 </div><div class="fragment">
     
-<div class="cell border-box-sizing code_cell">
-<div class="input">
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
 <div class="prompt input_prompt">
 In&nbsp;[164]:
 </div>
@@ -11026,11 +11004,11 @@ In&nbsp;[164]:
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
+<div class="vbox output_wrapper">
+<div class="output vbox">
 
 
-<div class="output_area"><div class="prompt output_prompt">
+<div class="hbox output_area"><div class="prompt output_prompt">
     Out[164]:</div>
 <div class="box-flex1 output_subarea output_pyout">
 
@@ -11151,8 +11129,8 @@ In&nbsp;[164]:
 </div>
     </div><div class="fragment">
     
-<div class="cell border-box-sizing code_cell">
-<div class="input">
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
 <div class="prompt input_prompt">
 In&nbsp;[165]:
 </div>
@@ -11163,11 +11141,11 @@ In&nbsp;[165]:
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
+<div class="vbox output_wrapper">
+<div class="output vbox">
 
 
-<div class="output_area"><div class="prompt output_prompt">
+<div class="hbox output_area"><div class="prompt output_prompt">
     Out[165]:</div>
 <div class="box-flex1 output_subarea output_pyout">
 
@@ -11570,10 +11548,10 @@ In&nbsp;[165]:
 </div>
     </div></section><section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="finally...">Finally...</h1>
+<h1 id="finally...">Finally...</h1>
 </div>
-<div class="cell border-box-sizing code_cell">
-<div class="input">
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
 <div class="prompt input_prompt">
 In&nbsp;[166]:
 </div>
@@ -11584,11 +11562,11 @@ In&nbsp;[166]:
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
+<div class="vbox output_wrapper">
+<div class="output vbox">
 
 
-<div class="output_area"><div class="prompt output_prompt">
+<div class="hbox output_area"><div class="prompt output_prompt">
     Out[166]:</div>
 <div class="box-flex1 output_subarea output_pyout">
 
@@ -11600,7 +11578,7 @@ In&nbsp;[166]:
 </div>
 </div>
 
-<div class="output_area"><div class="prompt"></div>
+<div class="hbox output_area"><div class="prompt"></div>
 <div class="box-flex1 output_subarea output_display_data">
 
 
@@ -12080,17 +12058,17 @@ wJY418XMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzCxI
     </section><section>
     <section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="how-to-continue-your-research">How to continue your research?</h1>
+<h1 id="how-to-continue-your-research">How to continue your research?</h1>
 </div><div class="fragment">
     
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Google: <a href="https://www.google.com.tw/search?q=name+encding+with+n+1950&amp;oq=name+encding+with+n+1950&amp;aqs=chrome..69i57.8222j0j7&amp;sourceid=chrome&amp;espv=210&amp;es_sm=91&amp;ie=UTF-8">name ending with n 1950</a></p>
+<p>Google: <a href="https://www.google.com.tw/search?q=name+encding+with+n+1950&amp;oq=name+encding+with+n+1950&amp;aqs=chrome..69i57.8222j0j7&amp;sourceid=chrome&amp;espv=210&amp;es_sm=91&amp;ie=UTF-8">name ending with n 1950</a></p>
 </div>
     </div></section>
     </section><section>
     <section>
-<div class="cell border-box-sizing code_cell">
-<div class="input">
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
 <div class="prompt input_prompt">
 In&nbsp;[167]:
 </div>
@@ -12101,11 +12079,11 @@ In&nbsp;[167]:
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
+<div class="vbox output_wrapper">
+<div class="output vbox">
 
 
-<div class="output_area"><div class="prompt"></div>
+<div class="hbox output_area"><div class="prompt"></div>
 <div class="box-flex1 output_subarea output_stream output_stdout">
 <pre>
 Thank you!
@@ -12120,12 +12098,12 @@ Thank you!
 </div><div style=display:none>
     
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="lab---boy-names-that-became-girl-names">Lab - Boy names that became girl names</h1>
+<h1 id="lab---boy-names-that-became-girl-names">Lab - Boy names that became girl names</h1>
 </div>
     </div><div style=display:none>
     
-<div class="cell border-box-sizing code_cell">
-<div class="input">
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
 <div class="prompt input_prompt">
 In&nbsp;[168]:
 </div>
@@ -12136,15 +12114,15 @@ In&nbsp;[168]:
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
+<div class="vbox output_wrapper">
+<div class="output vbox">
 
 
-<div class="output_area"><div class="prompt"></div>
+<div class="hbox output_area"><div class="prompt"></div>
 <div class="box-flex1 output_subarea output_stream output_stdout">
 <pre>
-{ &quot;a&quot;: &quot;Mozilla\/5.0 (Windows NT 6.1; WOW64) AppleWebKit\/535.11 (KHTML, like Gecko) Chrome\/17.0.963.78 Safari\/535.11&quot;, &quot;c&quot;: &quot;US&quot;, &quot;nk&quot;: 1, &quot;tz&quot;: &quot;America\/New_York&quot;, &quot;gr&quot;: &quot;MA&quot;, &quot;g&quot;: &quot;A6qOVH&quot;, &quot;h&quot;: &quot;wfLQtf&quot;, &quot;l&quot;: &quot;orofrog&quot;, &quot;al&quot;: &quot;en-US,en;q=0.8&quot;, &quot;hh&quot;: &quot;1.usa.gov&quot;, &quot;r&quot;: &quot;http:\/\/www.facebook.com\/l\/7AQEFzjSi\/1.usa.gov\/wfLQtf&quot;, &quot;u&quot;: &quot;http:\/\/www.ncbi.nlm.nih.gov\/pubmed\/22415991&quot;, &quot;t&quot;: 1331923247, &quot;hc&quot;: 1331822918, &quot;cy&quot;: &quot;Danvers&quot;, &quot;ll&quot;: [ 42.576698, -70.954903 ] }
-{ &quot;a&quot;: &quot;GoogleMaps\/RochesterNY&quot;, &quot;c&quot;: &quot;US&quot;, &quot;nk&quot;: 0, &quot;tz&quot;: &quot;America\/Denver&quot;, &quot;gr&quot;: &quot;UT&quot;, &quot;g&quot;: &quot;mwszkS&quot;, &quot;h&quot;: &quot;mwszkS&quot;, &quot;l&quot;: &quot;bitly&quot;, &quot;hh&quot;: &quot;j.mp&quot;, &quot;r&quot;: &quot;http:\/\/www.AwareMap.com\/&quot;, &quot;u&quot;: &quot;http:\/\/www.monroecounty.gov\/etc\/911\/rss.php&quot;, &quot;t&quot;: 1331923249, &quot;hc&quot;: 1308262393, &quot;cy&quot;: &quot;Provo&quot;, &quot;ll&quot;: [ 40.218102, -111.613297 ] }
+{ &quot;a&quot;: &quot;Mozilla\/5.0 (Windows NT 6.1; WOW64) AppleWebKit\/535.11 (KHTML, like Gecko) Chrome\/17.0.963.78 Safari\/535.11&quot;, &quot;c&quot;: &quot;US&quot;, &quot;nk&quot;: 1, &quot;tz&quot;: &quot;America\/New_York&quot;, &quot;gr&quot;: &quot;MA&quot;, &quot;g&quot;: &quot;A6qOVH&quot;, &quot;h&quot;: &quot;wfLQtf&quot;, &quot;l&quot;: &quot;orofrog&quot;, &quot;al&quot;: &quot;en-US,en;q=0.8&quot;, &quot;hh&quot;: &quot;1.usa.gov&quot;, &quot;r&quot;: &quot;http:\/\/www.facebook.com\/l\/7AQEFzjSi\/1.usa.gov\/wfLQtf&quot;, &quot;u&quot;: &quot;http:\/\/www.ncbi.nlm.nih.gov\/pubmed\/22415991&quot;, &quot;t&quot;: 1331923247, &quot;hc&quot;: 1331822918, &quot;cy&quot;: &quot;Danvers&quot;, &quot;ll&quot;: [ 42.576698, -70.954903 ] }
+{ &quot;a&quot;: &quot;GoogleMaps\/RochesterNY&quot;, &quot;c&quot;: &quot;US&quot;, &quot;nk&quot;: 0, &quot;tz&quot;: &quot;America\/Denver&quot;, &quot;gr&quot;: &quot;UT&quot;, &quot;g&quot;: &quot;mwszkS&quot;, &quot;h&quot;: &quot;mwszkS&quot;, &quot;l&quot;: &quot;bitly&quot;, &quot;hh&quot;: &quot;j.mp&quot;, &quot;r&quot;: &quot;http:\/\/www.AwareMap.com\/&quot;, &quot;u&quot;: &quot;http:\/\/www.monroecounty.gov\/etc\/911\/rss.php&quot;, &quot;t&quot;: 1331923249, &quot;hc&quot;: 1308262393, &quot;cy&quot;: &quot;Provo&quot;, &quot;ll&quot;: [ 40.218102, -111.613297 ] }
 
 </pre>
 </div>
@@ -12156,8 +12134,8 @@ In&nbsp;[168]:
 </div>
     </div><div style=display:none>
     
-<div class="cell border-box-sizing code_cell">
-<div class="input">
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
 <div class="prompt input_prompt">
 In&nbsp;[169]:
 </div>
@@ -12172,11 +12150,11 @@ In&nbsp;[169]:
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
+<div class="vbox output_wrapper">
+<div class="output vbox">
 
 
-<div class="output_area"><div class="prompt output_prompt">
+<div class="hbox output_area"><div class="prompt output_prompt">
     Out[169]:</div>
 <div class="box-flex1 output_subarea output_pyout">
 
@@ -12209,8 +12187,8 @@ In&nbsp;[169]:
 </div>
     </div><div style=display:none>
     
-<div class="cell border-box-sizing code_cell">
-<div class="input">
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
 <div class="prompt input_prompt">
 In&nbsp;[170]:
 </div>
@@ -12221,11 +12199,11 @@ In&nbsp;[170]:
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
+<div class="vbox output_wrapper">
+<div class="output vbox">
 
 
-<div class="output_area"><div class="prompt output_prompt">
+<div class="hbox output_area"><div class="prompt output_prompt">
     Out[170]:</div>
 <div class="box-flex1 output_subarea output_pyout">
 
@@ -12243,8 +12221,8 @@ u&apos;America/New_York&apos;
 </div>
     </div><div style=display:none>
     
-<div class="cell border-box-sizing code_cell">
-<div class="input">
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
 <div class="prompt input_prompt">
 In&nbsp;[171]:
 </div>
@@ -12256,11 +12234,11 @@ In&nbsp;[171]:
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
+<div class="vbox output_wrapper">
+<div class="output vbox">
 
 
-<div class="output_area"><div class="prompt output_prompt">
+<div class="hbox output_area"><div class="prompt output_prompt">
     Out[171]:</div>
 <div class="box-flex1 output_subarea output_pyout">
 
@@ -12516,8 +12494,8 @@ In&nbsp;[171]:
 </div>
     </div><div style=display:none>
     
-<div class="cell border-box-sizing code_cell">
-<div class="input">
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
 <div class="prompt input_prompt">
 In&nbsp;[172]:
 </div>
@@ -12528,11 +12506,11 @@ In&nbsp;[172]:
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
+<div class="vbox output_wrapper">
+<div class="output vbox">
 
 
-<div class="output_area"><div class="prompt output_prompt">
+<div class="hbox output_area"><div class="prompt output_prompt">
     Out[172]:</div>
 <div class="box-flex1 output_subarea output_pyout">
 
@@ -12560,8 +12538,8 @@ Name: tz, dtype: object
 </div>
     </div><div style=display:none>
     
-<div class="cell border-box-sizing code_cell">
-<div class="input">
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
 <div class="prompt input_prompt">
 In&nbsp;[173]:
 </div>
@@ -12573,11 +12551,11 @@ In&nbsp;[173]:
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
+<div class="vbox output_wrapper">
+<div class="output vbox">
 
 
-<div class="output_area"><div class="prompt"></div>
+<div class="hbox output_area"><div class="prompt"></div>
 <div class="box-flex1 output_subarea output_stream output_stdout">
 <pre>
 America/New_York       1251
@@ -12602,8 +12580,8 @@ dtype: int64
 </div>
     </div><div style=display:none>
     
-<div class="cell border-box-sizing code_cell">
-<div class="input">
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
 <div class="prompt input_prompt">
 In&nbsp;[174]:
 </div>
@@ -12615,11 +12593,11 @@ In&nbsp;[174]:
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
+<div class="vbox output_wrapper">
+<div class="output vbox">
 
 
-<div class="output_area"><div class="prompt"></div>
+<div class="hbox output_area"><div class="prompt"></div>
 <div class="box-flex1 output_subarea output_stream output_stdout">
 <pre>
 Populating the interactive namespace from numpy and matplotlib
@@ -12628,7 +12606,7 @@ Populating the interactive namespace from numpy and matplotlib
 </div>
 </div>
 
-<div class="output_area"><div class="prompt"></div>
+<div class="hbox output_area"><div class="prompt"></div>
 <div class="box-flex1 output_subarea output_stream output_stderr">
 <pre>
 WARNING: pylab import has clobbered these variables: [&apos;axes&apos;, &apos;table&apos;]
@@ -12638,7 +12616,7 @@ WARNING: pylab import has clobbered these variables: [&apos;axes&apos;, &apos;ta
 </div>
 </div>
 
-<div class="output_area"><div class="prompt output_prompt">
+<div class="hbox output_area"><div class="prompt output_prompt">
     Out[174]:</div>
 <div class="box-flex1 output_subarea output_pyout">
 
@@ -12650,7 +12628,7 @@ WARNING: pylab import has clobbered these variables: [&apos;axes&apos;, &apos;ta
 </div>
 </div>
 
-<div class="output_area"><div class="prompt"></div>
+<div class="hbox output_area"><div class="prompt"></div>
 <div class="box-flex1 output_subarea output_display_data">
 
 
@@ -12871,8 +12849,8 @@ AAAAAElFTkSuQmCC
 </div>
     </div><div style=display:none>
     
-<div class="cell border-box-sizing code_cell">
-<div class="input">
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
 <div class="prompt input_prompt">
 In&nbsp;[175]:
 </div>
@@ -12883,11 +12861,11 @@ In&nbsp;[175]:
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
+<div class="vbox output_wrapper">
+<div class="output vbox">
 
 
-<div class="output_area"><div class="prompt output_prompt">
+<div class="hbox output_area"><div class="prompt output_prompt">
     Out[175]:</div>
 <div class="box-flex1 output_subarea output_pyout">
 
@@ -12920,8 +12898,8 @@ Name: a, dtype: object
 </div>
     </div><div style=display:none>
     
-<div class="cell border-box-sizing code_cell">
-<div class="input">
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
 <div class="prompt input_prompt">
 In&nbsp;[176]:
 </div>
@@ -12932,11 +12910,11 @@ In&nbsp;[176]:
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
+<div class="vbox output_wrapper">
+<div class="output vbox">
 
 
-<div class="output_area"><div class="prompt"></div>
+<div class="hbox output_area"><div class="prompt"></div>
 <div class="box-flex1 output_subarea output_stream output_stdout">
 <pre>
 0     Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKi...
@@ -12966,8 +12944,8 @@ Name: a, dtype: object
 </div>
     </div><div style=display:none>
     
-<div class="cell border-box-sizing code_cell">
-<div class="input">
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
 <div class="prompt input_prompt">
 In&nbsp;[177]:
 </div>
@@ -12978,11 +12956,11 @@ In&nbsp;[177]:
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
+<div class="vbox output_wrapper">
+<div class="output vbox">
 
 
-<div class="output_area"><div class="prompt"></div>
+<div class="hbox output_area"><div class="prompt"></div>
 <div class="box-flex1 output_subarea output_stream output_stdout">
 <pre>
 Mozilla/5.0 (Windows NT 6.1; WOW64; rv:10.0.2) Gecko/20100101 Firefox/10.0.2    309
@@ -13028,8 +13006,8 @@ Length: 761, dtype: int64
 </div>
     </div><div style=display:none>
     
-<div class="cell border-box-sizing code_cell">
-<div class="input">
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
 <div class="prompt input_prompt">
 In&nbsp;[178]:
 </div>
@@ -13041,11 +13019,11 @@ In&nbsp;[178]:
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
+<div class="vbox output_wrapper">
+<div class="output vbox">
 
 
-<div class="output_area"><div class="prompt"></div>
+<div class="hbox output_area"><div class="prompt"></div>
 <div class="box-flex1 output_subarea output_stream output_stdout">
 <pre>
 0                Mozilla/5.0
@@ -13091,8 +13069,8 @@ Length: 3440, dtype: object
 </div>
     </div><div style=display:none>
     
-<div class="cell border-box-sizing code_cell">
-<div class="input">
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
 <div class="prompt input_prompt">
 In&nbsp;[179]:
 </div>
@@ -13103,11 +13081,11 @@ In&nbsp;[179]:
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
+<div class="vbox output_wrapper">
+<div class="output vbox">
 
 
-<div class="output_area"><div class="prompt"></div>
+<div class="hbox output_area"><div class="prompt"></div>
 <div class="box-flex1 output_subarea output_stream output_stdout">
 <pre>
 Mozilla/5.0                 2594
@@ -13134,9 +13112,24 @@ dtype: int64
 </div>
 </div>
 
-<script src="reveal.js/lib/js/head.min.js"></script>
+<!--
+Uncomment the following block and the addthis_widget.js (see below inside dependencies)
+to get enable social buttons.
+-->
 
-<script src="reveal.js/js/reveal.js"></script>
+<!--
+<div class="addthis_toolbox addthis_floating_style addthis_32x32_style" style="left:20px;top:20px;">
+<a class="addthis_button_twitter"></a>
+<a class="addthis_button_google_plusone_share"></a>
+<a class="addthis_button_linkedin"></a>
+<a class="addthis_button_facebook"></a>
+<a class="addthis_button_more"></a>
+</div>
+-->
+
+<script src="//cdn.jsdelivr.net/reveal.js/2.4.0/lib/js/head.min.js"></script>
+
+<script src="//cdn.jsdelivr.net/reveal.js/2.4.0/js/reveal.js"></script>
 
 <script>
 
@@ -13151,48 +13144,47 @@ transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/c
 
 // Optional libraries used to extend on reveal.js
 dependencies: [
-{ src: "reveal.js/lib/js/classList.js", condition: function() { return !document.body.classList; } },
-{ src: "reveal.js/plugin/highlight/highlight.js", async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-{ src: "reveal.js/plugin/notes/notes.js", async: true, condition: function() { return !!document.body.classList; } }
+{ src: "//cdn.jsdelivr.net/reveal.js/2.4.0/lib/js/classList.js", condition: function() { return !document.body.classList; } },
+{ src: "//cdn.jsdelivr.net/reveal.js/2.4.0/plugin/highlight/highlight.js", async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+{ src: "//cdn.jsdelivr.net/reveal.js/2.4.0/plugin/notes/notes.js", async: true, condition: function() { return !!document.body.classList; } }
+// { src: 'http://s7.addthis.com/js/300/addthis_widget.js', async: true},
 ]
 });
 </script>
 
-<!-- Loading mathjax macro -->
 <!-- MathJax configuration -->
-    <script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-      tex2jax: {
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
         inlineMath: [ ['$','$'], ["\\(","\\)"] ],
         displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
-      },
-      displayAlign: 'left', // Change this to 'center' to center equations.
-      "HTML-CSS": {
+    },
+    displayAlign: 'left', // Change this to 'center' to center equations.
+    "HTML-CSS": {
         styles: {'.MathJax_Display': {"margin": 0}}
-      }
-    });
-    </script>
-    <!-- End of mathjax configuration -->
-
-    <script>
-    //  We wait for the onload function to load MathJax after the page is completely loaded.
-    //  MathJax is loaded 1 unit of time after the page is ready.
-    //  This hack prevent problems when you load multiple js files.
-
-    window.onload = function () {
-      setTimeout(function () {
-        var script = document.createElement("script");
-        script.type = "text/javascript";
-        script.src  = "https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-AMS_HTML";
-        document.getElementsByTagName("head")[0].appendChild(script);
-      },1)
     }
-    </script>
+});
+</script>
+<!-- End of mathjax configuration -->
+
+<script>
+//  We wait for the onload function to load MathJax after the page is completely loaded.
+//  MathJax is loaded 1 unit of time after the page is ready.
+//  This hack prevent problems when you load multiple js files (i.e. social button from addthis).
+//
+window.onload = function () {
+  setTimeout(function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-AMS_HTML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  },1)
+}
+</script>
 
 <script>
 Reveal.addEventListener( 'slidechanged', function( event ) {
-  window.scrollTo(0,0);
-  MathJax.Hub.Rerender(event.currentSlide);
+MathJax.Hub.Rerender(event.currentSlide);
 });
 </script>
 
