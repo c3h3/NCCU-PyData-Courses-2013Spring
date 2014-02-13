@@ -1751,7 +1751,7 @@ div.output_prompt {
 <div class="cell border-box-sizing code_cell">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[1]:
+In&nbsp;[2]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="o">%</span><span class="k">matplotlib</span> <span class="n">inline</span>
@@ -1766,11 +1766,12 @@ In&nbsp;[1]:
 <div class="cell border-box-sizing code_cell">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[2]:
+In&nbsp;[3]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight"><pre><span class="kn">import</span> <span class="nn">matplotlib.pylab</span> <span class="kn">as</span> <span class="nn">pylab</span>
 <span class="n">pylab</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s">&#39;figure.figsize&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">12</span>
+<span class="n">pylab</span><span class="o">.</span><span class="n">ion</span><span class="p">()</span>
 </pre></div>
 
 </div>
@@ -1781,7 +1782,7 @@ In&nbsp;[2]:
     </section><section>
     <section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="hello-matplotlib">Hello Matplotlib!</h1>
+<h1 id="basic-matplotlib-skills">Basic Matplotlib Skills</h1>
 </div></section><section>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="if-you-are-using-ipython-notebook-...">If you are using Ipython Notebook ...</h2>
@@ -2044,7 +2045,8 @@ In&nbsp;[7]:
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="setting-new-title-...">Setting New Title ...</h2>
 </div>
-    </div>
+    </div><div class="fragment">
+    
 <div class="cell border-box-sizing code_cell">
 <div class="input">
 <div class="prompt input_prompt">
@@ -2076,7 +2078,8 @@ In&nbsp;[8]:
 </div>
 </div>
 
-</div></section><section>
+</div>
+    </div></section><section>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="looking-insight-line...">Looking Insight line...</h1>
 </div>
@@ -2113,7 +2116,8 @@ In&nbsp;[9]:
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="get-data-from-line-object-...">Get data from line object ...</h2>
 </div>
-    </div>
+    </div><div class="fragment">
+    
 <div class="cell border-box-sizing code_cell">
 <div class="input">
 <div class="prompt input_prompt">
@@ -2154,12 +2158,11 @@ array([[  0.        ,   0.        ],
 </div>
 </div>
 
-</div><div class="fragment">
-    
+</div>
+    </div></section><section>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="updating-new-data-...">Updating New Data ...</h2>
 </div>
-    </div>
 <div class="cell border-box-sizing code_cell">
 <div class="input">
 <div class="prompt input_prompt">
@@ -2187,6 +2190,25 @@ In&nbsp;[11]:
 
 </div>
 </div>
+
+</div>
+</div>
+
+</div><div class="fragment">
+    
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="live-demo-...">Live demo ...</h2>
+<h3 id="must-turn-on-the-interaction-mode-of-matplotlib"><a href="http://stackoverflow.com/questions/9753885/pylab-matplotlib-show-waits-until-window-closes">(must turn on the interaction mode of matplotlib)</a></h3>
+</div>
+    </div>
+<div class="cell border-box-sizing code_cell">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[4]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="n">pylab</span><span class="o">.</span><span class="n">ion</span><span class="p">()</span>
+</pre></div>
 
 </div>
 </div>
