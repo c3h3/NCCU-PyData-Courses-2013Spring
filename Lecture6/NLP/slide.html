@@ -1,31 +1,9 @@
-
 <!DOCTYPE html>
 <html>
 <head>
 
 <meta charset="utf-8" />
-<meta http-equiv="X-UA-Compatible" content="chrome=1" />
-
-<meta name="apple-mobile-web-app-capable" content="yes" />
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-
-<title>IntroNLPsldies slides</title>
-
-<!-- General and theme style sheets -->
-<link rel="stylesheet" href="reveal.js/css/reveal.css">
-<link rel="stylesheet" href="reveal.js/css/theme/simple.css" id="theme">
-
-<!-- For syntax highlighting -->
-<link rel="stylesheet" href="reveal.js/lib/css/zenburn.css">
-
-<!-- If the query includes 'print-pdf', use the PDF print sheet -->
-<script>
-document.write( '<link rel="stylesheet" href="reveal.js/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
-</script>
-
-<!--[if lt IE 9]>
-<script src="reveal.js/lib/js/html5shiv.js"></script>
-<![endif]-->
+<title>IntroNLPsldies</title>
 
 <style type="text/css">
     .clearfix{*zoom:1;}.clearfix:before,.clearfix:after{display:table;content:"";line-height:0;}
@@ -1684,70 +1662,48 @@ span#checkpoint_status,span#autosave_status{font-size:small;}
 
 <style type="text/css">
 /* Overrides of notebook CSS for static HTML export */
-html {
-  overflow-y: auto;
+body {
+  overflow: visible;
+  padding: 8px;
 }
-.reveal {
-  font-size: 20px;
+.input_area {
+  padding: 0.2em;
 }
-.reveal pre {
-  width: 95%;
-  padding: 0.4em;
+
+pre {
+  padding: 0.2em;
+  border: none;
   margin: 0px;
-  font-family: monospace, sans-serif;
-  font-size: 80%;
-  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
-}
-.reveal section img {
-  border: 0px solid black;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0);
-}
-.reveal .slides {
-  text-align: left;
-}
-.reveal.fade {
-  opacity: 1;
-}
-.reveal .progress {
-  position: static;
-}
-div.input_area {
-  padding: 0.06em;
-}
-div.code_cell {
-  background-color: transparent;
-}
-div.prompt {
-  width: 11ex;
-  padding: 0.4em;
-  margin: 0px;
-  font-family: monospace, sans-serif;
-  font-size: 80%;
-  text-align: right;
-}
-div.output_area pre {
-  font-family: monospace, sans-serif;
-  font-size: 80%;
-}
-div.output_prompt {
-  /* 5px right shift to account for margin in parent container */
-  margin: 5px 5px 0 0;
-}
-.rendered_html p {
-  text-align: inherit;
+  font-size: 13px;
 }
 </style>
 
 <!-- Custom stylesheet, it must be in the same directory as the html file -->
 <link rel="stylesheet" href="custom.css">
 
+<script src="https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script>
+<script type="text/javascript">
+init_mathjax = function() {
+    if (window.MathJax) {
+        // MathJax loaded
+        MathJax.Hub.Config({
+            tex2jax: {
+                inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
+            },
+            displayAlign: 'left', // Change this to 'center' to center equations.
+            "HTML-CSS": {
+                styles: {'.MathJax_Display': {"margin": 0}}
+            }
+        });
+        MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+    }
+}
+init_mathjax();
+</script>
 </head>
-
 <body>
-<div class="reveal">
-<div class="slides">
-<div style=display:none>
-    
+
 <div class="cell border-box-sizing code_cell">
 <div class="input">
 <div class="prompt input_prompt">
@@ -1761,8 +1717,6 @@ In&nbsp;[2]:
 </div>
 
 </div>
-    </div><div style=display:none>
-    
 <div class="cell border-box-sizing code_cell">
 <div class="input">
 <div class="prompt input_prompt">
@@ -1780,15 +1734,12 @@ In&nbsp;[3]:
 </div>
 
 </div>
-    </div></section>
-    </section><section>
-    <section>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="introduction-to-nlp-with-python">Introduction to NLP with Python</h1>
 </div>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="chia-chi-chang">Chia-Chi Chang</h2>
-</div></section><section>
+</div>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="outline">Outline:</h1>
 <ul>
@@ -1797,14 +1748,14 @@ In&nbsp;[3]:
 <li><h2>Hard Problems with NLP</h2></li>
 <li><h2>Chinese NLP's Problems</h2></li>
 </ul>
-</div></section><section>
+</div>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="courses-in-nlp">Courses in NLP:</h1>
 <ul>
 <li><h2><a href="https://www.coursera.org/course/nlangp">Michael Collins Course in Coursera</a></h2></li>
 <li><h2><a href="https://www.coursera.org/course/nlp">Stanford NLP Course in Coursera</a></h2></li>
 </ul>
-</div></section><section>
+</div>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="nlp-language-modeling">NLP &amp; Language Modeling:</h1>
 <div class="figure">
@@ -1816,22 +1767,20 @@ In&nbsp;[3]:
 <li><h2><a href="http://www.cs.columbia.edu/~cs4705/lectures/newlec01.pdf">Introductio to NLP</a></h2></li>
 <li><h2><a href="https://d396qusza40orc.cloudfront.net/nlangp/lectures%2Flm.pdf">Language Modeling</a></h2></li>
 </ul>
-</div></section><section>
+</div>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="example-supervised-nlp-models-workflow">[Example] Supervised NLP models workflow:</h1>
 <h2 id="ref-httpwww.slideshare.netogriselnltk-scikit-learnpyconfr2010ogrisel">Ref: http://www.slideshare.net/ogrisel/nltk-scikit-learnpyconfr2010ogrisel</h2>
 <div class="figure">
 <img src="supervised_nlp_nodel_flow.png" />
 </div>
-</div></section><section>
+</div>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="why-nlp-is-hard">Why NLP is Hard ?</h1>
-</div></section>
-    </section><section>
-    <section>
+</div>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="hello-language-modeling-...">Hello Language Modeling ...</h1>
-</div></section><section>
+</div>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="hello-ngram-model-counting-measure">Hello NGram Model &amp; Counting Measure:</h1>
 </div>
@@ -1839,20 +1788,20 @@ In&nbsp;[3]:
 <ul>
 <li><h2>Collecting Corpus</h2></li>
 </ul>
-</div></section><section>
+</div>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="using-ptt-corpus">Using PTT Corpus</h1>
 <h2 id="ref-lecture1-lecture2-ptt-web-crawler">Ref: <a href="http://talks.c3h3.org/Lecture2_WebCrawler.slides.html#/16">Lecture1 &amp; Lecture2: PTT Web Crawler</a></h2>
 <div class="figure">
 <img src="http://talks.c3h3.org/Lec2_slide_imgs/Web_Ptt_article.png" />
 </div>
-</div></section><section>
+</div>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="articles-in-db">Articles in DB:</h1>
 <div class="figure">
 <img src="ptt_corpus_prior.png" />
 </div>
-</div></section><section>
+</div>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="loading-data-from-mongodb">Loading Data From MongoDB</h1>
 </div>
@@ -1872,7 +1821,7 @@ In&nbsp;[4]:
 </div>
 </div>
 
-</div></section><section>
+</div>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="using-dataframe">Using DataFrame</h1>
 </div>
@@ -1891,8 +1840,7 @@ In&nbsp;[5]:
 </div>
 </div>
 
-</div><div class="fragment">
-    
+</div>
 <div class="cell border-box-sizing code_cell">
 <div class="input">
 <div class="prompt input_prompt">
@@ -2074,7 +2022,6 @@ In&nbsp;[6]:
 </div>
 
 </div>
-    </div></section><section>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="analysis-title-data-...">Analysis Title Data ...</h1>
 </div>
@@ -2140,7 +2087,7 @@ Name: title, Length: 37122, dtype: object
 </div>
 </div>
 
-</div></section><section>
+</div>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="hello-ngram-extractor">Hello NGram Extractor:</h1>
 </div>
@@ -2231,7 +2178,7 @@ In&nbsp;[10]:
 </div>
 </div>
 
-</div></section><section>
+</div>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="hello-my-first-ngram-extractor">Hello (my first) NGram Extractor:</h1>
 </div>
@@ -2283,12 +2230,10 @@ In&nbsp;[11]:
 </div>
 </div>
 
-</div><div class="fragment">
-    
+</div>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="python-qa-iterator-v.s.-generator">[Python Q&amp;A] iterator V.S. generator ?</h2>
 </div>
-    </div></section><section>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="using-ngram-extractor-as-tokenize">Using NGram Extractor as Tokenize:</h1>
 </div>
@@ -2375,7 +2320,7 @@ Trie has been built succesfully.
 </div>
 </div>
 
-</div></section><section>
+</div>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="text-vectorizer-in-scikit-learn">Text Vectorizer in Scikit Learn:</h1>
 </div>
@@ -2474,7 +2419,7 @@ In&nbsp;[14]:
 </div>
 </div>
 
-</div></section><section>
+</div>
 <div class="cell border-box-sizing code_cell">
 <div class="input">
 <div class="prompt input_prompt">
@@ -2504,7 +2449,7 @@ In&nbsp;[15]:
 </div>
 </div>
 
-</div></section><section>
+</div>
 <div class="cell border-box-sizing code_cell">
 <div class="input">
 <div class="prompt input_prompt">
@@ -2606,16 +2551,14 @@ In&nbsp;[16]:
 </div>
 </div>
 
-</div></section><section>
+</div>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="reference">Reference:</h2>
 <ul>
 <li><h3><a href="http://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.CountVectorizer.html">CountVectorizer</a></h3></li>
 <li><h3><a href="http://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.TfidfVectorizer.html">TfidfVectorizer</a></h3></li>
 </ul>
-</div></section>
-    </section><section>
-    <section>
+</div>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="text-classification">Text Classification</h1>
 </div>
@@ -2648,7 +2591,7 @@ In&nbsp;[17]:
 </div>
 </div>
 
-</div></section><section>
+</div>
 <div class="cell border-box-sizing code_cell">
 <div class="input">
 <div class="prompt input_prompt">
@@ -2748,7 +2691,7 @@ In&nbsp;[20]:
 </div>
 </div>
 
-</div></section><section>
+</div>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="feature-selection">Feature Selection:</h1>
 <h3 id="last-lecture-using-conditional-meanword-count-as-features-filter-...-top-10">(Last Lecture) Using Conditional Mean(Word Count) as Features Filter ... (Top 10%)</h3>
@@ -2957,7 +2900,7 @@ array([2176, 2560,  683,    0,    8,    9,  395,  524,   66,   14, 1552,
 </div>
 </div>
 
-</div></section><section>
+</div>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="get-document-term-matrix-dtm">Get Document-Term Matrix (DTM):</h1>
 </div>
@@ -3361,7 +3304,7 @@ In&nbsp;[30]:
 </div>
 </div>
 
-</div></section><section>
+</div>
 <div class="cell border-box-sizing code_cell">
 <div class="input">
 <div class="prompt input_prompt">
@@ -3540,7 +3483,7 @@ Index([u&apos;請&apos;, u&apos;題&apos;, u&apos;子&apos;, u&apos; &apos;, u&a
 </div>
 </div>
 
-</div></section><section>
+</div>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="some-visualization-...">Some Visualization ...</h1>
 </div>
@@ -4900,12 +4843,10 @@ TkSuQmCC
 </div>
 </div>
 
-</div></section><section>
+</div>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="homework-use-tf-idf-unigram-features-re-do-above-practice-...">[Homework] Use TF-IDF Unigram Features Re-Do above Practice ...</h1>
-</div></section>
-    </section><section>
-    <section>
+</div>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="hello-texts-classification-...">Hello Texts Classification ...</h1>
 </div>
@@ -4962,7 +4903,7 @@ In&nbsp;[35]:
 </div>
 </div>
 
-</div></section><section>
+</div>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="label-encoding-...">Label Encoding ...</h1>
 </div>
@@ -5001,7 +4942,7 @@ Y_values =  [0 0 0 ..., 0 0 0]
 </div>
 </div>
 
-</div></section><section>
+</div>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="hello-svc-...">Hello SVC ...</h1>
 </div>
@@ -5039,7 +4980,7 @@ In&nbsp;[37]:
 </div>
 </div>
 
-</div></section><section>
+</div>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="using-only-10-as-traing-data-...">Using only 10% as traing data ...</h1>
 </div>
@@ -5085,7 +5026,7 @@ np.mean((Y_values - pred_Y)**2) =  0.144550401379
 </div>
 </div>
 
-</div></section><section>
+</div>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="using-only-5-as-traing-data-...">Using only 5% as traing data ...</h1>
 </div>
@@ -5128,7 +5069,7 @@ np.mean((Y_values - pred_Y)**2) =  0.168579279134
 </div>
 </div>
 
-</div></section><section>
+</div>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="hello-pca-...">Hello PCA ...</h1>
 </div>
@@ -8779,7 +8720,7 @@ AEhK8QQAACApxRMAAICk/g9e560X7QmIhgAAAABJRU5ErkJggg==
 </div>
 </div>
 
-</div></section><section>
+</div>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="hello-maniford-learning-...">Hello Maniford Learning ...</h1>
 </div>
@@ -10275,10 +10216,10 @@ ADDV/wN1+Fwsu9hgVgAAAABJRU5ErkJggg==
 </div>
 </div>
 
-</div></section><section>
+</div>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="homework-hello-kernel-pca-...">[Homework] Hello Kernel PCA ...</h2>
-</div></section><section>
+</div>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="references">References</h2>
 <ul>
@@ -10289,9 +10230,7 @@ ADDV/wN1+Fwsu9hgVgAAAABJRU5ErkJggg==
 <li><h3><a href="http://scikit-learn.org/stable/modules/generated/sklearn.decomposition.SparsePCA.html#sklearn.decomposition.SparsePCA">SparsePCA</a></h3></li>
 <li><h3><a href="http://scikit-learn.org/stable/modules/generated/sklearn.decomposition.DictionaryLearning.html#sklearn.decomposition.DictionaryLearning">Dictionary Learning</a></h3></li>
 </ul>
-</div></section>
-    </section><section>
-    <section>
+</div>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="hello-topic-modeling">Hello Topic Modeling:</h1>
 </div>
@@ -10436,7 +10375,7 @@ Name: title, Length: 72, dtype: object
 </div>
 </div>
 
-</div></section><section>
+</div>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="try-jieba-features">Try jieba Features</h1>
 </div>
@@ -10545,7 +10484,7 @@ In&nbsp;[76]:
 </div>
 </div>
 
-</div></section><section>
+</div>
 <div class="cell border-box-sizing code_cell">
 <div class="input">
 <div class="prompt input_prompt">
@@ -10575,7 +10514,7 @@ In&nbsp;[77]:
 </div>
 </div>
 
-</div></section><section>
+</div>
 <div class="cell border-box-sizing code_cell">
 <div class="input">
 <div class="prompt input_prompt">
@@ -10881,7 +10820,7 @@ In&nbsp;[78]:
 </div>
 </div>
 
-</div></section><section>
+</div>
 <div class="cell border-box-sizing code_cell">
 <div class="input">
 <div class="prompt input_prompt">
@@ -10954,7 +10893,7 @@ In&nbsp;[83]:
 </div>
 </div>
 
-</div></section><section>
+</div>
 <div class="cell border-box-sizing code_cell">
 <div class="input">
 <div class="prompt input_prompt">
@@ -12930,9 +12869,7 @@ IiIibkfJqoiIiIiIiLgdJasiIiIiIiLidpSsioiIiIiIiNv5X6fIyyV5g5HpAAAAAElFTkSuQmCC
 </div>
 </div>
 
-</div></section>
-    </section><section>
-    <section>
+</div>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="large-scale-problem-...">Large Scale Problem ...</h1>
 </div>
@@ -12968,12 +12905,10 @@ In&nbsp;[86]:
 </div>
 </div>
 
-</div><div class="fragment">
-    
+</div>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="homework-try-to-use-pca-or-maniford-learning-to-reduce-dimensions-of-features">[Homework] Try to use PCA or Maniford Learning to Reduce Dimensions of Features ?</h3>
 </div>
-    </div></section><section>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="better-solution-...-for-pca-...">Better Solution ... for PCA ...</h1>
 </div>
@@ -13065,7 +13000,7 @@ V.shape =  (200, 16356)
 </div>
 </div>
 
-</div></section><section>
+</div>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="rough-solution-...-for-clustering-...">Rough Solution ... for Clustering ...</h1>
 <h2 id="as-a-dual-problem-of-dimension-reduction-...">AS a dual problem of Dimension Reduction ...</h2>
@@ -13150,7 +13085,7 @@ array([ 0.05483557,  0.08341618,  0.04981693,  0.06233593,  0.07185616,
 </div>
 </div>
 
-</div></section><section>
+</div>
 <div class="cell border-box-sizing code_cell">
 <div class="input">
 <div class="prompt input_prompt">
@@ -13202,9 +13137,7 @@ Name: title, dtype: object
 </div>
 </div>
 
-</div></section>
-    </section><section>
-    <section>
+</div>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="more-sharp-weapons">More Sharp Weapons:</h1>
 <ul>
@@ -13214,9 +13147,7 @@ Name: title, dtype: object
 <li><h2><a href="http://radimrehurek.com/gensim/">gensim: Topic Modeling Tools</a></h2></li>
 <li><h2><a href="http://radimrehurek.com/gensim/">NLTK: NLP Toolkits</a></h2></li>
 </ul>
-</div></section>
-    </section><section>
-    <section>
+</div>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="standard-processes-of-nlp">Standard Processes of NLP:</h1>
 <ul>
@@ -13241,70 +13172,5 @@ Name: title, dtype: object
 <li><h3><a href="http://nbviewer.ipython.org/github/c3h3/PyData-Notes/blob/master/visualization/QAs/Matplotlib_With_Chinese_Characters.ipynb">chinese in chart</a></h3></li>
 </ul>
 </div>
-</div>
-</div>
-
-<script src="reveal.js/lib/js/head.min.js"></script>
-
-<script src="reveal.js/js/reveal.js"></script>
-
-<script>
-
-// Full list of configuration options available here: https://github.com/hakimel/reveal.js#configuration
-Reveal.initialize({
-controls: true,
-progress: true,
-history: true,
-
-theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/none
-
-// Optional libraries used to extend on reveal.js
-dependencies: [
-{ src: "reveal.js/lib/js/classList.js", condition: function() { return !document.body.classList; } },
-{ src: "reveal.js/plugin/highlight/highlight.js", async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-{ src: "reveal.js/plugin/notes/notes.js", async: true, condition: function() { return !!document.body.classList; } }
-]
-});
-</script>
-
-<!-- MathJax configuration -->
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-  tex2jax: {
-    inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-    displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
-  },
-  displayAlign: 'left', // Change this to 'center' to center equations.
-  "HTML-CSS": {
-    styles: {'.MathJax_Display': {"margin": 0}}
-  }
-});
-</script>
-<!-- End of mathjax configuration -->
-
-<script>
-//  We wait for the onload function to load MathJax after the page is completely loaded.
-//  MathJax is loaded 1 unit of time after the page is ready.
-//  This hack prevent problems when you load multiple js files.
-
-window.onload = function () {
-  setTimeout(function () {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    script.src  = "https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-AMS_HTML";
-    document.getElementsByTagName("head")[0].appendChild(script);
-  },1)
-}
-</script>
-
-<script>
-Reveal.addEventListener( 'slidechanged', function( event ) {
-  window.scrollTo(0,0);
-  MathJax.Hub.Rerender(event.currentSlide);
-});
-</script>
-
 </body>
-
 </html>
